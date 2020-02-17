@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="#00000000"
+    >
+
+
+
+    <RelativeLayout
+        android:background="@drawable/white_bg"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/qb_px_60"
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_height="@dimen/qb_px_450"
+        android:layout_gravity="center">
+    <TextView
+        android:text="接收语音验证码\n验证码将以电话形式通知您，请留意您的电话"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:lineSpacingExtra="@dimen/qb_px_40"
+        android:layout_marginTop="@dimen/qb_px_40"
+        android:id="@+id/voice_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayC4"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/voice_disagree_btn"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/qb_px_150"
+            android:layout_weight="1" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorGrayC4"/>
+
+        <TextView
+            android:id="@+id/voice_agree_btn"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/qb_px_150"
+            android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

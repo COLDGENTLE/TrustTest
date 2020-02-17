@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_660"
+    android:layout_marginTop="@dimen/qb_px_40"
+    android:layout_marginBottom="@dimen/qb_px_40"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/white_bg_white_line_bg">
+
+
+
+
+    <ImageView
+        android:layout_marginLeft="@dimen/qb_px_40"
+        android:layout_marginTop="@dimen/qb_px_30"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/stroke_bike_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textSize="@dimen/qb_px_50"
+        android:id="@+id/item_stroke_time_tx"
+        android:fontFamily="@font/hwht_num"
+        android:layout_marginLeft="@dimen/qb_px_190"
+        android:layout_marginTop="@dimen/qb_px_50"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@color/gray6d"
+        android:text="13:06 - 13:46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    
+    <View
+        android:id="@+id/stroke_line1"
+        android:layout_marginTop="@dimen/qb_px_50"
+        app:layout_constraintTop_toBottomOf="@+id/item_stroke_time_tx"
+        android:background="#4a566d"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_2"/>
+
+    <View
+        android:background="#4a566d"
+        android:layout_marginLeft="@dimen/qb_px_81"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stroke_start_ic"
+        app:layout_constraintBottom_toTopOf="@+id/stroke_end_ic"
+        android:layout_width="@dimen/qb_px_2"
+        android:layout_height="@dimen/qb_px_140"/>
+
+    <ImageView
+        android:id="@+id/stroke_start_ic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/qb_px_80"
+        android:layout_marginLeft="@dimen/qb_px_60"
+        app:layout_constraintTop_toBottomOf="@+id/stroke_line1"
+        android:tint="@color/blueF1"
+        android:src="@drawable/stroke_paint_ic"
+        android:layout_width="@dimen/qb_px_45"
+        android:layout_height="@dimen/qb_px_45" />
+
+
+
+
+    <ImageView
+        android:id="@+id/stroke_end_ic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/qb_px_100"
+        android:layout_marginLeft="@dimen/qb_px_60"
+        app:layout_constraintTop_toBottomOf="@+id/stroke_start_ic"
+        android:tint="@color/colorRead"
+        android:src="@drawable/stroke_paint_ic"
+        android:layout_width="@dimen/qb_px_45"
+        android:layout_height="@dimen/qb_px_45" />
+
+
+
+    <TextView
+        android:layout_marginTop="@dimen/qb_px_60"
+        app:layout_constraintTop_toBottomOf="@+id/stroke_line1"
+        app:layout_constraintLeft_toRightOf="@+id/stroke_start_ic"
+        android:fontFamily="@font/hwht_subset"
+        android:textColor="@color/gray555"
+        android:textSize="@dimen/qb_px_60"
+        android:layout_marginLeft="@dimen/qb_px_55"
+        android:id="@+id/item_stroke_start_tx"
+        android:text="合川路兴地商务大厦"
+        android:layout_width="@dimen/qb_px_1000"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/item_stroke_end_tx"
+        android:layout_marginTop="@dimen/qb_px_80"
+        app:layout_constraintTop_toBottomOf="@+id/item_stroke_start_tx"
+        app:layout_constraintLeft_toRightOf="@+id/stroke_start_ic"
+        android:fontFamily="@font/hwht_subset"
+        android:textColor="@color/gray555"
+        android:textSize="@dimen/qb_px_60"
+        android:layout_marginLeft="@dimen/qb_px_55"
+        android:text="合川路兴地商务大厦"
+        android:layout_width="@dimen/qb_px_1000"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_marginRight="@dimen/qb_px_90"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_stroke_start_tx"
+        android:src="@drawable/stroke_btn_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:background="@drawable/f5f6f7_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_150"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/qb_px_100"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:src="@drawable/strike_muiles_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:maxLines="1"
+                android:id="@+id/item_storke_miles_tx"
+                android:layout_marginLeft="@dimen/qb_px_20"
+                android:text="0km"
+                android:textColor="@color/gray555"
+                android:fontFamily="@font/hwht_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:src="@drawable/stroke_time_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:maxLines="1"
+                android:id="@+id/item_storke_time_tx"
+                android:layout_marginLeft="@dimen/qb_px_20"
+                android:text="00:00:00"
+                android:textColor="@color/gray555"
+                android:fontFamily="@font/hwht_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/qb_px_100"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:src="@drawable/stroke_average_speed_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:maxLines="1"
+                android:id="@+id/item_storke_avg_spee_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/qb_px_20"
+                android:fontFamily="@font/hwht_num"
+                android:text="0km/h"
+                android:textColor="@color/gray555" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

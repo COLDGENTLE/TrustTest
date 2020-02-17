@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_360"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/card_security_settings_title_tx"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:layout_marginTop="@dimen/qb_px_30"
+        android:text="@string/item_security_settings_title_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/qb_px_60">
+
+        <ImageView
+            android:id="@+id/card_security_settings_status_ic"
+            android:layout_marginLeft="@dimen/qb_px_20"
+            android:src="@drawable/home_security_settings_alert_ic"
+            android:layout_width="@dimen/qb_px_136"
+            android:layout_height="@dimen/qb_px_160" />
+
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_160"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/security_settings_title_tx"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/qb_px_61"
+                android:text="@string/item_security_settings_status_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/security_settings_msg_tx"
+                android:gravity="center_vertical"
+                android:text="@string/item_security_settings_status_msg_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

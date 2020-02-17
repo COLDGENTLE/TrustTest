@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+      <TextView
+          android:text="车辆状态"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+
+
+      <TextView
+          android:layout_alignParentRight="true"
+          android:text="车辆状态"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+   </RelativeLayout>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+      <TextView
+          android:text="您的车型适合xxxxxxxxx"
+          android:layout_width="@dimen/qb_px_400"
+          android:layout_height="@dimen/qb_px_300" />
+
+
+      <ImageView
+          android:layout_marginTop="@dimen/qb_px_100"
+          android:layout_alignParentRight="true"
+          android:background="@drawable/ic_launcher_background"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+   </RelativeLayout>
+
+
+   <TextView
+       android:text="续航里程只有500，记得及时充电哦\n车辆位置信号弱，建议将车辆停放在相好的场所"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/qb_px_300" />
+</LinearLayout>

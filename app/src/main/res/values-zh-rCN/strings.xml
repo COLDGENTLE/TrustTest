@@ -1,0 +1,374 @@
+<resources>
+    <string name="app_name">所乐</string>
+
+    <!--&lt;!&ndash;登录页面String&ndash;&gt;-->
+    <!--<string name="login_fragment_layout_pwd_login">密码登录</string>-->
+    <!--<string name="login_fragment_layout_phone_login">手机登录</string>-->
+    <!--<string name="login_fragment_layout_show_car">车辆展厅</string>-->
+    <!--<string name="login_fragment_layout_phone_hint_ed">请输入手机号</string>-->
+    <!--<string name="login_fragment_layout_pwd_hint_ed">请输入密码</string>-->
+    <!--<string name="login_fragment_layout_phone_help">未注册手机号验证后自动登录</string>-->
+    <!--<string name="login_fragment_layout_submint">登录</string>-->
+    <!--<string name="login_fragment_layout_protocol"><Data><![CDATA[登录即表示你同意<click>用户服务协议</click>和<click>隐私政策</click> ]]></Data></string>-->
+    <!--<string name="login_fragment_bind_phone_layout_protocol"><Data><![CDATA[我同意<click>用户服务协议</click>和<click>隐私政策</click> ]]></Data></string>-->
+    <!--<string name="layout_register">注册</string>-->
+    <!--<string name="layout_change_pwd">忘记密码</string>-->
+    <!--<string name="layout_there_login">快速登录</string>-->
+    <!--<string name="layout_wei_bo">微博</string>-->
+    <!--<string name="layout_wei_xin">微信</string>-->
+    <!--<string name="layout_qq">QQ</string>-->
+
+    <!--<string name="t"><Data><![CDATA[这是一个测试 <img src="drawable/bg.png"> ]]></Data></string>-->
+
+    <!--<string name="login_fragment_pwd_error">密码不能为空!</string>-->
+    <!--<string name="login_fragment_phone_error">请输入正确的手机号!</string>-->
+
+
+    <!--&lt;!&ndash;注册修改密码页面&ndash;&gt;-->
+    <!--<string name="layout_register_tx">注册新用户</string>-->
+    <!--<string name="layout_reset_pwd_tx">找回密码</string>-->
+
+    <!--&lt;!&ndash;验证码发送页面&ndash;&gt;-->
+    <!--<string name="input_verification_code_tx">输入验证码</string>-->
+    <!--<string name="verification_code_tx">验证码已发送至:%1$s</string>-->
+    <!--<string name="verification_code_voice_tx">电话拨打中，请留意接听电话。</string>-->
+    <!--<string name="verification_code_request">重新发送短信验证码</string>-->
+    <!--<string name="verification_voice_code_request">重新发送语音验证码</string>-->
+    <!--<string name="verification_code_voice">使用语音验证码</string>-->
+
+    <!--<string name="is_to_voice_ui_tx"><Data><![CDATA[ <font color="#000000"><size>接收语音验证码</size> <br> 验证码将以电话形式通知您，请留意您的电话</font>]]></Data></string>-->
+
+
+    <!--&lt;!&ndash;三方登陆&ndash;&gt;-->
+    <!--<string name="three_login_submint_tx">已此号登录</string>-->
+    <!--<string name="three_login_other_submint_tx">其他方式登录</string>-->
+
+    <!--&lt;!&ndash;首页卡片字体&ndash;&gt;-->
+    <!--<string name="home_hirstory_tx"><Data><![CDATA[<font size="90px"><size>%1$s</size></font> km]]></Data></string>-->
+    <!--<string name="home_hirstory_speed_tx"><Data><![CDATA[<font size="90px"><size>%1$s</size></font> km/h]]></Data></string>-->
+    <!--<string name="home_hirstory_time_tx"><Data><![CDATA[<font size="90px"><size>%1$s</size></font> h]]></Data></string>-->
+    <!--<string name="no_car_tx">还没有添加车辆哦！</string>-->
+
+    <!--<string name="cancel">取消</string>-->
+    <!--<string name="title">请选择时间</string>-->
+    <!--<string name="confirm">确定</string>-->
+    <!--<string name="year">年</string>-->
+    <!--<string name="month">月</string>-->
+    <!--<string name="day">日</string>-->
+    <!--<string name="hour">时</string>-->
+    <!--<string name="minute">分</string>-->
+
+    <!--<string name="select_date">选择日期</string>-->
+    <!--<string name="current_date">当前日期</string>-->
+    <!--<string name="select_time">选择时间</string>-->
+    <!--<string name="current_time">当前时间</string>-->
+
+    <!--<string name="no_car_login_Btn_tx">添加我的第一辆车</string>-->
+    <!--<string name="no_car_no_login_Btn_tx">抢先体验，立即预约</string>-->
+
+
+    <!--&lt;!&ndash;应急防盗电池&ndash;&gt;-->
+    <!--<string name="emergency_tx"><Data><![CDATA[应急防盗电池还可以待机约<font size="90px"><size>%1$s</size></font> 天]]></Data></string>-->
+
+    <!--&lt;!&ndash;积分&ndash;&gt;-->
+    <!--<string name="integral_tx"><Data><![CDATA[<font size="130px"><size>%1$s</size></font> 分]]></Data></string>-->
+    <!--<string name="user_integral_num_tx">我的积分</string>-->
+    <!--<string name="user_integral_check_in_tx">每日签到</string>-->
+    <!--<string name="user_integral_check_in_success_tx">已签到</string>-->
+    <!--<string name="user_notification_tx">消息通知</string>-->
+    <!--<string name="user_unread_message_tx">您有未读信息</string>-->
+    <!--<string name="user_general_settings_tx">通用设置</string>-->
+    <!--<string name="user_help_feedback_tx">帮助反馈</string>-->
+    <!--<string name="user_on_bs_tx">关于蓝鲨</string>-->
+    <!--<string name="user_bs_version_tx"><Data><![CDATA[<font size="130px">版本%1$s</font>]]></Data></string>-->
+
+    <!--<string name="integral_info_title_tx">积分详情</string>-->
+    <!--<string name="integral_info_num_tx"><Data><![CDATA[当前积分<br><font color="#209efb"><size>%1$s</size></font><font color="#209efb">分</font>]]></Data></string>-->
+    <!--<string name="integral_info_item_tx"><Data><![CDATA[<font color="#000000"><size>%1$s</size></font><br>%2$s]]></Data></string>-->
+    <!--<string name="integral_info_item_num_tx"><Data><![CDATA[%1$s<size>%2$s</size>]]></Data></string>-->
+
+
+
+    <!--&lt;!&ndash;主页面&ndash;&gt;-->
+    <!--<string name="main_my_car_tx">爱车</string>-->
+    <!--<string name="main_blue_shark_tx">发现</string>-->
+    <!--<string name="main_shopping_tx">心悦</string>-->
+    <!--<string name="main_my_tx">我</string>-->
+
+
+    <!--&lt;!&ndash;爱车页面&ndash;&gt;-->
+    <!--<string name="my_car_tourist_tx"><Data><![CDATA[查看您的爱车状态，请先 <click>注册/登录</click>]]></Data></string>-->
+
+    <!--&lt;!&ndash;我的页面&ndash;&gt;-->
+    <!--<string name="my_register_or_login_tx">注册/登录</string>-->
+
+    <!--&lt;!&ndash;车辆详情&ndash;&gt;-->
+    <!--<string name="car_info_title">车辆详情</string>-->
+    <!--<string name="car_info_tx">车辆资料</string>-->
+    <!--<string name="car_info_complete_tx">资料完成度%1$s %%</string>-->
+    <!--<string name="car_info_name_tx">车辆名称</string>-->
+    <!--<string name="car_info_plate_num_tx">车牌号</string>-->
+    <!--<string name="car_info_bike_class_tx">车辆类型</string>-->
+    <!--<string name="car_info_vin_tx">车架号</string>-->
+    <!--<string name="car_info_about_tx">关于车辆</string>-->
+    <!--<string name="car_info_bind_days_tx">陪伴天数</string>-->
+    <!--<string name="car_info_total_mileage_tx">总里程</string>-->
+    <!--<string name="car_info_total_mileage_num_tx">%1$s KM</string>-->
+    <!--<string name="car_info_software_version_tx">车辆软件版本</string>-->
+    <!--<string name="car_info_light_bicycle_tx">电动自行车</string>-->
+    <!--<string name="car_info_light_motorcycle_tx">电动轻摩</string>-->
+    <!--<string name="car_info_motorcycle_tx">电动摩托车</string>-->
+
+    <!--&lt;!&ndash;车辆编辑&ndash;&gt;-->
+    <!--<string name="car_edit_title">车辆编辑</string>-->
+    <!--<string name="car_edit_version_tx">车辆品牌</string>-->
+    <!--<string name="car_edit_type_tx">车辆类型</string>-->
+    <!--<string name="car_edit_mode_tx">车辆型号</string>-->
+    <!--<string name="car_edit_motor_or_engine_ed_tx">电机/发动机号</string>-->
+    <!--<string name="car_edit_del_tx">车辆将从车库删除，车辆的所有定位行驶数据删除</string>-->
+
+
+    <!--&lt;!&ndash;地图&ndash;&gt;-->
+    <!--<string name="map_car_vehicle_positioning_tx">车辆定位</string>-->
+    <!--<string name="nothing_tx">0</string>-->
+    <!--<string name="car_location_tx">车辆位置: %1$s</string>-->
+    <!--<string name="car_bs_assisted_positioning_tx">基站辅助定位</string>-->
+    <!--<string name="car_location_error_tx">车辆坐标为0,请检查车辆定位是否正常!</string>-->
+
+    <!--<string name="car_loction_nothing">未获取到车辆位置，请将车辆移至室外定位</string>-->
+
+
+    <!--<string name="map_bs_open_tx">显示车辆的粗略位置\n当车辆无卫星信号时，将自动显示车辆的粗略位置，误差可能约10~500米</string>-->
+    <!--<string name="map_bs_close_tx">隐藏车辆的粗略位置\n当车辆无卫星信号时，车辆位置无法更新，直至车辆的卫星信号恢复</string>-->
+
+    <!--<string name="car_ol_success_tx">与车辆网络通讯连接正常</string>-->
+    <!--<string name="car_ol_error_tx">无法连接到车辆，位置更新可能会不及时</string>-->
+
+
+    <!--&lt;!&ndash;电池&ndash;&gt;-->
+    <!--<string name="emergency_time_tx">应急防盗电池待机剩余时间</string>-->
+    <!--<string name="emergency_remind_tx">车内电池已移除，为确保车辆安全，请尽快插入电池</string>-->
+    <!--<string name="battery_title_tx">电量管理</string>-->
+    <!--<string name="battery1_tx">电池1</string>-->
+    <!--<string name="battery2_tx">电池2</string>-->
+    <!--<string name="battery_recharge_mileage_tx">续航里程</string>-->
+
+    <!--<string name="battery_num_tx"><Data><![CDATA[%1$s <size>%%</size>]]></Data></string>-->
+    <!--<string name="battery_temperature_tx"><Data><![CDATA[%1$s <size>℃</size>]]></Data></string>-->
+
+
+    <!--&lt;!&ndash;行车记录&ndash;&gt;-->
+    <!--<string name="car_history_title_tx">行车记录</string>-->
+    <!--<string name="car_history_day_tx">日</string>-->
+    <!--<string name="car_history_week_tx">周</string>-->
+    <!--<string name="car_history_month_tx">月</string>-->
+    <!--<string name="car_history_driven_distance_tx">行驶里程</string>-->
+    <!--<string name="car_history_average_speed_tx">平均时速</string>-->
+    <!--<string name="car_history_riding_time_tx">骑行时间</string>-->
+    <!--<string name="car_history_today_tx">今天</string>-->
+    <!--<string name="popu_warn_tx">只看报警</string>-->
+    <!--<string name="popu_location_tx">只看轨迹</string>-->
+    <!--<string name="popu_all_tx">我全都要</string>-->
+    <!--<string name="popu_top_speed_tx"><Data><![CDATA[ <font color="#0099ff">最高时速 <size>%1$s</size> km/h</font>]]></Data></string>-->
+    <!--<string name="popu_riding_tx"><Data><![CDATA[ <font color="#0099ff">骑行 <size>%1$s</size> 次</font>]]></Data></string>-->
+    <!--<string name="popu_warn_num_tx"><Data><![CDATA[ <font color="#0099ff">报警 <size>%1$s</size> 次</font>]]></Data></string>-->
+    <!--<string name="item_driven_distance_tx"><Data><![CDATA[行驶里程<br/>  <font color="#0099ff">%1$skm</font>]]></Data></string>-->
+    <!--<string name="item_riding_time_tx"><Data><![CDATA[骑行时长<br/>  <font color="#0099ff">%1$sh</font>]]></Data></string>-->
+    <!--<string name="item_carbon_emission_tx"><Data><![CDATA[节约碳排放<br/>  <font color="#0099ff">%1$skg</font>]]></Data></string>-->
+    <!--<string name="item_max_speed_tx"><Data><![CDATA[最高时速<br/>  <font color="#0099ff">%1$skm/h</font>]]></Data></string>-->
+    <!--<string name="item_min_speed_tx"><Data><![CDATA[最低时速<br/>  <font color="#0099ff">%1$skm/h</font>]]></Data></string>-->
+    <!--<string name="item_avg_speed_tx"><Data><![CDATA[平均时速<br/>  <font color="#0099ff">%1$skm/h</font>]]></Data></string>-->
+
+
+
+
+    <!--&lt;!&ndash;轨迹回放&ndash;&gt;-->
+    <!--<string name="car_ride_track_title">轨迹回放</string>-->
+    <!--<string name="car_ride_track_controll_start">开始</string>-->
+    <!--<string name="car_ride_track_controll_pause">暂停</string>-->
+
+
+    <!--&lt;!&ndash;安防设置&ndash;&gt;-->
+    <!--<string name="item_security_settings_title_tx">安防设置</string>-->
+    <!--<string name="item_security_settings_status_tx">警戒模式</string>-->
+    <!--<string name="item_security_settings_status_msg_tx">开启的车辆状态消息，都会及时通知</string>-->
+
+    <!--<string name="itme_security_settings_do_not_disturb_status_tx">勿扰模式</string>-->
+    <!--<string name="itme_security_settings_do_not_disturb_status_msg_tx">您已禁止所有车辆状态提醒</string>-->
+
+    <!--<string name="itme_security_settings_lose_status_tx">丢失模式</string>-->
+    <!--<string name="itme_security_settings_lose_status_msg_tx">您爱车的位置、电门开关、电瓶移除状态及时通知</string>-->
+
+
+    <!--<string name="item_security_settings_status_title_tx">安防状态</string>-->
+
+    <!--<string name="security_settings_alert_msg_tx"><Data><![CDATA[<font color="#000000" ><size>警戒模式</size></font><br/>  默认及您设置的车辆状态，都会及时通知]]></Data></string>-->
+    <!--<string name="security_settings_alert_title_tx">警戒模式</string>-->
+    <!--<string name="security_settings_do_not_disturb_msg_tx"><Data><![CDATA[<font color="#000000" ><size>勿扰模式</size></font><br/>  勿扰模式下，所有车辆状态不会通知]]></Data></string>-->
+
+    <!--<string name="security_settings_lose_car_msg_tx"><Data><![CDATA[<font color="#000000" ><size>丢车模式</size></font><br/>  启动丢车模式后，将远程锁定此车，并实时通知爱车的各种动态]]></Data></string>-->
+    <!--<string name="security_settings_lose_car_title_msg_tx">车辆的丢车模式启动后，将自动关闭“车辆状态通知模式”，直至退出丢失车模式</string>-->
+
+    <!--<string name="security_settings_lose_car_app_alert_tx"><Data><![CDATA[<font color="#000000" ><size>APP报警通知</size></font><br/>  通过APP推送报警通知]]></Data></string>-->
+    <!--<string name="security_settings_test_alert_tx">测试报警</string>-->
+
+    <!--<string name="alert_illegal_move_tx">车辆非法位移</string>-->
+    <!--<string name="alert_power_remove_tx">电瓶移除</string>-->
+    <!--<string name="alert_power_add_tx">电瓶插入</string>-->
+    <!--<string name="alert_serious_shock_tx">严重震动</string>-->
+    <!--<string name="alert_medium_shock_tx">中等震动</string>-->
+    <!--<string name="alert_slight_shock_tx">轻微震动</string>-->
+    <!--<string name="alert_power_low_tx">低电量</string>-->
+    <!--<string name="alert_title_tx">警戒模式消息设置</string>-->
+
+    <!--&lt;!&ndash;添加车辆&ndash;&gt;-->
+    <!--<string name="add_cars_description_1_tx">搜索添加车辆时\n请持手机靠近车辆至2米范围内操作。</string>-->
+    <!--<string name="add_cars_description_2_tx"><Data><![CDATA[打开车辆电门后一分钟内，-->
+    <!--长按左侧把手上的<br><img src=1>键2秒，车辆将进入待绑定状态]]></Data></string>-->
+    <!--<string name="add_cars_description_3_tx">车辆进入待搜索状态后，如2分钟无操作，将恢复原状。\n如需再次搜索，请重复上述步骤。</string>-->
+
+    <!--<string name="cars_model_name_tx">车辆型号: %1$s</string>-->
+    <!--<string name="cars_vin_tx">车架号: %1$s</string>-->
+
+
+
+    <!--<string name="bind_car_connection_tx">请根据以上示意图\n输入车辆的PIN码，完成绑定</string>-->
+
+    <!--<string name="ping_error_tx">车辆PIN校验错误，请确认车辆与PIN码一致</string>-->
+
+    <!--<string name="next_tx">下一步</string>-->
+    <!--<string name="search_again_tx">重新搜索</string>-->
+
+    <!--&lt;!&ndash;设置车辆信息&ndash;&gt;-->
+    <!--<string name="car_mac_msg_tx">车辆添加成功\n快给爱车起个名字吧</string>-->
+    <!--<string name="car_mac_tx">MAC: %1$s</string>-->
+    <!--<string name="car_vin_tx">车架号: %1$s</string>-->
+
+    <!--&lt;!&ndash;车辆控制&ndash;&gt;-->
+    <!--<string name="controll_car_title_txt">车辆控制</string>-->
+    <!--<string name="controll_car_lock_txt"><Data><![CDATA[设防:%1$s]]></Data></string>-->
+
+    <!--<string name="controll_car_lock_ready_txt">正在设防……</string>-->
+    <!--<string name="controll_car_lock_success_txt">车辆已设防</string>-->
+    <!--<string name="controll_car_lock_error_txt">车辆设防失败</string>-->
+    <!--<string name="controll_car_lock_time_out_txt">车辆设防超时，请重试</string>-->
+
+
+    <!--<string name="controll_car_unlock_txt"><Data><![CDATA[撤防:%1$s]]></Data></string>-->
+    <!--<string name="controll_car_unlock_ready_txt">正在撤防……</string>-->
+    <!--<string name="controll_car_unlock_success_txt">车辆已撤防</string>-->
+    <!--<string name="controll_car_unlock_error_txt">车辆撤防失败</string>-->
+    <!--<string name="controll_car_unlock_time_out_txt">车辆撤防超时，请重试</string>-->
+
+
+    <!--<string name="controll_car_no_music_lock_txt"><Data><![CDATA[静音设防:%1$s]]></Data></string>-->
+    <!--<string name="controll_car_no_music_lock_ready_txt">正在静音设防……</string>-->
+    <!--<string name="controll_car_no_music_lock_success_txt">车辆已静音设防</string>-->
+    <!--<string name="controll_car_no_music_lock_error_txt">静音设防失败</string>-->
+    <!--<string name="controll_car_no_music_lock_time_out_txt">静音设防超时</string>-->
+
+
+    <!--<string name="controll_car_find_car_txt"><Data><![CDATA[寻车:%1$s]]></Data></string>-->
+    <!--<string name="controll_car_find_car_ready_txt">正在下发寻车指令……</string>-->
+    <!--<string name="controll_car_find_car_success_txt">车辆寻车已打开</string>-->
+    <!--<string name="controll_car_find_car_error_txt">车辆寻车打开失败</string>-->
+    <!--<string name="controll_car_find_car_time_out_txt">车辆下发寻车指令超时，请重试</string>-->
+
+    <!--<string name="controll_car_open_acc_txt"><Data><![CDATA[开电门:%1$s]]></Data></string>-->
+    <!--<string name="controll_car_open_acc_ready_txt">正在打开电门……</string>-->
+    <!--<string name="controll_car_open_acc_success_txt">车辆电门已打开</string>-->
+    <!--<string name="controll_car_open_acc_error_txt">车辆电门打开失败</string>-->
+    <!--<string name="controll_car_open_acc_time_out_txt">车辆打开电门超时，请重试</string>-->
+
+
+    <!--<string name="controll_car_close_acc_txt"><Data><![CDATA[关电门:%1$s]]></Data></string>-->
+    <!--<string name="controll_car_close_acc_ready_txt">正在关闭电门……</string>-->
+    <!--<string name="controll_car_close_acc_success_txt">车辆电门已关闭</string>-->
+    <!--<string name="controll_car_close_acc_error_txt">车辆电门关闭失败</string>-->
+    <!--<string name="controll_car_close_acc_time_out_txt">车辆电门关闭超时</string>-->
+
+    <!--<string name="controll_car_open_bucket_txt"><Data><![CDATA[开坐桶:%1$s]]></Data></string>-->
+    <!--<string name="controll_car_open_bucket_ready_txt">正在打开座桶……</string>-->
+    <!--<string name="controll_car_open_bucket_success_txt">车辆座桶已打开</string>-->
+    <!--<string name="controll_car_open_bucket_error_txt">车辆座桶打开失败</string>-->
+    <!--<string name="controll_car_open_bucket_time_out_txt">车辆座桶打开超时，请重试</string>-->
+
+
+
+    <!--<string name="controll_car_start_txt"><Data><![CDATA[一键启动:%1$s]]></Data></string>-->
+    <!--<string name="controll_car_start_ready_txt">正在启动中……</string>-->
+    <!--<string name="controll_car_start_success_txt">车辆启动成功，电门已打开</string>-->
+    <!--<string name="controll_car_start_error_txt">车辆启动失败</string>-->
+    <!--<string name="controll_car_start_time_out_txt">车辆启动超时，请重试</string>-->
+
+
+
+    <!--<string name="controll_car_success_txt">成功</string>-->
+    <!--<string name="controll_car_time_out_txt">超时</string>-->
+
+
+
+    <!--&lt;!&ndash;丢车&ndash;&gt;-->
+    <!--<string name="lose_bike_title">丢车模式</string>-->
+    <!--<string name="lose_bike_tag"></string>-->
+    <!--<string name="lose_bike_taging">正在开启丢车模式...</string>-->
+    <!--<string name="lose_bike_tag_success">丢车模式启动成功!</string>-->
+    <!--<string name="lose_bike_status_tag">丢车模式下，系统将智能追踪车辆位置，推送信息提高找回车辆几率</string>-->
+    <!--<string name="lose_bike_msg">丢车模式下，车辆及警报状态\n1、车辆的粗略位置显示\n2、车辆位置更新时立刻通知\n3、仅在车辆发生非法位移、电门打开、电门关闭、电池移除时提醒\n4、APP推送、微信提醒（需要应用内开启）</string>-->
+    <!--<string name="lose_bike_submint_tx">开启丢车模式</string>-->
+    <!--<string name="lose_bike_lose_success_submint_tx">退出丢车模式</string>-->
+
+    <!--&lt;!&ndash;车辆网络注册&ndash;&gt;-->
+    <!--<string name="bike_section_title_sectioning_tx">车辆网络注册中</string>-->
+    <!--<string name="bike_section_title_sectioning_msg_tx">受车辆网络环境影响，该过程可能需要几分钟，请耐心等待</string>-->
+
+    <!--<string name="bike_section_title_section_nothing_tx">车辆网络注册</string>-->
+    <!--<string name="bike_section_title_section_nothing_msg_tx">车辆网络未知状态</string>-->
+
+
+    <!--<string name="bike_section_title_section_error_tx">车辆网络注册失败</string>-->
+    <!--<string name="bike_section_title_section_error_no_sim_msg_tx">未检测到SIM卡，请联系客服人员或附近门店确认</string>-->
+    <!--<string name="bike_section_title_section_error_sim_expired_msg_tx">检测到车辆的SIM卡已过期，请联系客服人员或附近门店确认</string>-->
+    <!--<string name="bike_section_title_section_error_no_net_tx">检测到车辆无网络，请将车辆移至移动网络环境良好的地方完成车辆网络注册\n如果车辆网络长时间未注册完成，请连接车辆重试</string>-->
+
+    <!--<string name="bike_section_title_section_dissconnection_ble_tx">蓝牙断开</string>-->
+    <!--<string name="bike_section_title_section_dissconnection_ble_msg_tx">与设备蓝牙断开，正在重新连接请稍后...</string>-->
+
+
+
+    <!--<string name="ride_track_sum_tx"><Data><![CDATA[行驶距离<br><font size="90px"><size>%1$s</size></font> km]]></Data></string>-->
+    <!--<string name="ride_track_speed_tx"><Data><![CDATA[行驶速度<br><font size="90px"><size>%1$s</size></font> km/h]]></Data></string>-->
+    <!--<string name="ride_track_time_tx"><Data><![CDATA[行驶时间<br><font size="90px"><size>%1$s</size></font> 分钟]]></Data></string>-->
+
+    <!--<string name="ride_track_max_speed_tx">最高时速: %1$skm/h</string>-->
+
+    <!--<string name="start_address_tx">起点: %1$s</string>-->
+    <!--<string name="end_address_tx">终点: %1$s</string>-->
+
+    <!--<string name="del_car_1">删除车辆后，车辆平台服务运营商流量将继续处于服务状态。</string>-->
+    <!--<string name="del_car_2">删除车辆后，车辆的行车数据都会清除，并无法恢复。</string>-->
+    <!--<string name="del_car_3">删除车辆后，车辆的状态消息都会清除，并无法恢复。</string>-->
+    <!--<string name="del_car_4">删除车辆后，车辆的系统固件将无法更新升级。</string>-->
+    <!--<string name="del_car_tx">删除车辆</string>-->
+
+    <!--&lt;!&ndash;popu隐私政策&ndash;&gt;-->
+    <!--<string name="popupwindow_first_privacy_policy_tx"><Data><![CDATA[亲爱的用户，蓝鲨依照相关法律法规要求进<br>行信息及风险防范管理。<br>为了您可以正常使用我们的服务，我们将依法收<br>集并使用您的车辆相关信息。<br>蓝鲨将严格保护您的个人信息，确保信息安<br>全，具体详见<click>《隐私政策》</click>。点击“同意”，表示您<br>同意上述内容、并确认您已阅读。]]></Data></string>-->
+    <!--<string name="popupwindow_privacy_policy_disagree_tx">不同意</string>-->
+    <!--<string name="popupwindow_privacy_policy_agree_tx">同意</string>-->
+
+    <!--<string name="privacy_policy_tx"><Data><![CDATA[ <font color="#ffffff">.</font> <click>《用户服务协议》</click>和<click>《隐私政策》</click> ]]></Data></string>-->
+    <!--<string name="app_from">鲨湾科技（上海）有限公司  版权所有\nCopyright © 2018-2019 Sharkgulf.All Rights Reserved.</string>-->
+    <!--<string name="about_bs">关于蓝鲨</string>-->
+    <!--<string name="popupwindow_disagree_privacy_policy_cancel_tx">我知道了</string>-->
+    <!--<string name="popupwindow_disagree_privacy_policy_tx"><Data><![CDATA[不同意蓝鲨应用的<click>《隐私政策》<br></click>，我们将无法继续为您提供app相关服务。]]></Data></string>-->
+
+
+    <!--&lt;!&ndash;alertlist&ndash;&gt;-->
+    <!--<string name="alertlist_title_tx">车辆消息</string>-->
+    <!--<string name="alertlist_today_tx">今天</string>-->
+
+    <!--&lt;!&ndash;网络问题&ndash;&gt;-->
+    <!--<string name="http_error_tx">当前网络不可以用，请检查网络设置</string>-->
+</resources>
+
+

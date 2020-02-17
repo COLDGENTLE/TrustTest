@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhiteGay"
+    tools:context=".cards.activity.securitysettings.AlertActivity">
+
+    <include
+        layout="@layout/tite_layout"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingLeft="@dimen/qb_px_60"
+        android:paddingRight="@dimen/qb_px_60"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_180">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/qb_px_50"
+            android:id="@+id/alert_controll_bike_type_title_tv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="@dimen/qb_px_20"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/security_settings_alert_title_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/alert_controll_bike_type_msg_tv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="@dimen/qb_px_5"
+            app:layout_constraintTop_toBottomOf="@+id/alert_controll_bike_type_title_tv"
+            android:text="@string/security_settings_alert_msg_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/alert_controll_bike_type_sw"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            app:theme="@style/MySwitch"
+            android:layout_height="wrap_content" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorGrayC4"
+        android:layout_height="1dp"/>
+
+
+    <RelativeLayout
+        android:paddingLeft="@dimen/qb_px_60"
+        android:paddingRight="@dimen/qb_px_60"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_150">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:id="@+id/alert_illegal_move_tv"
+            android:textSize="@dimen/qb_px_50"
+            android:text="@string/alert_illegal_move_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/alert_move"
+            android:layout_alignParentRight="true"
+            android:text="已开启"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorGrayC4"
+        android:layout_height="1dp"/>
+
+
+
+    <RelativeLayout
+        android:paddingLeft="@dimen/qb_px_60"
+        android:paddingRight="@dimen/qb_px_60"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_150">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:id="@+id/alert_power_remove_tv"
+            android:textSize="@dimen/qb_px_50"
+            android:text="@string/alert_power_remove_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/alert_batt_out"
+            android:layout_alignParentRight="true"
+            android:text="已开启"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorGrayC4"
+        android:layout_height="1dp"/>
+
+
+
+    <RelativeLayout
+        android:paddingLeft="@dimen/qb_px_60"
+        android:paddingRight="@dimen/qb_px_60"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_150">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:id="@+id/alert_serious_shock_tv"
+            android:textSize="@dimen/qb_px_50"
+            android:text="@string/alert_serious_shock_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/alert_serious_shock_sw"
+            android:layout_alignParentRight="true"
+            android:text="已开启"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorGrayC4"
+        android:layout_height="1dp"/>
+
+
+    <RelativeLayout
+        android:paddingLeft="@dimen/qb_px_60"
+        android:paddingRight="@dimen/qb_px_60"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_150">
+
+        <TextView
+            android:id="@+id/alert_medium_shock_tv"
+            android:textSize="@dimen/qb_px_50"
+            android:textColor="@color/colorBlack"
+            android:text="@string/alert_medium_shock_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/alert_medium_shock_sw"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            app:theme="@style/MySwitch"
+            android:layout_height="wrap_content"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorGrayC4"
+        android:layout_height="1dp"/>
+
+
+
+    <RelativeLayout
+        android:paddingLeft="@dimen/qb_px_60"
+        android:paddingRight="@dimen/qb_px_60"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_150">
+
+        <TextView
+            android:id="@+id/alert_power_low_tv"
+            android:textSize="@dimen/qb_px_50"
+            android:text="@string/alert_power_low_tx"
+            android:textColor="@color/colorBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/alert_power_low_sw"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            app:theme="@style/MySwitch"
+            android:layout_height="wrap_content"
+            />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorGrayC4"
+        android:layout_height="1dp"/>
+
+
+    
+
+
+
+</LinearLayout>

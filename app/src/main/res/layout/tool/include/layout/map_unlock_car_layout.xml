@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/unlock_car_unlock_title_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:textColor="#ff7800"
+            android:drawablePadding="@dimen/qb_px_20"
+            android:drawableLeft="@drawable/map_controll_car_unlock_icon"
+            android:gravity="center"
+            android:text="锁定车辆"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/qb_px_110" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/unlock_car_unlock_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_100">
+
+        <TextView
+            android:id="@+id/unlock_car_lock_title_tx"
+            android:layout_centerInParent="true"
+            android:text="确定要锁定这辆车吗？"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/unlock_car_lock_msg_tx"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/qb_px_108"
+        android:layout_marginRight="@dimen/qb_px_108"
+        android:text="车辆锁定后，此车的遥控钥匙和APP将无法进行撤防和打开电门操作"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/unlock_car_lock_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/qb_px_100"
+        android:layout_marginLeft="@dimen/qb_px_100">
+
+
+
+        <Button
+            android:id="@+id/unlock_car_lock_btn"
+            android:text="确认锁定"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/qb_px_114"/>
+
+
+        <Button
+            android:id="@+id/unlock_car_unlock_btn"
+            android:text="不锁定"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/unlock_car_lock_cancel_btn"
+        android:text="取消锁定"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

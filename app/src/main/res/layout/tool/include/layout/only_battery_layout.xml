@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_370"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+
+            <ImageView
+                android:id="@+id/battery_only_ba1_first_img"
+                android:visibility="invisible"
+                android:src="@drawable/ic_battery_first_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/qb_px_330"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:src="@drawable/ic_battery_no_ele"
+                    android:layout_width="@dimen/qb_px_330"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/battery_only_ba1_capacity_img"
+                    android:src="@drawable/ic_battery_no_ele"
+                    android:layout_width="@dimen/qb_px_330"
+                    android:layout_height="match_parent" />
+
+
+            </RelativeLayout>
+
+
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/battery_only_ba1_in_use_img"
+                android:rotation="180"
+                android:src="@drawable/ic_battery_charging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_marginTop="@dimen/qb_px_10"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/qb_px_360"
+            android:layout_height="@dimen/qb_px_170"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="left">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:gravity="center"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMinTextSize="@dimen/qb_px_10"
+                        app:autoSizeMaxTextSize="@dimen/qb_px_80"
+                        app:autoSizeStepGranularity="2sp"
+                        android:id="@+id/battery_only_ba1_capacity_txt"
+                        android:text="0 %"
+                        android:textSize="@dimen/qb_px_80"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/qb_px_100" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:textSize="@dimen/qb_px_35"
+                    android:text="电池电量"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="left">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:gravity="center"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMinTextSize="@dimen/qb_px_10"
+                        app:autoSizeMaxTextSize="@dimen/qb_px_80"
+                        app:autoSizeStepGranularity="2sp"
+                        android:id="@+id/battery_only_ba1_temp_txt"
+                        android:text="0 ℃"
+                        android:textSize="@dimen/qb_px_80"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/qb_px_100" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:textSize="@dimen/qb_px_35"
+                    android:text="电池温度"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/only_battery_charge_es_tx"
+            android:textSize="@dimen/qb_px_35"
+            android:layout_marginTop="@dimen/qb_px_15"
+            android:layout_gravity="center_horizontal"
+            android:text="约需要xx小时xx分钟充满"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:layout_marginRight="@dimen/qb_px_20"
+        android:layout_marginLeft="@dimen/qb_px_20"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+    <fragment
+        android:id="@+id/only_battert_fragment"
+        android:name="com.sharkgulf.soloera.cards.activity.battery.BatteryFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

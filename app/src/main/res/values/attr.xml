@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<attr name="interval" format="integer"/>-->
+    <!--<attr name="showIndicator" format="boolean"/>-->
+    <!--<attr name="orientation" format="enum">-->
+        <!--<enum name="horizontal" value="0"/>-->
+        <!--<enum name="vertical" value="1"/>-->
+    <!--</attr>-->
+    <!--<attr name="autoPlaying" format="boolean"/>-->
+    <declare-styleable name="RecyclerViewBannerBase">
+        <attr name="interval"/>
+        <attr name="showIndicator" />
+        <attr name="orientation" />
+        <attr name="autoPlaying"/>
+        <attr name="indicatorSelectedSrc" format="color|reference"/>
+        <attr name="indicatorUnselectedSrc" format="color|reference"/>
+        <attr name="indicatorSpace" format="dimension|reference"/>
+        <attr name="indicatorMarginLeft" format="dimension|reference"/>
+        <attr name="indicatorMarginRight" format="dimension|reference"/>
+        <attr name="indicatorMarginBottom" format="dimension|reference"/>
+        <attr name="indicatorGravity" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="BannerLayout">
+        <attr name="interval" />
+        <attr name="showIndicator" />
+        <attr name="orientation" />
+        <attr name="autoPlaying"/>
+        <attr name="itemSpace1" format="integer"/>
+        <attr name="centerScale" format="float"/>
+        <attr name="moveSpeed" format="float"/>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="RoundImageView">
+        <attr name="circle" format="boolean" />
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="HoloCircularProgressBar">
+        <attr name="stroke_width" format="dimension" />
+        <attr name="progress" format="float" />
+        <attr name="marker_progress" format="float" />
+        <attr name="progress_color" format="color" />
+        <attr name="progress_background_color" format="color" />
+        <attr name="thumb_visible" format="boolean" />
+        <attr name="marker_visible" format="boolean" />
+        <attr name="android:gravity" />
+    </declare-styleable>
+
+    <attr name="circularProgressBarStyle" format="reference" />
+
+
+    <declare-styleable name="TextDrawable">
+        <attr name="leftDrawable" format="reference"/>
+        <attr name="leftDrawableWidth" format="dimension"/>
+        <attr name="leftDrawableHeight" format="dimension"/>
+        <attr name="rightDrawable" format="reference"/>
+        <attr name="rightDrawableWidth"   format="dimension"/>
+        <attr name="rightDrawableHeight" format="dimension"/>
+        <attr name="topDrawable" format="reference"/>
+        <attr name="topDrawableWidth" format="dimension"/>
+        <attr name="topDrawableHeight" format="dimension"/>
+    </declare-styleable>
+
+
+    <!-- 波纹进度条 -->
+    <declare-styleable name="WaveProgressViews">
+        <attr name="wave_progress_max" format="integer" />
+        <attr name="wave_progress" format="integer" />
+        <attr name="wave_speed" format="float" />
+        <attr name="swave_width" format="float" />
+        <attr name="swave_height" format="float" />
+        <attr name="swave_color" format="color" />
+        <attr name="swave_bg_color" format="color" />
+        <attr name="stroke_color" format="color" />
+        <attr name="main_text" format="string" />
+        <attr name="main_text_color" format="color" />
+        <attr name="main_text_size" format="dimension" />
+        <attr name="hint_text" format="string" />
+        <attr name="hint_color" format="color" />
+        <attr name="hint_size" format="dimension" />
+        <attr name="text_space" format="dimension" />
+    </declare-styleable>
+
+    <!--注意这里的name要和自定义View的名称一致，不然在xml布局中无法引用-->
+    <!--<declare-styleable name="CircleBarView">-->
+        <!--<attr name="csprogress_color" format="color"></attr>-->
+        <!--<attr name="bg_color" format="color"></attr>-->
+
+        <!--<attr name="bar_width" format="dimension"></attr>-->
+
+        <!--<attr name="start_angle" format="float"></attr>-->
+        <!--<attr name="sweep_angle" format="float"></attr>-->
+    <!--</declare-styleable>-->
+    <!--<declare-styleable name="WaveProgressView">-->
+        <!--<attr name="wave_color" format="color"></attr>-->
+        <!--<attr name="second_wave_color" format="color"></attr>-->
+        <!--<attr name="wave_bg_color" format="color"></attr>-->
+
+        <!--<attr name="wave_width" format="dimension"></attr>-->
+        <!--<attr name="wave_height" format="dimension"></attr>-->
+    <!--</declare-styleable>-->
+    <declare-styleable name="WaveProgress">
+        <!-- 是否开启抗锯齿 -->
+        <attr name="antiAlias" />
+        <!-- 深色水波动画时间 -->
+        <attr name="darkWaveAnimTime" format="integer" />
+        <!-- 浅色水波动画时间 -->
+        <attr name="lightWaveAnimTime" format="integer" />
+        <!-- 最大值 -->
+        <attr name="maxValue" />
+        <!-- 当前值 -->
+        <attr name="value" />
+        <attr name="valueColor" />
+        <attr name="valueSize" />
+        <!-- 绘制内容相应的提示语 -->
+        <attr name="hint" />
+        <attr name="hintSize" />
+        <attr name="hintColor" />
+        <!-- 圆环宽度 -->
+        <attr name="circleWidth" format="dimension" />
+        <!-- 圆环颜色 -->
+        <attr name="circleColor" format="color|reference" />
+        <!-- 背景圆环颜色 -->
+        <attr name="bgCircleColor" format="color|reference" />
+        <!-- 锁定水波不随圆环进度改变，默认锁定在50%处 -->
+        <attr name="lockWave" format="boolean" />
+        <!-- 水波数量 -->
+        <attr name="waveNum" format="integer" />
+        <!-- 水波高度，峰值和谷值之和 -->
+        <attr name="waveHeight" format="dimension" />
+        <!-- 深色水波颜色 -->
+        <attr name="darkWaveColor" format="color|reference" />
+        <!-- 是否显示浅色水波 -->
+        <attr name="showLightWave" format="boolean" />
+        <!-- 浅色水波颜色 -->
+        <attr name="lightWaveColor" format="color|reference" />
+        <!-- 浅色水波的方向 -->
+        <attr name="lightWaveDirect" format="enum">
+            <enum name="L2R" value="0" />
+            <enum name="R2L" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+
+    <!-- 圆形进度条 -->
+    <declare-styleable name="CircleProgressBar">
+        <attr name="antiAlias" />
+        <attr name="startAngle" />
+        <attr name="sweepAngle" />
+        <attr name="animTime" />
+        <attr name="maxValue" />
+        <attr name="value" />
+        <attr name="precision" />
+        <attr name="valueSize" />
+        <attr name="valueColor" />
+        <attr name="textOffsetPercentInRadius" />
+        <!-- 绘制内容相应的提示语 -->
+        <attr name="hint" />
+        <attr name="hintSize" />
+        <attr name="hintColor" />
+        <!-- 绘制内容的单位 -->
+        <attr name="unit" />
+        <attr name="unitSize" />
+        <attr name="unitColor" />
+        <!-- 圆弧宽度 -->
+        <attr name="arcWidth" />
+        <attr name="arcColors" />
+        <!-- 背景圆弧颜色 -->
+        <attr name="bgArcColor" />
+        <!-- 背景圆弧宽度 -->
+        <attr name="bgArcWidth" format="dimension" />
+    </declare-styleable>
+</resources>

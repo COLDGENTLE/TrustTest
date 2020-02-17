@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/qb_px_30"
+    android:layout_marginLeft="@dimen/qb_px_50"
+    android:layout_marginRight="@dimen/qb_px_50"
+    android:background="@drawable/white_bg_white_line_bg">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:visibility="gone"
+        android:gravity="center"
+        android:textSize="@dimen/qb_px_50"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:id="@+id/item_malfunction_time_tx"
+        android:text="18:25:00"
+        android:layout_width="@dimen/qb_px_200"
+        android:layout_height="wrap_content"
+        android:autoSizeMinTextSize="8dp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMaxTextSize="18dp"
+        android:maxLines="1"/>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/item_malfunction_end_layout"
+        android:layout_marginLeft="@dimen/qb_px_30"
+        android:layout_width="@dimen/qb_px_50"
+        android:layout_height="match_parent"
+        >
+
+        <View
+            android:layout_above="@+id/view_line"
+            android:layout_centerHorizontal="true"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#00AeFF"/>
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/qb_px_25"
+            android:layout_height="@dimen/qb_px_25"
+            android:background="#00AeFF"/>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/item_malfunction_view_layout"
+        android:layout_marginLeft="@dimen/qb_px_30"
+        android:layout_width="@dimen/qb_px_50"
+        android:layout_height="match_parent"
+        >
+
+        <View
+            android:layout_centerHorizontal="true"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#00AeFF"/>
+    </RelativeLayout>
+
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/item_malfunction_type_ic"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:src="@drawable/alert_defute_big_ic"
+        android:layout_width="@dimen/qb_px_80"
+        android:layout_height="@dimen/qb_px_80" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/item_malfunction_msg_tx"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/item_malfunction_num_tx"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <ImageView
+        android:id="@+id/bike_alert_list_error_ic"
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/bike_alert_error_ic"
+        android:layout_width="@dimen/qb_px_150"
+        android:layout_height="@dimen/qb_px_150"/>
+
+
+    <ImageView
+        android:visibility="invisible"
+        app:layout_constraintHorizontal_weight="1"
+        android:id="@+id/bike_alert_list_error_gone_ic"
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        app:layout_constraintTop_toBottomOf="@+id/bike_alert_list_error_ic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/bike_alert_error_ic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+
+
+    <TextView
+        android:id="@+id/bike_alert_list_bike_name_tv"
+        android:textSize="@dimen/qb_px_70"
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/bike_alert_list_error_ic"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:text="@string/demo_show_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/bike_alert_list_event_tv"
+        android:layout_marginTop="@dimen/qb_px_5"
+        android:textSize="@dimen/qb_px_60"
+        android:textColor="@color/gray222"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        app:layout_constraintTop_toBottomOf="@+id/bike_alert_list_bike_name_tv"
+        app:layout_constraintLeft_toRightOf="@+id/bike_alert_list_error_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="车辆振动 3 次"/>
+
+
+    <LinearLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:layout_marginBottom="@dimen/qb_px_50"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        app:layout_constraintLeft_toRightOf="@+id/bike_alert_list_error_gone_ic"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#f5f7fe"
+        android:layout_marginRight="@dimen/qb_px_50"
+        app:layout_constraintTop_toBottomOf="@+id/bike_alert_list_event_tv">
+
+        <View
+            android:layout_width="@dimen/qb_px_10"
+            android:layout_height="match_parent"
+            android:background="@drawable/blue_bg" />
+
+        <TextView
+            android:id="@+id/bike_alert_list_msg_tvr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/qb_px_50"
+            android:text="17:12:10 轻微震动" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/bike_alert_list_time_tv"
+        android:text="15:12"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="@dimen/qb_px_50"
+        android:layout_marginTop="@dimen/qb_px_50"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

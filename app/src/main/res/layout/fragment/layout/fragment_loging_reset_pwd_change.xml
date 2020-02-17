@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".loging.LogingActivity"
+>
+
+
+<TextView
+    android:id="@+id/login_type_tv"
+    android:fontFamily="@font/hwht_subset"
+    android:textStyle="bold"
+    android:textSize="@dimen/qb_px_50"
+    android:textColor="@color/colorWhiteGay"
+    android:text="@string/set_pwd_tx"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginTop="@dimen/qb_px_100"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingConstraints" />
+
+<LinearLayout
+    android:id="@+id/login_ed_layout"
+    android:layout_marginTop="@dimen/qb_px_123"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/login_type_tv"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/qb_px_143"
+    android:layout_marginLeft="@dimen/qb_px_143"
+    tools:ignore="MissingConstraints">
+
+
+    <include
+        android:visibility="visible"
+        android:id="@+id/fragment_loging_reset_pwd_change_first_pwd_ed"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/qb_px_30"
+        android:layout_marginRight="@dimen/qb_px_30"
+        android:layout_height="@dimen/qb_px_110"
+        layout="@layout/bs_edit_text_layout"/>
+
+
+  <include
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/qb_px_60"
+        android:id="@+id/fragment_loging_reset_pwd_change_second_pwd_ed"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/qb_px_30"
+        android:layout_marginRight="@dimen/qb_px_30"
+        android:layout_height="@dimen/qb_px_110"
+        layout="@layout/bs_edit_text_layout"/>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/bs_edit_text_pwd_line"
+        android:layout_marginTop="@dimen/qb_px_18"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1"
+        android:background="@color/gray6d"/>
+
+
+</LinearLayout>
+
+    <Button
+        android:layout_marginRight="@dimen/qb_px_143"
+        android:layout_marginLeft="@dimen/qb_px_143"
+        app:layout_constraintTop_toBottomOf="@+id/login_ed_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/fragment_loging_reset_pwd_change_submint_btn"
+        android:textColor="@color/blue2fc"
+        android:background="@drawable/white_bg_white_line_bg"
+        android:layout_marginTop="@dimen/qb_px_360"
+        android:text="@string/next_tx"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_110" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

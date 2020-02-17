@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/viewpager_ic"
+        android:src="@drawable/bind_car_connection_low_ic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1000"
+        android:contentDescription="TODO" />
+
+
+    <TextView
+        android:id="@+id/viewpager_name"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

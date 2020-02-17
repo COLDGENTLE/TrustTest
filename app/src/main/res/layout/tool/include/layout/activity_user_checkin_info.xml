@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home.user.checkininfo.UserCheckinInfoActivity">
+
+    <include
+        layout="@layout/tite_layout"/>
+
+    <ImageView
+        android:id="@+id/checkin_info_bg"
+        android:scaleType="fitXY"
+        android:src="@drawable/user_checkin_info_no_user_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+
+        <TextView
+            android:textSize="@dimen/qb_px_60"
+            android:gravity="center"
+            android:id="@+id/integral_info_num_tx"
+            android:lineSpacingExtra="@dimen/qb_px_30"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="@dimen/qb_px_70"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/qb_px_60"
+            android:background="@color/colorGrayEc"
+            android:paddingLeft="@dimen/qb_px_60"
+            android:text="@string/integral_info_title_tx"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_90" />
+
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/user_checkin_info_swlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_user_checkin_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <RelativeLayout
+        android:background="@drawable/grayf2f2_bg"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1350">
+
+        <TextView
+            android:textSize="@dimen/qb_px_60"
+            android:layout_marginTop="@dimen/qb_px_50"
+            android:layout_marginLeft="@dimen/qb_px_50"
+            android:textColor="@color/colorBlack"
+            android:text="选择车辆"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:src="@drawable/close_ic"
+            android:layout_marginRight="@dimen/qb_px_50"
+            android:id="@+id/popu_car_layout_close_btn"
+            android:layout_marginTop="@dimen/qb_px_50"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="@dimen/qb_px_50"
+            android:layout_below="@+id/popu_car_layout_close_btn"
+            android:id="@+id/pupo_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

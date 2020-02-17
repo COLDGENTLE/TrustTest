@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/qb_px_800"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorWhiteGay"
+   >
+
+
+    <LinearLayout
+        android:layout_width="@dimen/qb_px_800"
+        android:layout_marginTop="@dimen/qb_px_20"
+        android:layout_height="@dimen/qb_px_150"
+        android:layout_marginBottom="@dimen/qb_px_10">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_marginLeft="@dimen/qb_px_20"
+            android:layout_marginRight="@dimen/qb_px_10"
+            android:src="@drawable/icon_map"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_marginLeft="@dimen/qb_px_10"
+            android:layout_marginRight="@dimen/qb_px_10"
+            android:src="@drawable/ic_satellite_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_marginLeft="@dimen/qb_px_10"
+            android:layout_marginRight="@dimen/qb_px_20"
+            android:src="@drawable/ic_3d_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_marginBottom="@dimen/qb_px_20"
+        android:layout_width="@dimen/qb_px_800"
+        android:layout_height="@dimen/qb_px_100"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_map_btn"
+            android:textColor="@drawable/popuwindow_map_selector_tx_bg"
+            android:background="@drawable/popuwindow_map_selector_bg"
+            android:layout_marginLeft="@dimen/qb_px_20"
+            android:layout_marginRight="@dimen/qb_px_10"
+            android:gravity="center"
+            android:button="@null"
+            android:text="标准地图"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:id="@+id/radio_wxmap_btn"
+            android:textColor="@drawable/popuwindow_map_selector_tx_bg"
+            android:background="@drawable/popuwindow_map_selector_bg"
+            android:layout_marginLeft="@dimen/qb_px_10"
+            android:layout_marginRight="@dimen/qb_px_10"
+            android:gravity="center"
+            android:button="@null"
+            android:text="卫星地图"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:id="@+id/radio_theredmap_btn"
+            android:textColor="@drawable/popuwindow_map_selector_tx_bg"
+            android:background="@drawable/popuwindow_map_selector_bg"
+            android:layout_marginLeft="@dimen/qb_px_10"
+            android:layout_marginRight="@dimen/qb_px_20"
+            android:gravity="center"
+            android:button="@null"
+            android:text="3D地图"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </RadioGroup>
+
+
+</LinearLayout>

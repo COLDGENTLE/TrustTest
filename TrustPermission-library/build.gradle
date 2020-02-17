@@ -1,0 +1,34 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+def sdkVersion = rootProject.ext.androidVersion
+def supporCompiles = rootProject.ext.supporCompiles
+android {
+    compileSdkVersion sdkVersion.compileSdkVersion
+    defaultConfig {
+        minSdkVersion androidVersion["minSdkVersion"]
+        targetSdkVersion androidVersion["targetSdkVersion"]
+        versionCode androidVersion["versionCode"]
+        versionName androidVersion["versionName"]
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation supporCompiles["v7"]
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation 'org.aspectj:aspectjrt:1.9.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}

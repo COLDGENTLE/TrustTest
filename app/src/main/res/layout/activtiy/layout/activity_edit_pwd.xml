@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eaedef"
+    tools:context="com.sharkgulf.soloera.home.user.EditPwdActivity">
+
+    <include
+        layout="@layout/tite_layout"/>
+
+
+    <TextView
+        android:layout_marginRight="@dimen/qb_px_100"
+        android:layout_marginLeft="@dimen/qb_px_100"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/hwht_subset"
+        android:textSize="@dimen/qb_px_52"
+        android:textColor="@color/gray6d"
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:text="@string/edit_pwd_msg1_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:background="@color/colorWhiteGay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_150">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/hwht_subset"
+            android:layout_marginLeft="@dimen/qb_px_50"
+            android:gravity="center_vertical"
+            android:text="@string/phone_num_tx"
+            android:layout_width="@dimen/qb_px_250"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:textColor="@color/gray6d"
+            android:fontFamily="@font/hwht_num"
+            android:gravity="center_vertical"
+            android:id="@+id/edit_pwd_phone_tx"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGrayE5"/>
+
+
+    <RelativeLayout
+        android:id="@+id/edit_pwd_old_l"
+        android:background="@color/colorWhiteGay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/edit_pwd_old_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_150"
+            android:layout_marginLeft="@dimen/qb_px_50"
+            android:layout_marginRight="@dimen/qb_px_50"
+            layout="@layout/bs_edit_text_layout"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGrayE5"/>
+
+
+
+    <RelativeLayout
+        android:background="@color/colorWhiteGay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/edit_pwd_new_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_150"
+            android:layout_marginLeft="@dimen/qb_px_50"
+            android:layout_marginRight="@dimen/qb_px_50"
+            layout="@layout/bs_edit_text_layout"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGrayE5"/>
+
+
+
+
+    <RelativeLayout
+        android:background="@color/colorWhiteGay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/edit_pwd_new2_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_150"
+            android:layout_marginLeft="@dimen/qb_px_50"
+            android:layout_marginRight="@dimen/qb_px_50"
+            layout="@layout/bs_edit_text_layout"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGrayE5"/>
+
+
+
+    <TextView
+        android:id="@+id/edit_pwd_msg2_tv"
+        android:textSize="@dimen/qb_px_52"
+        android:textColor="@color/gray6d"
+        android:fontFamily="@font/hwht_num"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:text="密码必须不少于6个且不超过16个字符，字母或数字或符号"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+    <Button
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/qb_px_200"
+        android:textColor="@color/colorWhiteGay"
+        android:background="@drawable/blue_bg"
+        android:id="@+id/edit_pwd_submint_btn"
+        android:text="提交修改"
+        android:layout_width="@dimen/qb_px_780"
+        android:layout_height="@dimen/qb_px_110"  />
+
+
+</LinearLayout>

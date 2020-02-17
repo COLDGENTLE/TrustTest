@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="@dimen/qb_px_600"
+    android:layout_height="@dimen/qb_px_300"
+    android:gravity="center"
+    android:background="@color/colorWhiteGay">
+
+    <TextView
+        android:id="@+id/popuwindow_choose_layout_title_Tx"
+        android:text="是否删除车辆?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/popuwindow_choose_layout_submint_btn"
+            android:text="确定"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/popuwindow_choose_layout_cancel_btn"
+            android:text="取消"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

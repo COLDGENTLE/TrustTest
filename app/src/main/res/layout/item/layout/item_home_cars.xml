@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_150"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    >
+
+
+    <View
+        android:background="@color/blue0ff"
+        android:id="@+id/home_cars_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.sharkgulf.soloera.tool.view.TextDrawable
+        android:layout_marginLeft="@dimen/qb_px_100"
+        android:fontFamily="@font/hwht_subset"
+        android:id="@+id/item_cars_name"
+        android:gravity="center_vertical"
+        android:text="爱车名最长八个字"
+        android:textStyle="bold"
+        android:textColor="@color/gray555"
+        android:layout_width="@dimen/qb_px_550"
+        android:layout_height="match_parent"
+        app:leftDrawable="@drawable/user_devices_ic"
+        android:drawablePadding="@dimen/qb_px_40"
+        />
+
+    <TextView
+        android:textSize="@dimen/qb_px_40"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textColor="@color/colorWhiteGay"
+        android:background="@drawable/blue_0ff_bg"
+        android:text="@string/usering_tx"
+        android:layout_marginRight="@dimen/qb_px_50"
+        android:layout_alignParentRight="true"
+        android:id="@+id/item_cars_choose_im"
+        android:layout_width="@dimen/qb_px_180"
+        android:layout_height="@dimen/qb_px_80" />
+</RelativeLayout>

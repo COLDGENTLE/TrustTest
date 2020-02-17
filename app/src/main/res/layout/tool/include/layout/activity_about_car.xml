@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home.user.cars.AboutCarActivity">
+
+    <include
+        layout="@layout/tite_layout"/>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:text="@string/mac_tx"
+            android:textSize="@dimen/qb_px_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/qb_px_60"
+
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/about_car_mac_tv"
+                android:textSize="@dimen/qb_px_42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+    <RelativeLayout
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:text="@string/imei_tx"
+            android:textSize="@dimen/qb_px_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/qb_px_60"
+
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/about_car_imei_tv"
+                android:textSize="@dimen/qb_px_42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+    <RelativeLayout
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:text="@string/sn_tx"
+            android:textSize="@dimen/qb_px_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/qb_px_60"
+
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/about_car_sn_tv"
+                android:textSize="@dimen/qb_px_42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+    <RelativeLayout
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:text="@string/imsi_tx"
+            android:textSize="@dimen/qb_px_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/qb_px_60"
+
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/about_car_imsi_tv"
+                android:textSize="@dimen/qb_px_42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:text="@string/add_car_time_tx"
+            android:textSize="@dimen/qb_px_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/qb_px_60"
+
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/about_car_add_time_tv"
+                android:textSize="@dimen/qb_px_42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+    <RelativeLayout
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:text="@string/car_register_time_tx"
+            android:textSize="@dimen/qb_px_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/qb_px_60"
+
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/about_car_register_time_tv"
+                android:textSize="@dimen/qb_px_42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+    <RelativeLayout
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:text="@string/bind_car_day_tx"
+            android:textSize="@dimen/qb_px_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/qb_px_60"
+
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/about_car_bind_car_time_tv"
+                android:textSize="@dimen/qb_px_42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+    <RelativeLayout
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:text="@string/total_mileage_tx"
+            android:textSize="@dimen/qb_px_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/qb_px_60"
+
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+
+                android:id="@+id/about_car_bind_total_mileage_tv"
+                android:textSize="@dimen/qb_px_42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+</LinearLayout>

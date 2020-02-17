@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/item_month_title_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120"
+        android:orientation="horizontal"
+        android:background="#1e2e4d">
+
+        <TextView
+            android:gravity="center"
+            android:text="周一"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:gravity="center"
+            android:text="周二"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:gravity="center"
+            android:text="周三"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:gravity="center"
+            android:text="周四"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:gravity="center"
+            android:text="周五"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:gravity="center"
+            android:text="周六"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:gravity="center"
+            android:text="周日"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="@color/colorGrayC4"
+            android:gravity="center"
+            android:id="@+id/item_month_1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:textColor="#c4c4c4"
+            android:gravity="center"
+            android:id="@+id/item_month_2"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:textColor="#c4c4c4"
+            android:gravity="center"
+            android:id="@+id/item_month_3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:textColor="#c4c4c4"
+            android:gravity="center"
+            android:id="@+id/item_month_4"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:textColor="#c4c4c4"
+            android:gravity="center"
+            android:id="@+id/item_month_5"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:textColor="#c4c4c4"
+            android:gravity="center"
+            android:id="@+id/item_month_6"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:textColor="#c4c4c4"
+            android:gravity="center"
+            android:id="@+id/item_month_7"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

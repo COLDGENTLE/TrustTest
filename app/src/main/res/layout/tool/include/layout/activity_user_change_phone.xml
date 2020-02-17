@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.user.UserChangePhoneActivity"
+    android:background="@color/grayDef">
+
+    <include
+        android:id="@+id/change_phone_title_layout"
+        layout="@layout/tite_layout"/>
+
+
+    <TextView
+        android:layout_marginTop="@dimen/qb_px_75"
+        android:text="@string/change_pwd_msg1_tx"
+        android:id="@+id/change_phone_msg1_tv"
+        app:layout_constraintTop_toBottomOf="@+id/change_phone_title_layout"
+        style="@style/change_phone_tx_style"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:layout_marginTop="@dimen/qb_px_80"
+        app:layout_constraintTop_toBottomOf="@+id/change_phone_msg1_tv"
+        style="@style/change_phone_tx_style"
+        tools:ignore="MissingConstraints"
+        android:id="@+id/change_phone_msg2_tv"
+        android:text="@string/change_pwd_msg2_tx" />
+
+
+    <LinearLayout
+        android:id="@+id/change_pwd_layout"
+        android:layout_marginTop="@dimen/qb_px_50"
+        app:layout_constraintTop_toBottomOf="@+id/change_phone_msg2_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhiteGay"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/change_phone_layout"
+            android:layout_marginLeft="@dimen/qb_px_55"
+            android:layout_marginRight="@dimen/qb_px_55"
+            layout="@layout/bs_edit_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_150"/>
+
+        <View
+            android:layout_marginLeft="@dimen/qb_px_55"
+            android:background="@color/colorGrayE5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_3"/>
+
+        <include
+            android:id="@+id/change_phone_smms_layout"
+            android:layout_marginLeft="@dimen/qb_px_55"
+            android:layout_marginRight="@dimen/qb_px_55"
+            layout="@layout/bs_edit_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_150"/>
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/change_phone_submint_btn"
+        android:text="@string/confirm_2"
+        android:textColor="@color/colorWhiteGay"
+        android:layout_marginTop="@dimen/qb_px_80"
+        android:layout_marginLeft="@dimen/qb_px_55"
+        android:layout_marginRight="@dimen/qb_px_55"
+        android:background="@drawable/blue_0ff_bg"
+        app:layout_constraintTop_toBottomOf="@+id/change_pwd_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_150"
+        tools:ignore="MissingConstraints" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

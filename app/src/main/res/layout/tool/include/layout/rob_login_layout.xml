@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+
+
+    <LinearLayout
+        android:background="@drawable/white_bg"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/qb_px_150"
+        android:layout_marginRight="@dimen/qb_px_150"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_60">
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/rob_login_close_btn"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_close_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:text="检测到您的账号在其他设备登录"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGrayC4"/>
+
+    <TextView
+        android:textColor="@color/blue"
+        android:gravity="center"
+        android:id="@+id/rob_login_to_login_btn"
+        android:text="重新登录"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/qb_px_150" />
+
+    </LinearLayout>
+
+</LinearLayout>

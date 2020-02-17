@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="@dimen/qb_px_200"
+    android:orientation="horizontal"
+    android:scaleType="fitXY"
+    >
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:background="@drawable/controll_car_up_big_ic"
+        android:layout_width="@dimen/qb_px_300"
+        android:layout_height="@dimen/qb_px_300"
+        android:layout_marginTop="@dimen/qb_px_120"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+       >
+
+        <ImageView
+            android:background="@drawable/controll_car_start_bg"
+            android:layout_width="@dimen/qb_px_250"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:background="@drawable/controll_car_up__ic"
+        android:layout_width="@dimen/qb_px_200"
+        android:layout_height="@dimen/qb_px_200"
+        android:layout_marginBottom="@dimen/qb_px_60"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/qb_px_143"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:background="@drawable/controll_car_find_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:background="@drawable/controll_car_up__ic"
+        android:layout_width="@dimen/qb_px_200"
+        android:layout_height="@dimen/qb_px_200"
+        android:layout_marginBottom="@dimen/qb_px_60"
+        android:layout_marginRight="@dimen/qb_px_143"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:background="@drawable/controll_car_eitting_bucket_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/qb_px_143"
+        android:layout_marginTop="@dimen/qb_px_140"
+        android:layout_width="@dimen/qb_px_200"
+        android:layout_height="@dimen/qb_px_200"
+        android:background="@drawable/controll_car_up__ic"
+        android:gravity="center">
+
+        <ImageView
+            android:background="@drawable/controll_car_lock_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/qb_px_140"
+        android:layout_marginRight="@dimen/qb_px_143"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/qb_px_200"
+        android:layout_height="@dimen/qb_px_200"
+        android:background="@drawable/controll_car_up__ic"
+        android:gravity="center"
+        >
+
+
+        <ImageView
+            android:background="@drawable/controll_car_unlock_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+    </RelativeLayout>
+
+
+
+    <com.sharkgulf.soloera.tool.view.TextDrawable
+        style="@style/controll_car_style"
+        app:topDrawableHeight="@dimen/qb_px_130"
+        app:topDrawableWidth="@dimen/qb_px_130"
+        app:topDrawable="@drawable/home_controll_lock_close_ic"
+        android:id="@+id/controll_one_lock_btn"
+        android:text="@string/car_lock_tx"
+         />
+
+
+    <com.sharkgulf.soloera.tool.view.TextDrawable
+        style="@style/controll_car_style"
+        app:topDrawableHeight="@dimen/qb_px_130"
+        app:topDrawableWidth="@dimen/qb_px_130"
+        app:topDrawable="@drawable/home_controll_lock_open_ic"
+        android:id="@+id/controll_one_unlock_btn"
+        android:text="@string/car_open_lock_tx" />
+
+
+    <com.sharkgulf.soloera.tool.view.TextDrawable
+        style="@style/controll_car_style"
+        app:topDrawableHeight="@dimen/qb_px_130"
+        app:topDrawableWidth="@dimen/qb_px_130"
+        app:topDrawable="@drawable/home_controll_start_ic"
+        android:id="@+id/controll_one_start_btn"
+        android:text="@string/car_start_tx"
+        />
+
+    <com.sharkgulf.soloera.tool.view.TextDrawable
+        style="@style/controll_car_style"
+        app:topDrawableHeight="@dimen/qb_px_130"
+        app:topDrawableWidth="@dimen/qb_px_130"
+        app:topDrawable="@drawable/home_controll_bucket_ic"
+        android:id="@+id/controll_one_bucket_btn"
+        android:text="@string/car_bucket_tx"
+       />
+
+    <com.sharkgulf.soloera.tool.view.TextDrawable
+        style="@style/controll_car_style"
+        app:topDrawableHeight="@dimen/qb_px_130"
+        app:topDrawableWidth="@dimen/qb_px_130"
+        app:topDrawable="@drawable/home_controll_find_car_ic"
+        android:id="@+id/controll_one_find_btn"
+        android:text="@string/car_find_tx"
+        />
+
+</LinearLayout>

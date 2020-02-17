@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loging.LogingActivity"
+    >
+
+
+    <TextView
+        android:id="@+id/ver_code_type_tv"
+        android:fontFamily="@font/hwht_subset"
+        android:textStyle="bold"
+        android:textSize="@dimen/qb_px_50"
+        android:textColor="@color/colorWhiteGay"
+        android:text="@string/input_verification_code_tx"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/qb_px_100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:fontFamily="@font/hwht_subset"
+        android:layout_marginTop="@dimen/qb_px_121"
+        android:textColor="@color/colorWhiteGay"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ver_code_type_tv"
+        android:id="@+id/ver_code_tx"
+        android:lineSpacingExtra="@dimen/qb_px_10"
+        android:textStyle="bold"
+        android:textSize="@dimen/qb_px_48"
+        android:text="@string/verification_code_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+
+    <com.tuo.customview.VerificationCodeView
+        app:icv_et_text_color="@color/colorBlack"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ver_code_tx"
+        android:id="@+id/fragment_berification_code_ed"
+        app:icv_et_number="6"
+        app:icv_et_bg_focus="@drawable/ver_code_bg_focus"
+        app:icv_et_bg_normal="@drawable/ver_code_bg_normal"
+        app:icv_et_divider_drawable="@drawable/shape_divider_identifying"
+        android:layout_marginTop="@dimen/qb_px_78"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_150"
+        app:icv_et_width="@dimen/qb_px_130"
+        tools:ignore="MissingConstraints" />
+
+
+
+    <TextView
+        android:fontFamily="@font/hwht_subset"
+        android:textColor="@color/colorWhiteGay"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_berification_code_ed"
+        android:visibility="gone"
+        android:textSize="@dimen/qb_px_36"
+        android:layout_marginTop="@dimen/qb_px_90"
+        android:id="@+id/fragment_login_verification_code_reacquire_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:fontFamily="@font/hwht_subset"
+        android:textColor="@color/colorWhiteGay"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_login_verification_code_reacquire_tx"
+        android:visibility="gone"
+        android:id="@+id/fragment_login_verification_code_reacquire_btn"
+        android:textSize="@dimen/qb_px_36"
+        android:layout_marginTop="@dimen/qb_px_90"
+        android:text="@string/verification_code_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:fontFamily="@font/hwht_subset"
+        android:textColor="@color/colorWhiteGay"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_login_verification_code_reacquire_btn"
+        android:visibility="invisible"
+        android:id="@+id/fragment_login_voice_txt_btn"
+        android:textSize="@dimen/qb_px_36"
+        android:layout_marginTop="@dimen/qb_px_90"
+        android:text="@string/verification_code_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

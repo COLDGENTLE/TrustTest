@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_efefef"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/help_layout_reseach_layout"
+        android:layout_above="@+id/help_layout_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:alpha="0.5"
+            android:textColor="@color/gray555"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="轻触空白区域\n重新搜索车辆"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/qb_px_50"
+        android:layout_marginRight="@dimen/qb_px_50"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:id="@+id/help_layout_btn_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/white_bg_white_line_bg">
+
+
+        <TextView
+            android:layout_marginTop="@dimen/qb_px_50"
+            android:layout_above="@+id/help_layout_btn_layout"
+            android:layout_marginLeft="@dimen/qb_px_50"
+            android:textColor="@color/gray555"
+            android:textSize="@dimen/qb_px_42"
+            android:text="无法搜索到车辆,可能原因如下:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:layout_marginRight="@dimen/qb_px_50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:gravity="center"
+            android:layout_marginTop="@dimen/qb_px_18"
+            android:textColor="@color/gray555"
+            android:textSize="@dimen/qb_px_50"
+            android:text="车辆未进入待绑定状态"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/qb_px_92"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:alpha="0.5"
+            android:id="@+id/help_layout_s1_msg_tv"
+            app:layout_constraintTop_toBottomOf="@+id/help_layout_back_btn"
+            android:lineHeight="@dimen/qb_px_50"
+            android:textSize="@dimen/qb_px_42"
+            android:layout_marginTop="@dimen/qb_px_10"
+            android:textColor="@color/gray555"
+            android:text="车辆进入待绑定状态超过2分钟，将自动退出此状态，\n请按照添加车辆引导步骤重新进入待绑定状态"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/help_layout_back_btn"
+            android:textColor="@color/blue0ff"
+            android:layout_marginTop="@dimen/qb_px_20"
+            android:gravity="center"
+            android:text="返回查看"
+            android:layout_width="@dimen/qb_px_300"
+            android:layout_height="@dimen/qb_px_92"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:background="@color/gray6d"
+            android:layout_marginTop="@dimen/qb_px_50"
+            app:layout_constraintTop_toBottomOf="@+id/help_layout_s1_msg_tv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/qb_px_1"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginRight="@dimen/qb_px_50"
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_280"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:gravity="center"
+            android:layout_marginTop="@dimen/qb_px_18"
+            android:textColor="@color/gray555"
+            android:textSize="@dimen/qb_px_50"
+            android:text="手机蓝牙搜索异常"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/qb_px_92"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:alpha="0.5"
+            android:id="@+id/help_layout_s2_msg_tv"
+            app:layout_constraintTop_toBottomOf="@+id/help_layout_reseach_btn"
+            android:lineHeight="@dimen/qb_px_50"
+            android:textSize="@dimen/qb_px_42"
+            android:layout_marginTop="@dimen/qb_px_10"
+            android:textColor="@color/gray555"
+            android:text="长时间未搜索到车辆，重新搜索车辆"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/help_layout_reseach_btn"
+            android:textColor="@color/blue0ff"
+            android:layout_marginTop="@dimen/qb_px_20"
+            android:gravity="center"
+            android:text="重新搜索"
+            android:layout_width="@dimen/qb_px_300"
+            android:layout_height="@dimen/qb_px_92"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:background="@color/gray6d"
+            android:layout_marginTop="@dimen/qb_px_50"
+            app:layout_constraintTop_toBottomOf="@+id/help_layout_s2_msg_tv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/qb_px_1"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_marginRight="@dimen/qb_px_50"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_200"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="@dimen/qb_px_18"
+            android:textColor="@color/gray555"
+            android:textSize="@dimen/qb_px_50"
+            android:text="手机蓝牙异常"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:alpha="0.5"
+            android:lineHeight="@dimen/qb_px_50"
+            android:textSize="@dimen/qb_px_42"
+            android:layout_marginTop="@dimen/qb_px_10"
+            android:textColor="@color/gray555"
+            android:text="请重启手机后，再次尝试添加车辆"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

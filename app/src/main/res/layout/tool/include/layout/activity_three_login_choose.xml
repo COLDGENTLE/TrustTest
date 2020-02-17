@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loging.ThreeLoginChooseActivity">
+
+    <ImageView
+        android:id="@+id/three_user_ic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/qb_px_300"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="@dimen/qb_px_400"
+        android:layout_height="@dimen/qb_px_400"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/three_user_type_tx"
+        android:layout_marginTop="@dimen/qb_px_100"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/three_user_ic"
+        android:text="测试"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:layout_marginTop="@dimen/qb_px_100"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/three_user_type_tx"
+        android:id="@+id/three_login_submint_btn"
+        android:textColor="#ffffff"
+        android:background="@drawable/login_register_btn_bg"
+        android:text="@string/three_login_submint_tx"
+        android:layout_width="@dimen/qb_px_500"
+        android:layout_height="@dimen/qb_px_120" />
+
+
+    <TextView
+        android:textColor="@color/textBlue"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/qb_px_100"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/three_login_submint_btn"
+        android:id="@+id/three_login_other_submint_btn"
+        android:text="@string/three_login_other_submint_tx"
+        android:layout_width="@dimen/qb_px_500"
+        android:layout_height="@dimen/qb_px_120" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

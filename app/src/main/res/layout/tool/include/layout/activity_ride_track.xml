@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/testtetet"
+    tools:context=".cards.activity.history.RideTrackActivity">
+
+    <include
+        android:visibility="gone"
+        layout="@layout/tite_layout"/>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/ride_track_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <ImageView
+            android:tint="@color/colorWhiteGay"
+            android:src="@drawable/ic_black"
+            android:id="@+id/ride_track_black_btn"
+            android:background="@drawable/ride_track_btn_bg"
+            android:layout_width="40dp"
+            android:layout_height="50dp" />
+
+        <ImageView
+            android:scaleType="center"
+            android:tint="@color/colorWhiteGay"
+            android:src="@drawable/map_type"
+            android:id="@+id/ride_track_map_type_btn"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ride_track_btn_bg"
+            android:layout_width="40dp"
+            android:layout_height="50dp" />
+
+
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/ride_track_map_type_btn"
+            android:layout_toRightOf="@+id/ride_track_black_btn"
+            android:id="@+id/ride_track_address_"
+            android:background="@drawable/ride_track_btn_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+
+            <TextView
+                android:id="@+id/ride_track_start_tx"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorWhiteGay"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/ride_track_end_tx"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorWhiteGay"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:background="@drawable/ride_track_btn_bg"
+        android:layout_above="@+id/ride_track_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="@dimen/qb_px_50"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:src="@drawable/ride_track_control_start_ic"
+            android:id="@+id/ride_track_control_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+
+        <ImageView
+            android:src="@drawable/ride_track_control_speed_1_ic"
+            android:id="@+id/ride_track_control_speed_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:src="@drawable/ride_track_control_map_big_ic"
+            android:id="@+id/ride_track_control_map_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:src="@drawable/ride_track_control_map_hirsory_line_ic"
+            android:id="@+id/ride_track_control_data_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/qb_px_100"
+        android:id="@+id/ride_track_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.sharkgulf.soloera.tool.view.trackprogressview.TrackProgressView
+            android:background="@color/colorWhiteGay"
+            android:id="@+id/ride_track__track_progress_view"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_500"/>
+
+
+        <LinearLayout
+            android:background="@drawable/white_bg_white_line_bg"
+            android:layout_marginRight="@dimen/qb_px_50"
+            android:layout_marginLeft="@dimen/qb_px_50"
+            android:id="@+id/ride_track_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_150"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/qb_px_50"
+                    android:src="@drawable/stroke_bike_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/stroke_time_tx"
+                    android:layout_marginLeft="@dimen/qb_px_30"
+                    android:text="14:00:29 - 18:08:21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray092"/>
+
+
+
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/qb_px_50"
+                android:background="@drawable/blue_0ff_bg"
+                android:layout_marginRight="@dimen/qb_px_50"
+                android:layout_marginLeft="@dimen/qb_px_50"
+                android:layout_marginTop="@dimen/qb_px_50"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_200">
+
+                <TextView
+                    android:textColor="@color/colorWhiteGay"
+                    android:gravity="center"
+                    android:id="@+id/ride_track_sum_tx"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:textColor="@color/colorWhiteGay"
+                    android:id="@+id/ride_track_time_tx"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:textColor="@color/colorWhiteGay"
+                    android:gravity="center"
+                    android:id="@+id/ride_track_speed_tx"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

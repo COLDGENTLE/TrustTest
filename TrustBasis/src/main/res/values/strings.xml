@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TrustLibrary</string>
+    <!--<string name="JsonSyntaxException"> APP数据解析异常，请检查车辆状态是否正常!</string>-->
+    <string name="JsonSyntaxException"> 数据解析异常!</string>
+    <string name="UnknownHostException"> 无法解析主机“echo.websocket.org”：没有与主机关联的地址</string>
+    <string name="HttpTimeOut"> 请求超时</string>
+</resources>

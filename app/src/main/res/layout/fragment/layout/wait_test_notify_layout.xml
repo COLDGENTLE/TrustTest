@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@+id/test_notify_title"
+        layout="@layout/tite_layout"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/test_alert_auto_black_layout"
+        android:layout_marginRight="@dimen/qb_px_50"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:layout_below="@+id/test_notify_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:textColor="@color/textBlue"
+            android:text="@string/test_alert_auto_black_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <com.sharkgulf.soloera.tool.view.HoloCircularProgressBar
+            android:layout_marginTop="@dimen/qb_px_400"
+            android:layout_width="@dimen/qb_px_600"
+            android:layout_height="@dimen/qb_px_600"
+            app:progress_color="#049af6"
+            app:progress_background_color="#a9aaac"
+            android:max="30"
+            android:id="@+id/test_notify_auto_black_progressbar" />
+
+        <TextView
+            android:id="@+id/test_notify_auto_black_num_tx"
+            android:textColor="#049af6"
+            android:textSize="@dimen/qb_px_200"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/test_alert_wait_layout"
+        android:layout_below="@+id/test_notify_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_marginTop="@dimen/qb_px_100"
+            android:text="您是否确认已收到 (APP推送) 的报警通知?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/qb_px_400"
+            android:layout_width="@dimen/qb_px_600"
+            android:layout_height="@dimen/qb_px_600"
+            >
+
+
+            <com.sharkgulf.soloera.tool.view.HoloCircularProgressBar
+                app:progress_color="#049af6"
+                app:progress_background_color="#a9aaac"
+                android:max="30"
+                android:id="@+id/test_notify_progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/test_notify_num_tx"
+                android:textColor="#049af6"
+                android:textSize="@dimen/qb_px_200"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/test_alert_wait_btn_layout"
+        android:layout_marginLeft="@dimen/qb_px_60"
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/qb_px_100"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/test_notify_finsh_btn"
+            android:gravity="center"
+            android:text="已收到"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_150" />
+
+        <Button
+            android:id="@+id/test_notify_resend_btn"
+            android:gravity="center"
+            android:text="未收到"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_150" />
+
+        <Button
+            android:id="@+id/test_notify_end_btn"
+            android:gravity="center"
+            android:text="结束测试"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_150" />
+
+    </LinearLayout>
+</RelativeLayout>

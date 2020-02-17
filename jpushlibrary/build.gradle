@@ -1,0 +1,111 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'com.jfrog.artifactory'
+apply plugin: 'maven-publish'
+
+def packageName = 'com.sharkgulf.jpush'
+def libraryVersion = '0.0.4'
+
+publishing {
+    publications {
+        aar(MavenPublication) {
+            groupId packageName
+            version = libraryVersion
+            artifactId project.getName()
+            // Tell maven to prepare the generated "*.aar" file for publishing
+            artifact("$buildDir/outputs/aar/${project.getName()}-release.aar")
+        }
+    }
+}
+
+artifactory {
+    contextUrl = 'http://i.ti-link.com.cn/artifactory'  // 表示要发布到哪里去，上下文连接
+    publish {
+        repository {
+            repoKey = 'libs-release-local'  // artifactory分支，可在artifactory查看
+            username = "mahaitao"  // artifactory 默认管理员
+            password = "abcd1357"  // artifactory 默认管理员密码
+        }
+        defaults {
+            publications('aar')  // 表示要发布的文件类型
+            publishArtifacts = true
+            properties = ['qa.level': 'basic', 'dev.team': 'core']
+            publishPom = true  // 是否将自动生成的pom.xml文件发布到Artifactory
+        }
+    }
+}
+
+
+android {
+    compileSdkVersion 28
+
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        manifestPlaceholders = [
+//                JPUSH_PKGNAME : "com.eavoo.submarine",
+//                JPUSH_APPKEY : "2cfc7dead0fbc7403ef4e8e3",
+//                JPUSH_CHANNEL : "jpush-default",
+//                MEIZU_APPKEY:"12312313",
+//                MEIZU_APPID:"12312313",
+//                XIAOMI_APPID:"MI-2882303761517473137",
+//                XIAOMI_APPKEY:"MI-5751747321137",
+//                HUAWEI_APPID:"10539217",
+//                HMSVERSION:"2.6.3.301",
+//                OPPO_APPKEY:"OP-2fd85f638a2642d289a744cdde28c307",
+//                OPPO_APPID:"OP-30089734",
+//                OPPO_APPSECRET:"OP-44fc03d1f86646059a3aac7fb572d6c2",
+//                VIVO_APPKEY:"1231231231321",
+//                VIVO_APPID:"1231231231321",
+//                trust:"2882303761518010495"
+//        ]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        flatDir{
+            dirs 'libs'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'cn.jiguang.sdk:jpush:3.5.4'
+    implementation 'cn.jiguang.sdk:jcore:2.2.4'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //huawei
+    implementation 'cn.jiguang.sdk.plugin:huawei:3.5.4'
+    //xiaomi
+    implementation 'cn.jiguang.sdk.plugin:xiaomi:3.5.4'
+    //oppo
+    implementation 'cn.jiguang.sdk.plugin:oppo:3.5.4'
+    //vivo
+    implementation 'cn.jiguang.sdk.plugin:vivo:3.5.4'
+    //meizu
+    implementation 'cn.jiguang.sdk.plugin:meizu:3.5.4'
+
+    implementation 'com.huawei.hms:push:3.0.3.301'
+}
+
+apply plugin: 'com.huawei.agconnect'

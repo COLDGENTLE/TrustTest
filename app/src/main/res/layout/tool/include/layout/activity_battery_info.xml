@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayDef"
+    tools:context=".cards.activity.battery.BatteryInfoActivity">
+
+    <include
+
+        android:id="@+id/battery_info_title"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/tite_layout"/>
+
+    <RelativeLayout
+        app:layout_constraintTop_toBottomOf="@+id/battery_info_title"
+        android:id="@+id/battert_fragment1_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fragment
+            android:visibility="visible"
+            android:id="@+id/battert_fragment1"
+            android:layout_marginTop="@dimen/qb_px_50"
+            android:tag="BatteryFragment1"
+            android:name="com.sharkgulf.soloera.cards.activity.battery.BatteryFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints" />
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_500"
+    android:background="@color/colorBlack"
+    android:layout_marginLeft="@dimen/qb_px_50"
+    android:layout_marginRight="@dimen/qb_px_50"
+    >
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/qb_px_460"
+            android:layout_height="@dimen/qb_px_400"
+            android:src="@drawable/home_controll_car_ic"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/item_car_module_tv"
+            android:layout_marginLeft="@dimen/qb_px_70"
+            android:fontFamily="@font/hwht_num"
+            android:textStyle="bold"
+            android:textSize="@dimen/qb_px_104"
+            android:layout_marginTop="@dimen/qb_px_50"
+            app:layout_constraintLeft_toRightOf="@+id/image"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/colorWhiteGay"
+            android:text="Rober 6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/qb_px_30"
+            android:id="@+id/item_mac_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/qb_px_70"
+            android:text="MAC:asdasdasdasdasdsad"
+            android:textColor="@color/gray6d"
+            app:layout_constraintLeft_toRightOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@+id/item_car_num_txt"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/qb_px_50"
+            android:id="@+id/item_car_num_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/qb_px_70"
+            android:textColor="@color/gray6d"
+            app:layout_constraintLeft_toRightOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@+id/item_car_module_tv"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/item_car_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/greene4d"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_1"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

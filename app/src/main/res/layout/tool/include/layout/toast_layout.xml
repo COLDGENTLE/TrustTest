@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/gray_2b_bg">
+    <TextView
+        android:layout_margin="@dimen/qb_px_50"
+        android:textColor="@color/colorWhiteGay"
+        android:id="@+id/toast_msg_tv"
+        android:text = "我是toast测试"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

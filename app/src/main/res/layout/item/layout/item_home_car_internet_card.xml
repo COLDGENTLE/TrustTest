@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_680"
+    android:layout_marginTop="@dimen/qb_px_20"
+    android:background="#00000000"
+   >
+    <fragment
+        android:tag="FragmentHomeCarInternetStatusCard"
+        android:name="com.sharkgulf.soloera.home.fragment.FragmentHomeCarInternetStatusCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.cardview.widget.CardView>

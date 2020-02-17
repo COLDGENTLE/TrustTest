@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhiteGay"
+    tools:context=".cards.activity.battery.BatteryActivity"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+
+        <include
+            android:id="@+id/battery_toolbar"
+            layout="@layout/tite_layout"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_1280">
+
+
+            <com.sharkgulf.soloera.tool.view.layout.weight.BatteryBgView
+                android:id="@+id/battery_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="@dimen/qb_px_100"
+                android:id="@+id/battery_progress_layout"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_790"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <com.sharkgulf.soloera.tool.view.progress.WaveProgress
+                    android:id="@+id/battery_wave_progress_view"
+                    android:layout_width="@dimen/qb_px_630"
+                    android:layout_height="@dimen/qb_px_630"
+                    android:layout_centerInParent="true"
+                    app:bgCircleColor="@color/transparent"
+                    app:darkWaveAnimTime="1000"
+                    app:darkWaveColor="@color/transparent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lightWaveAnimTime="2000"
+                    app:lightWaveColor="@color/colorWhiteGay"
+                    app:lightWaveDirect="R2L"
+                    app:lockWave="false"
+                    app:value="0"
+                    app:waveHeight="10dp"
+                    app:waveNum="1" />
+
+
+                <com.sharkgulf.soloera.tool.view.progress.CircleProgress
+                    android:id="@+id/circle_progress_bar"
+                    android:layout_width="@dimen/qb_px_680"
+                    android:layout_height="@dimen/qb_px_680"
+                    android:layout_centerInParent="true"
+                    app:antiAlias="true"
+                    app:arcWidth="5dp"
+                    app:bgArcColor="#000000"
+                    app:bgArcWidth="5dp"
+                    app:hintSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:maxValue="160"
+                    app:startAngle="135"
+                    app:sweepAngle="270"
+                    app:unitSize="15sp"
+                    app:value="0"
+                    app:valueSize="25sp" />
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="@dimen/qb_px_15"
+                    android:layout_height="@dimen/qb_px_30"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/qb_px_325"
+                    android:layout_marginBottom="@dimen/qb_px_120"
+                    android:background="@color/colorBlack"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="@dimen/qb_px_20"
+                    android:layout_height="@dimen/qb_px_30"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/qb_px_300"
+                    android:layout_marginBottom="@dimen/qb_px_110"
+                    android:background="@color/colorBlack"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/battery_mileage_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/battery_status_im"
+                        android:src="@drawable/battery_ic_add_pwder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/battery_status_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/battery_mileage_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/qb_px_30"
+                    android:fontFamily="@font/hwht_subset"
+                    android:textColor="@color/colorWhiteGay"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/battery_mileage_layout" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <View
+                android:layout_marginTop="@dimen/qb_px_50"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/battery_progress_layout"
+                android:layout_width="@dimen/qb_px_5"
+                android:layout_height="@dimen/qb_px_100"
+                android:background="@color/colorWhiteGay"></View>
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/qb_px_100"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/battery_progress_layout"
+                android:layout_width="@dimen/qb_px_300"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:alpha="0.7"
+                    android:text="@string/estimated_mileage_tx"
+                    android:textColor="@color/colorWhiteGay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/battery_mileage_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/hwht_num"
+                    android:text="74.3"
+                    android:textColor="@color/colorWhiteGay"
+                    android:textSize="@dimen/qb_px_130" />
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginRight="@dimen/qb_px_100"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/battery_progress_layout"
+                android:layout_width="@dimen/qb_px_300"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:alpha="0.7"
+                    android:text="@string/battery_nomorl_info_tx"
+                    android:textColor="@color/colorWhiteGay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="00"
+                    android:id="@+id/battery1_num_tv"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/hwht_num"
+                    android:textColor="@color/colorWhiteGay"
+                    android:textSize="@dimen/qb_px_130" />
+
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <TextView
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/qb_px_44"
+            android:fontFamily="@font/hwht_subset"
+            android:textColor="@color/colorWhiteGay"
+            android:text="电池状态实时检测中"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/qb_px_200"
+            android:layout_marginLeft="@dimen/qb_px_200"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_670">
+
+            <ImageView
+                android:src="@drawable/battery_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_670" />
+
+
+            <ImageView
+                android:id="@+id/battery1_status_ic"
+                android:layout_marginTop="@dimen/qb_px_200"
+                android:layout_marginLeft="@dimen/qb_px_180"
+                android:src="@drawable/battery_nomorl_bg"
+                android:layout_width="@dimen/qb_px_300"
+                android:layout_height="@dimen/qb_px_250" />
+
+            <TextView
+                android:id="@+id/battery1_text_tv"
+                android:layout_marginTop="@dimen/qb_px_370"
+                android:layout_marginLeft="@dimen/qb_px_260"
+                android:textSize="@dimen/qb_px_30"
+                android:fontFamily="@font/hwht_subset"
+                android:text="电池电量%"
+                android:textColor="@color/colorWhiteGay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/qb_px_270"
+                android:layout_below="@+id/battery1_status_ic"
+                android:textSize="@dimen/qb_px_60"
+                android:fontFamily="@font/hwht_num"
+                android:text="50%"
+                android:textColor="@color/colorWhiteGay"
+                android:layout_width="@dimen/qb_px_130"
+                android:layout_height="wrap_content" />
+
+
+
+
+
+
+            <ImageView
+                android:id="@+id/battery2_status_ic"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/qb_px_150"
+                android:layout_marginTop="@dimen/qb_px_200"
+                android:src="@drawable/battery_nomorl_bg"
+                android:layout_width="@dimen/qb_px_300"
+                android:layout_height="@dimen/qb_px_250" />
+
+
+            <TextView
+                android:id="@+id/battery2_text_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/qb_px_370"
+                android:layout_marginRight="@dimen/qb_px_230"
+                android:textSize="@dimen/qb_px_30"
+                android:fontFamily="@font/hwht_subset"
+                android:text="电池电量%"
+                android:textColor="@color/colorWhiteGay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/battery2_num_tv"
+                android:layout_marginRight="@dimen/qb_px_230"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/battery1_status_ic"
+                android:textSize="@dimen/qb_px_60"
+                android:fontFamily="@font/hwht_num"
+                android:text="50%"
+                android:textColor="@color/colorWhiteGay"
+                android:layout_width="@dimen/qb_px_130"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/battery1_tem_text_tv"
+            android:layout_marginTop="@dimen/qb_px_100"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/gray555"
+            android:text="电池温度26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.sharkgulf.soloera.tool.view.TextDrawable
+            android:layout_marginTop="@dimen/qb_px_50"
+            android:visibility="visible"
+            android:id="@+id/battery2_add_power_tv"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/gray555"
+            android:text="电池1约需要 6小时26分钟 可以充电完成"
+            app:leftDrawable="@drawable/battery_ic_add_pwder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="@dimen/qb_px_60"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_190"
+            android:background="@drawable/gray_f8f8f8_bg_efefef_line"
+            android:layout_marginLeft="@dimen/qb_px_50"
+            android:layout_marginRight="@dimen/qb_px_50"
+            >
+
+            <ImageView
+                android:paddingTop="@dimen/qb_px_20"
+                android:paddingBottom="@dimen/qb_px_20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="@dimen/qb_px_200"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/battery_info_tx_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:layout_marginLeft="@dimen/qb_px_30"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/hwht_subset"
+                android:textColor="@color/gray555"
+                android:text="中控电池安全"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/battery_day_tv"
+                android:layout_marginRight="@dimen/qb_px_35"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/qb_px_30"
+                android:fontFamily="@font/hwht_subset"
+                android:textColor="@color/gray555"
+                android:text="可待机0天"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:alpha="0.5"
+                android:layout_marginTop="@dimen/qb_px_10"
+                android:id="@+id/battery_time_tv"
+                android:layout_marginRight="@dimen/qb_px_30"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/battery_day_tv"
+                android:fontFamily="@font/hwht_subset"
+                android:textColor="@color/gray555"
+                android:text="最近更新时间0小时前"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/battery_info_btn"
+            android:layout_marginTop="@dimen/qb_px_40"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_190"
+            android:background="@drawable/gray_f8f8f8_bg_efefef_line"
+            android:layout_marginLeft="@dimen/qb_px_50"
+            android:layout_marginRight="@dimen/qb_px_50"
+            >
+
+            <TextView
+                android:layout_marginLeft="@dimen/qb_px_30"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/hwht_subset"
+                android:textColor="@color/gray555"
+                android:text="电池基本信息"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:src="@drawable/battery_btn_ic"
+                    android:layout_marginRight="@dimen/qb_px_30"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+</ScrollView>

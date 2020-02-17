@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:clickable="true"
+    android:background="@color/colorWhiteGay"
+    tools:context=".home.MainActivity">
+
+
+
+<!-- main_layout_start-->
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:overScrollMode="never"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:id="@+id/activity_main_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <LinearLayout
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:clipChildren="false"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+            <RelativeLayout
+                android:background="@color/blue0ff"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center_vertical">
+
+
+
+                <RelativeLayout
+                    android:id="@+id/main_car_layout"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:visibility="visible"
+                        android:padding="@dimen/qb_px_10"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/qb_px_60"
+                        android:id="@+id/main_car_settings"
+                        android:src="@drawable/home_menu_ic"
+                        android:layout_width="@dimen/qb_px_100"
+                        android:layout_height="@dimen/qb_px_100" />
+
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:padding="@dimen/qb_px_10"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/qb_px_60"
+                        android:id="@+id/main_black_demo_btn"
+                        android:src="@drawable/lleft_ic"
+                        android:layout_width="@dimen/qb_px_100"
+                        android:layout_height="@dimen/qb_px_100" />
+                </RelativeLayout>
+
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/spinner_bikes_layout"
+                    android:paddingLeft="@dimen/qb_px_20"
+                    android:paddingRight="@dimen/qb_px_20"
+                    android:layout_marginLeft="@dimen/qb_px_50"
+                    android:layout_toRightOf="@+id/main_car_layout"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/bike_demo_tx"
+                        android:id="@+id/main_car_info"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhiteGay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/qb_px_100"
+                        />
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:src="@drawable/ic_icon_select"
+                        android:spinnerMode="dropdown"
+                        android:id="@+id/fragment_my_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/main_car_info"
+                        />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/home_ble_im"
+                    android:layout_marginRight="@dimen/qb_px_27"
+                    android:layout_toLeftOf="@+id/home_alert_list_layout"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/home_ble_disenable_ic"
+                    android:layout_width="@dimen/qb_px_80"
+                    android:layout_height="@dimen/qb_px_80" />
+
+                <ImageView
+                    android:id="@+id/home_bike_status_ic"
+                    android:layout_marginRight="@dimen/qb_px_27"
+                    android:layout_toLeftOf="@+id/home_ble_im"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/home_bike_status_unconnect_ic"
+                    android:layout_width="@dimen/qb_px_80"
+                    android:layout_height="@dimen/qb_px_80" />
+
+
+
+                <RelativeLayout
+                    android:id="@+id/home_alert_list_layout"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/qb_px_40"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="@dimen/qb_px_80"
+                    android:layout_height="@dimen/qb_px_80">
+
+
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:id="@+id/fragment_main_message_btn"
+                        android:src="@drawable/home_alert_ic"
+                        android:layout_width="@dimen/qb_px_80"
+                        android:layout_height="@dimen/qb_px_80"/>
+
+                    <View
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone"
+                        android:id="@+id/fragment_read_status_ic"
+                        android:layout_marginBottom="@dimen/qb_px_60"
+                        android:background="@drawable/alert_popu_button_down_bg"
+                        android:layout_width="@dimen/qb_px_20"
+                        android:layout_height="@dimen/qb_px_20"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <!-- main_layout_end-->
+
+    <!--no_car_layout_start-->
+    <RelativeLayout
+        android:id="@+id/no_car_layout"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <com.sharkgulf.soloera.tool.view.BsVideoView
+            android:visibility="visible"
+            android:layout_centerInParent="true"
+            android:id="@+id/no_car_demo_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/qb_px_100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_above="@+id/no_car_demo_btn"
+                android:id="@+id/no_car_submint_btn"
+                android:layout_marginBottom="@dimen/qb_px_50"
+                android:layout_marginRight="@dimen/qb_px_50"
+                android:layout_marginLeft="@dimen/qb_px_50"
+                android:background="@drawable/blue_0ff_bg"
+                android:gravity="center"
+                android:textColor="@color/colorWhiteGay"
+                android:text="@string/my_login_or_register__tx"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_150"/>
+
+
+
+            <Button
+                android:id="@+id/no_car_demo_btn"
+                android:layout_marginRight="@dimen/qb_px_50"
+                android:layout_marginLeft="@dimen/qb_px_50"
+                android:background="@drawable/gray_ic_bg"
+                android:gravity="center"
+                android:textColor="@color/colorWhiteGay"
+                android:text="@string/demo_show_tx"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_150"/>
+
+            <Button
+                android:visibility="invisible"
+                android:id="@+id/text_btn_test"
+                android:text="test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginTop="@dimen/qb_px_50"
+            android:visibility="visible"
+            android:padding="@dimen/qb_px_10"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:id="@+id/no_car_settings"
+            android:src="@drawable/home_menu_ic"
+            android:layout_width="@dimen/qb_px_100"
+            android:layout_height="@dimen/qb_px_100" />
+    </RelativeLayout>
+
+    <!--no_car_layout_end-->
+
+
+
+</RelativeLayout>

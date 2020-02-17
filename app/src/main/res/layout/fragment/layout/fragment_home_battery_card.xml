@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+
+
+    <LinearLayout
+        android:id="@+id/card_battery_layout"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginLeft="@dimen/qb_px_50"
+            android:layout_marginTop="@dimen/qb_px_30"
+            android:text="电量管理"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/qb_m_px_40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:id="@+id/card_battery_recharge_mileage_tv"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/qb_px_160"
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/card_battery_recharge_mileage_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="@color/colorBlack"
+                    android:text="km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="续航里程"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+        <include
+            android:id="@+id/card_battery_only_layout"
+            android:visibility="visible"
+            layout="@layout/card_battery_only"/>
+        <include
+            android:id="@+id/card_battery_double_layout"
+            android:visibility="gone"
+            layout="@layout/card_battery_double"/>
+
+    </LinearLayout>
+
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/include_battery_nothing_layout"
+        layout="@layout/include_battery_nothing_layout"/>
+
+
+
+
+</LinearLayout>

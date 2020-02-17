@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".cards.activity.battery.BatteryActivity">
+
+
+
+    <include
+        android:id="@+id/hirstory_title_layout"
+        layout="@layout/tite_layout"/>
+
+
+
+    <ScrollView
+        android:layout_below="@+id/hirstory_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:background="@color/blue0ff"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_400"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/qb_px_120"
+                    android:layout_marginLeft="@dimen/qb_px_50"
+                    android:layout_marginRight="@dimen/qb_px_50"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/qb_px_250"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:fontFamily="@font/hwht_num"
+                                android:textSize="@dimen/qb_px_100"
+                                android:id="@+id/hirstory_mileage_tv"
+                                android:gravity="center"
+                                android:textColor="@color/colorWhiteGay"
+                                android:text="0"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/qb_px_130" />
+
+                            <TextView
+                                android:alpha="0.6"
+                                android:textSize="@dimen/qb_px_40"
+                                android:maxLines="1"
+                                android:textColor="@color/colorWhiteGay"
+                                android:text="@string/car_history_driven_distance_tx"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:fontFamily="@font/hwht_num"
+                                android:textSize="@dimen/qb_px_100"
+                                android:id="@+id/hirstory_speed_tv"
+                                android:gravity="center"
+                                android:textColor="@color/colorWhiteGay"
+                                android:text="0"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/qb_px_130" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:alpha="0.6"
+                                android:textSize="@dimen/qb_px_40"
+                                android:maxLines="1"
+                                app:autoSizeStepGranularity="2sp"
+                                android:textColor="@color/colorWhiteGay"
+                                android:text="@string/car_history_average_speed_tx"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:fontFamily="@font/hwht_num"
+                                android:textSize="@dimen/qb_px_100"
+                                android:textColor="@color/colorWhiteGay"
+                                android:id="@+id/hirstory_time_tv"
+                                android:gravity="center"
+                                android:text="0"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/qb_px_130" />
+
+                            <TextView
+                                android:alpha="0.6"
+                                android:textSize="@dimen/qb_px_40"
+                                android:maxLines="1"
+                                android:textColor="@color/colorWhiteGay"
+                                android:text="@string/car_history_riding_time_tx"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/history_tablayout"
+                    android:layout_marginLeft="@dimen/qb_px_60"
+                    android:layout_marginRight="@dimen/qb_px_60"
+                    android:layout_marginTop="@dimen/qb_px_100"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/qb_px_150"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/blue0ff"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/colorBlack"
+                    app:tabTextColor="@color/gray6d"
+                    >
+
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_marginLeft="@dimen/qb_px_500"
+                        android:layout_width="@dimen/qb_px_300"
+                        android:layout_height="match_parent"
+                        android:text="@string/car_history_day_tx" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_marginLeft="@dimen/qb_px_500"
+                        android:layout_width="@dimen/qb_px_100"
+                        android:layout_height="match_parent"
+                        android:text="@string/car_history_week_tx" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="@dimen/qb_px_400"
+                        android:layout_height="match_parent"
+                        android:text="@string/car_history_month_tx" />
+
+
+                </com.google.android.material.tabs.TabLayout>
+
+
+
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/qb_px_60"
+                    android:layout_marginRight="@dimen/qb_px_60"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/qb_px_100">
+                    <TextView
+                        android:id="@+id/hirstory_choose_day_tv"
+                        android:textSize="@dimen/qb_px_35"
+                        android:gravity="center"
+                        android:fontFamily="@font/hwht_num"
+                        android:textColor="@color/colorWhiteGay"
+                        android:text="2019/11/16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/hirstory_choose_week_tv"
+                        android:textSize="@dimen/qb_px_35"
+                        android:gravity="center"
+                        android:fontFamily="@font/hwht_num"
+                        android:textColor="@color/colorWhiteGay"
+                        android:text="2019/11/16~2019/11/16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/hirstory_choose_month_tv"
+                        android:textSize="@dimen/qb_px_35"
+                        android:gravity="center"
+                        android:fontFamily="@font/hwht_num"
+                        android:textColor="@color/colorWhiteGay"
+                        android:text="2019/11"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="@dimen/qb_px_60"
+                    android:layout_marginTop="@dimen/qb_px_50"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/qb_px_850">
+
+                    <com.sharkgulf.soloera.cards.activity.AutoLocateHorizontalView
+                        android:layout_marginTop="@dimen/qb_px_50"
+                        android:id="@+id/car_hirstory_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="@dimen/qb_px_180"
+                        android:layout_height="@dimen/qb_px_800"/>
+
+                    <View
+                        android:layout_marginTop="@dimen/qb_px_10"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/car_hirstory_relat_layout"
+                        android:layout_width="@dimen/qb_px_180"
+                        android:layout_height="match_parent"/>
+
+
+                    <RelativeLayout
+                        android:id="@+id/car_hirstory_relat_layout"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="@dimen/qb_px_180"
+                        android:layout_height="@dimen/qb_px_730"
+                        >
+
+                        <View
+                            android:id="@+id/history_item_line"
+                            android:layout_above="@+id/tv_bar"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#0099ff"/>
+
+
+
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:visibility="invisible"
+                            android:id="@+id/history_max_mileage_tv"
+                            android:layout_marginLeft="@dimen/qb_px_10"
+                            android:textColor="#236bed"
+                            android:fontFamily="@font/hwht_num"
+                            android:text="0km"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:visibility="invisible"
+                            android:layout_marginBottom="@dimen/qb_px_214"
+                            android:id="@+id/history_half_mileage_tv"
+                            android:layout_centerVertical="true"
+                            android:textColor="#236bed"
+                            android:fontFamily="@font/hwht_num"
+                            android:text="0km"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="@dimen/qb_px_50"
+                        android:layout_width="@dimen/qb_px_50"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="match_parent">
+                        <View
+                            android:id="@+id/test_height_layout"
+                            android:layout_width="@dimen/qb_px_1"
+                            android:layout_height="@dimen/qb_px_699"/>
+
+                        <View
+                            android:visibility="visible"
+                            android:id="@+id/history_max_line"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="#131313"
+                            android:layout_marginBottom="@dimen/qb_px_121"/>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+                <View
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/qb_px_10"
+                    android:layout_marginLeft="@dimen/qb_px_50"
+                    android:layout_marginRight="@dimen/qb_px_50"
+                    android:background="@color/colorBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/qb_px_50"
+                    android:layout_marginLeft="@dimen/qb_px_60"
+                    android:layout_marginRight="@dimen/qb_px_60"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/qb_px_200"
+                   >
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_centerHorizontal="true"
+                            android:maxLines="1"
+                            android:layout_marginTop="@dimen/qb_px_20"
+                            android:id="@+id/hirstory_choose_type_mileage_tv"
+                            android:maxWidth="@dimen/qb_px_160"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/hwht_num"
+                            android:text="0"
+                            android:textColor="@color/gray555"
+                            android:textSize="@dimen/qb_px_70"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="@dimen/qb_px_35"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/hirstory_choose_type_mileage_tv"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/hwht_subset"
+                            android:textColor="@color/gray888"
+                            android:text="@string/car_history_driven_distance_tx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:layout_centerHorizontal="true"
+                            android:maxLines="1"
+                            android:layout_marginTop="@dimen/qb_px_20"
+                            android:id="@+id/hirstory_choose_type_max_speed_tv"
+                            android:maxWidth="@dimen/qb_px_200"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/hwht_num"
+                            android:text="0"
+                            android:layout_marginLeft="@dimen/qb_px_60"
+                            android:textColor="@color/gray555"
+                            android:textSize="@dimen/qb_px_70"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="@dimen/qb_px_35"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/hirstory_choose_type_max_speed_tv"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/hwht_subset"
+                            android:textColor="@color/gray888"
+                            android:text="@string/car_history_max_speed_tx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:layout_centerHorizontal="true"
+                            android:maxLines="1"
+                            android:layout_marginTop="@dimen/qb_px_20"
+                            android:id="@+id/hirstory_choose_type_average_speed_tv"
+                            android:maxWidth="@dimen/qb_px_200"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/hwht_num"
+                            android:text="0"
+                            android:layout_marginLeft="@dimen/qb_px_60"
+                            android:textColor="@color/gray555"
+                            android:textSize="@dimen/qb_px_70"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="@dimen/qb_px_35"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/hirstory_choose_type_average_speed_tv"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/hwht_subset"
+                            android:textColor="@color/gray888"
+                            android:text="@string/car_history_avg_speed_tx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:layout_centerHorizontal="true"
+                            android:maxLines="1"
+                            android:layout_marginTop="@dimen/qb_px_20"
+                            android:id="@+id/hirstory_choose_type_use_num_tv"
+                            android:maxWidth="@dimen/qb_px_170"
+                            android:layout_marginLeft="@dimen/qb_px_90"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/hwht_num"
+                            android:text="0"
+                            android:textColor="@color/gray555"
+                            android:textSize="@dimen/qb_px_70"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="@dimen/qb_px_35"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/hirstory_choose_type_use_num_tv"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/hwht_subset"
+                            android:textColor="@color/gray888"
+                            android:text="@string/car_history_drive_num_tx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+
+
+
+                <TextView
+                    android:textSize="@dimen/qb_px_50"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/hwht_num"
+                    android:textColor="@color/colorWhiteGay"
+                    android:id="@+id/car_history_day_tx"
+                    android:layout_marginLeft="@dimen/qb_px_60"
+                    android:layout_marginRight="@dimen/qb_px_60"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="@dimen/qb_px_50"
+                    android:layout_marginLeft="@dimen/qb_px_110"
+                    android:layout_marginRight="@dimen/qb_px_110"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/qb_px_170"
+                    android:id="@+id/car_history_week_recycler"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/car_history_month_recycler"/>
+
+                <include
+                    android:id="@+id/hirstory_list_empty_layout"
+                    layout="@layout/item_list_empty_view_layout"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/qb_px_60"
+                    android:layout_marginRight="@dimen/qb_px_60"
+                    android:id="@+id/hirstory_recycler_info"
+                    android:layout_width="match_parent"
+                    android:minHeight="@dimen/qb_px_2208"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/test_layout_asd"
+                android:fillViewport="false"
+                app:layout_scrollFlags="scroll"
+                android:background="@drawable/history_info_bg"
+                android:layout_marginTop="@dimen/qb_px_20"
+                android:layout_marginLeft="@dimen/qb_px_50"
+                android:layout_marginRight="@dimen/qb_px_50"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_130"
+                android:gravity="center_vertical"
+
+                >
+
+                <TextView
+                        android:id="@+id/car_history_max_speed_tx"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3.2"
+                        android:gravity="center"
+                         />
+
+
+                    <TextView
+                        android:id="@+id/car_history_drive_num_tx"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/car_history_error_tx"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:gravity="center" />
+            </LinearLayout>
+
+    </RelativeLayout>
+    </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

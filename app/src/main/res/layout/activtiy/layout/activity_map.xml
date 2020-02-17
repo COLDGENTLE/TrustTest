@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/text_map_layout"
+    tools:context=".cards.activity.map.MapActivity">
+
+
+
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/activity_map_mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        tools:layout_editor_absoluteX="-82dp"
+        tools:layout_editor_absoluteY="-51dp" />
+
+
+    <ImageView
+        app:layout_constraintTop_toBottomOf="@+id/map_title_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="@dimen/qb_px_30"
+        android:layout_marginTop="@dimen/qb_px_100"
+        android:id="@+id/test_img"
+        android:src="@drawable/gd_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="ContentDescription" />
+
+
+
+
+
+
+
+
+
+    <ImageView
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/qb_px_30"
+        android:src="@drawable/map_type"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/qb_px_60"
+        android:id="@+id/activity_map_type_btn"
+        android:layout_width="@dimen/qb_px_120"
+        android:layout_height="@dimen/qb_px_120" />
+
+
+
+
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:background="@drawable/white_bg_black_line_bg"
+        android:layout_marginBottom="@dimen/qb_px_60"
+        android:layout_marginLeft="@dimen/qb_px_30"
+        android:layout_width="@dimen/qb_px_122"
+        android:gravity="center"
+        android:layout_height="@dimen/qb_px_152">
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/activity_map_bsa_bg"
+            android:layout_margin="@dimen/qb_px_10"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/map_btn_bg_ic"/>
+
+
+        <TextView
+            android:id="@+id/activity_map_bsa_btn"
+            android:layout_centerInParent="true"
+            android:drawablePadding="@dimen/qb_m_px_12"
+            android:textSize="@dimen/qb_px_26"
+            android:padding="@dimen/qb_px_3"
+            android:gravity="center"
+            android:drawableTop="@drawable/map_btn_bsa_ic"
+            android:text="辅助"
+            android:layout_width="@dimen/qb_px_104"
+            android:layout_height="@dimen/qb_px_134"
+            tools:ignore="RtlHardcoded"
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+    <TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="@dimen/qb_px_30"
+        android:layout_marginRight="@dimen/qb_px_30"
+        android:layout_marginBottom="@dimen/qb_px_30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+   <RelativeLayout
+       android:layout_marginLeft="@dimen/qb_px_30"
+       android:layout_marginRight="@dimen/qb_px_30"
+       android:layout_marginBottom="@dimen/qb_px_30"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:id="@+id/map_address_info_layout"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+
+
+       <TextView
+           android:id="@+id/map_no_address_layout"
+           android:layout_centerInParent="true"
+           android:layout_marginRight="@dimen/qb_px_100"
+           android:layout_marginLeft="@dimen/qb_px_100"
+           android:textColor="@color/colorWhiteGay"
+           android:background="@drawable/eed_bg"
+           android:text="@string/car_loction_nothing"
+           android:gravity="center"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/qb_px_150"/>
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/map_address_info_data_layout"
+           android:visibility="visible"
+           android:background="@drawable/map_address_layout_bg"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <TextView
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintLeft_toLeftOf="parent"
+               android:textColor="@color/gray6d"
+               android:layout_marginTop="@dimen/qb_px_42"
+               android:fontFamily="@font/hwht_num"
+               android:id="@+id/activity_map_car_time_tx"
+               android:layout_marginLeft="@dimen/qb_px_42"
+               android:textSize="@dimen/qb_px_45"
+               android:text=""
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+
+
+
+
+           <ImageView
+               android:id="@+id/activity_map_gps_status_ic"
+               android:layout_marginRight="@dimen/qb_px_50"
+               app:layout_constraintRight_toRightOf="parent"
+               android:layout_marginTop="@dimen/qb_px_42"
+               app:layout_constraintTop_toTopOf="parent"
+               android:src="@drawable/map_gps_status_4_ic"
+               android:layout_width="@dimen/qb_px_200"
+               android:layout_height="@dimen/qb_px_50" />
+
+
+
+           <ImageView
+               android:id="@+id/map_address_ic"
+               android:layout_marginTop="@dimen/qb_px_50"
+               app:layout_constraintTop_toBottomOf="@+id/activity_map_car_time_tx"
+               app:layout_constraintLeft_toLeftOf="parent"
+               android:layout_marginLeft="@dimen/qb_px_30"
+               android:src="@drawable/map_address_ic"
+               android:layout_width="@dimen/qb_px_90"
+               android:layout_height="@dimen/qb_px_90" />
+
+
+
+           <TextView
+               android:fontFamily="@font/hwht_num"
+               android:textColor="@color/colorBlack"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintRight_toRightOf="parent"
+               android:layout_marginRight="@dimen/qb_px_50"
+               android:layout_marginTop="@dimen/qb_px_50"
+               app:layout_constraintTop_toBottomOf="@+id/activity_map_car_time_tx"
+               android:textSize="@dimen/qb_px_55"
+               android:id="@+id/activity_map_car_address_tx"
+               android:layout_marginLeft="@dimen/qb_px_140"
+               android:text="@string/car_loction_nothing"
+               android:lineSpacingExtra="@dimen/qb_px_10"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/qb_px_170" />
+
+
+
+           <View
+               android:id="@+id/activity_map_car_test_line"
+               android:layout_marginRight="@dimen/qb_px_70"
+               android:layout_marginLeft="@dimen/qb_px_70"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintRight_toRightOf="parent"
+               android:layout_marginTop="@dimen/qb_px_10"
+               app:layout_constraintTop_toBottomOf="@+id/activity_map_car_address_tx"
+               android:background="#e7eef6"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/qb_px_5"/>
+
+
+
+           <TextView
+               android:layout_marginLeft="@dimen/qb_px_30"
+               android:layout_marginRight="@dimen/qb_px_30"
+               android:layout_marginTop="@dimen/qb_px_30"
+               android:background="@drawable/blue_0ff_bg"
+               android:fontFamily="@font/hwht_subset"
+               android:textColor="@color/colorWhiteGay"
+               app:layout_constraintTop_toBottomOf="@+id/activity_map_car_test_line"
+               android:id="@+id/activity_map_car_navigation_btn"
+               android:layout_marginBottom="@dimen/qb_px_50"
+               android:gravity="center"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               android:text="导航"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/qb_px_110" />
+
+
+
+
+           <LinearLayout
+               android:visibility="gone"
+               android:layout_width="match_parent"
+               android:gravity="bottom"
+               android:layout_height="@dimen/qb_px_90">
+
+               <TextView
+                   android:id="@+id/activity_map_car_online_tx"
+                   android:layout_marginLeft="@dimen/qb_px_42"
+                   android:text="未知 "
+                   android:textSize="@dimen/qb_px_42"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <TextView
+                   android:visibility="gone"
+                   android:id="@+id/activity_map_car_region_tx"
+                   android:textSize="@dimen/qb_px_42"
+                   android:layout_marginLeft="@dimen/qb_px_30"
+                   android:text="精度约 0m"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+
+               <FrameLayout
+                   android:visibility="gone"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   >
+
+
+               </FrameLayout>
+           </LinearLayout>
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </RelativeLayout>
+
+
+
+
+
+        <FrameLayout
+            android:visibility="gone"
+            android:id="@+id/map_framelayout"
+            android:background="@drawable/white_bg_black_line_bg"
+            android:layout_width="match_parent"
+            android:minHeight="@dimen/qb_px_120"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/qb_px_30"/>
+
+
+
+
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/map_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            android:id="@+id/map_offinemap_download_btn"
+            android:background="#ffcc33"
+            android:gravity="center"
+            android:text="检测到当前所在城市地图未下载，点击下载"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintTop_toBottomOf="@+id/map_offinemap_download_btn"
+            android:background="@color/blue0ff"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_130"
+            tools:ignore="MissingConstraints">
+
+
+            <com.sharkgulf.soloera.tool.view.TextDrawable
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/back_btn"
+                android:layout_marginBottom="@dimen/qb_px_20"
+                android:textSize="@dimen/qb_px_60"
+                android:gravity="center_vertical"
+                app:leftDrawable="@drawable/ic_black_withe"
+                android:fontFamily="@font/hwht_subset"
+                android:text="@string/anti_lost_positioning_tx"
+                android:textColor="@color/colorWhiteGay"
+                android:layout_width="@dimen/qb_px_400"
+                android:layout_height="match_parent"
+                app:leftDrawableWidth="@dimen/qb_px_100"
+                app:leftDrawableHeight="@dimen/qb_px_100"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/map_bike_status_layout"
+        android:background="@drawable/map_btn_up_bg"
+        android:layout_marginBottom="@dimen/qb_px_30"
+        android:layout_marginLeft="@dimen/qb_px_30"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf = "@+id/map_address_info_layout"
+        android:layout_width="@dimen/qb_px_155"
+        android:layout_height="@dimen/qb_px_160"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:layout_marginBottom="@dimen/qb_px_20"
+            android:id="@+id/map_bike_status_ic"
+            android:layout_marginLeft="@dimen/qb_px_30"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/map_bike_status_alert_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textSize="@dimen/qb_px_50"
+            android:id="@+id/map_bike_status_title_tv"
+            android:layout_marginLeft="@dimen/qb_px_30"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/qb_px_30"
+            app:layout_constraintLeft_toRightOf="@+id/map_bike_status_ic"
+            android:fontFamily="@font/hwht_subset"
+            android:textColor="@color/colorBlack"
+            android:text="警戒模式"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/map_bike_status_title_tv"
+            android:textSize="@dimen/qb_px_40"
+            android:id="@+id/map_bike_status_msg_tv"
+            android:layout_marginLeft="@dimen/qb_px_30"
+            android:layout_marginTop="@dimen/qb_px_2"
+            app:layout_constraintLeft_toRightOf="@+id/map_bike_status_ic"
+            android:fontFamily="@font/hwht_subset"
+            android:textColor="@color/gray6d"
+            android:text="警戒模式"
+            android:layout_width="@dimen/qb_px_600"
+            android:layout_height="wrap_content" />
+
+
+            <Switch
+                android:layout_marginLeft="@dimen/qb_px_10"
+                app:layout_constraintLeft_toRightOf="@+id/map_bike_status_msg_tv"
+                android:id="@+id/map_bike_status_controll_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/activity_map_car_btn"
+        android:background="@drawable/map_btn_bg"
+        android:layout_marginRight="@dimen/qb_px_30"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="@dimen/qb_px_30"
+        app:layout_constraintBottom_toTopOf="@+id/map_address_info_layout"
+        android:layout_width="@dimen/qb_px_155"
+        android:layout_height="@dimen/qb_px_155"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_marginBottom="@dimen/qb_px_20"
+            android:src="@drawable/map_bike_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/activity_map_user_btn"
+        android:background="@drawable/map_btn_bg"
+        android:layout_marginRight="@dimen/qb_px_30"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="@dimen/qb_px_30"
+        app:layout_constraintBottom_toTopOf="@+id/activity_map_car_btn"
+        android:layout_width="@dimen/qb_px_155"
+        android:layout_height="@dimen/qb_px_155"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_marginBottom="@dimen/qb_px_20"
+            android:id="@+id/map_user_ic"
+            android:src="@drawable/map_user_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/activity_map_find_car_btn"
+        android:layout_marginTop="@dimen/qb_px_100"
+        app:layout_constraintTop_toBottomOf="@+id/map_title_layout"
+        android:background="@drawable/map_btn_bg"
+        android:layout_marginRight="@dimen/qb_px_30"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="@dimen/qb_px_155"
+        android:layout_height="@dimen/qb_px_155"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_marginBottom="@dimen/qb_px_20"
+            android:src="@drawable/map_find_car_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

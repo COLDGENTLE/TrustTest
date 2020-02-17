@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sharkgulf.soloera.home.user.UserIcActivity"
+    android:orientation="vertical"
+    android:background="@color/colorBlack">
+
+    <LinearLayout
+        android:orientation="vertical"
+         android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_160"
+        >
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/user_ic_back_btn"
+                android:layout_marginLeft="@dimen/qb_px_50"
+                android:textColor="@color/colorWhiteGay"
+                android:text="取消"
+                android:layout_toRightOf="@+id/title_back_btn"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:textSize="@dimen/qb_px_60"
+                android:fontFamily="@font/hwht_subset"
+                android:textColor="@color/colorWhiteGay"
+                android:transitionName="titleShare"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:text="设置头像"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:fontFamily="@font/hwht_subset"
+                android:id="@+id/user_ic_more_btn"
+                android:layout_marginRight="@dimen/qb_px_50"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorWhiteGay"
+                android:text="完成"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:fontFamily="@font/hwht_subset"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/qb_px_180"
+        android:textColor="@color/colorWhiteGay"
+        android:text="请调整图像至适合的大小位置"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <FrameLayout
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:layout_marginRight="@dimen/qb_px_50"
+        android:id="@+id/likeView"
+        android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/qb_px_390"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/user_ic_logo_submint_btn"
+        android:layout_marginBottom="@dimen/qb_px_200">
+
+        <ImageView
+            android:id="@+id/src_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:scaleType="center" />
+    </FrameLayout>
+
+<!--    <com.sharkgulf.blueshark.home.user.TestQQView-->
+<!--        android:layout_marginLeft="@dimen/qb_px_50"-->
+<!--        android:layout_marginRight="@dimen/qb_px_50"-->
+<!--        android:id="@+id/likeView"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:layout_marginTop="@dimen/qb_px_390"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_above="@+id/user_ic_logo_submint_btn"-->
+<!--        android:layout_marginBottom="@dimen/qb_px_200" />-->
+
+
+
+    <Button
+        android:visibility="gone"
+        android:fontFamily="@font/hwht_subset"
+        android:layout_marginBottom="@dimen/qb_px_50"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/user_ic_logo_submint_btn"
+        android:textColor="#ffffff"
+        android:background="@drawable/blue_bg"
+        android:text="完成"
+        android:layout_width="@dimen/qb_px_780"
+        android:layout_height="@dimen/qb_px_110" />
+
+    <ImageView
+        android:id="@+id/test_img_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

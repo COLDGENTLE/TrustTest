@@ -1,0 +1,54 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="user_right_ic">
+        <item name="android:src">@drawable/ic_right</item>
+        <item name="android:tint">@color/colorGrayCa</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="user_tx">
+        <item name="android:text">@string/setting_no</item>
+        <item name="android:gravity">right</item>
+        <item name="android:layout_marginLeft">@dimen/qb_px_390</item>
+        <item name="android:layout_width">@dimen/qb_px_390</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="user_type_tx">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:layout_marginLeft">@dimen/qb_px_10</item>
+        <item name="android:layout_width">@dimen/qb_px_250</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="change_phone_tx_style">
+        <item name="android:textColor">@color/gray999</item>
+        <item name="android:layout_marginLeft">@dimen/qb_px_55</item>
+        <item name="android:layout_marginRight">@dimen/qb_px_55</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="controll_car_style">
+        <item name="android:textColor">@color/colorWhiteGay</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+</resources>

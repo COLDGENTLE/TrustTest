@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/blue2fc"
+    android:paddingLeft="@dimen/qb_px_113"
+    android:paddingRight="@dimen/qb_px_113"
+    android:id="@+id/test_layout">
+
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/login_type_tv"
+            android:fontFamily="@font/hwht_subset"
+            android:textStyle="bold"
+            android:textSize="@dimen/qb_px_50"
+            android:textColor="@color/colorWhiteGay"
+            android:text="@string/login_fragment_layout_pwd_login"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/qb_px_100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints,SpUsage" />
+
+        <LinearLayout
+            android:id="@+id/login_ed_layout"
+            android:layout_marginTop="@dimen/qb_px_123"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_type_tv"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/qb_px_30"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/user_ic"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp" />
+
+
+                <com.sharkgulf.soloera.tool.view.ClearEditText
+                    android:textColor="@color/colorWhiteGay"
+                    android:layout_marginRight="@dimen/qb_px_30"
+                    android:layout_marginLeft="@dimen/qb_px_50"
+                    android:fontFamily="@font/hwht_subset"
+                    android:id="@+id/fragment_loging_phone"
+                    android:layout_width="match_parent"
+                    android:background="@null"
+                    android:textColorHint="@color/colorWhiteGay"
+                    android:hint="@string/login_fragment_layout_phone_hint_ed"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:drawablePadding="@dimen/qb_px_50"
+                    android:layout_height="@dimen/qb_px_110" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_marginTop="@dimen/qb_px_18"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_1"
+                android:background="@color/colorWhiteGay"/>
+
+
+            <com.sharkgulf.soloera.tool.view.ClearEditText
+                android:textColor="@color/colorWhiteGay"
+                android:layout_marginLeft="@dimen/qb_px_30"
+                android:layout_marginRight="@dimen/qb_px_30"
+                android:textColorHint="@color/colorWhiteGay"
+                android:fontFamily="@font/hwht_subset"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/qb_px_60"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:hint="@string/login_fragment_layout_pwd_hint_ed"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:drawablePadding="@dimen/qb_px_50"
+                android:drawableLeft="@drawable/pwd_ic"
+                android:layout_height="@dimen/qb_px_110" />
+
+            <include
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/qb_px_60"
+                android:id="@+id/bs_edit_text_pwd"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/qb_px_30"
+                android:layout_marginRight="@dimen/qb_px_30"
+                android:layout_height="@dimen/qb_px_110"
+                layout="@layout/bs_edit_text_layout"/>
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/bs_edit_text_pwd_line"
+                android:layout_marginTop="@dimen/qb_px_18"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_1"
+                android:background="@color/colorWhiteGay"/>
+        </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/qb_px_30"
+        android:layout_marginRight="@dimen/qb_px_30"
+        app:layout_constraintTop_toBottomOf="@+id/login_ed_layout"
+        android:id="@+id/fragment_login_other_layout"
+        android:layout_marginTop="@dimen/qb_px_68"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:fontFamily="@font/hwht_subset"
+            android:transitionName="titleShare"
+            android:id="@+id/fragment_login_register_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/layout_register_tx"
+            android:textColor="@color/colorWhiteGay"
+            android:textSize="@dimen/qb_px_50" />
+
+        <TextView
+            android:fontFamily="@font/hwht_subset"
+            android:transitionName="titleShare"
+            android:id="@+id/fragment_login_change_pwd_btn"
+            android:textSize="@dimen/qb_px_50"
+            android:textColor="@color/colorWhiteGay"
+            android:layout_alignParentRight="true"
+            android:text="@string/layout_change_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+
+    <Button
+        android:fontFamily="@font/hwht_subset"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_login_other_layout"
+        android:id="@+id/fragment_login_submint_btn"
+        android:textColor="@color/blue2fc"
+        android:background="@drawable/white_bg_white_line_bg"
+        android:layout_marginTop="@dimen/qb_px_270"
+        android:text="@string/login_fragment_layout_submint"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_110"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/fragment_login_submint_btn"
+        android:textColor="@color/colorWhiteGay"
+        android:id="@+id/fragment_loging_help_tx"
+        android:textSize="@dimen/qb_px_42"
+        android:visibility="visible"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="@dimen/qb_px_18"
+        android:layout_marginTop="@dimen/qb_px_30"
+        android:text="@string/login_fragment_layout_phone_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <LinearLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/layout_there_logo"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_140"
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="@dimen/qb_px_185"
+        android:layout_marginRight="@dimen/qb_px_184"
+        android:layout_marginBottom="@dimen/qb_px_400">
+
+
+        <ImageView
+            android:src="@drawable/wb_ic"
+            android:id="@+id/login_wb_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:src="@drawable/wx_ic"
+            android:id="@+id/login_wx_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:src="@drawable/qq_ic"
+            android:id="@+id/login_qq_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+
+
+
+
+        <TextView
+            android:fontFamily="@font/hwht_subset"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_there_logo"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="@dimen/qb_px_33"
+            android:visibility="visible"
+            android:id="@+id/fragment_login_protocol_tx"
+            android:transitionName="titleShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_service_tx"
+            android:textColor="@color/colorWhiteGay"
+            android:textSize="@dimen/qb_px_50" />
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:transitionName="share"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/test_linear_layout"
+                android:layout_marginTop="@dimen/qb_px_30"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_125"
+                android:orientation="vertical">
+
+
+
+                <!--android:id="@+id/fragment_loging_pwd"-->
+                <com.sharkgulf.soloera.tool.view.ClearEditText
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/qb_px_10"
+
+                    android:layout_width="@dimen/qb_px_600"
+                    android:background="@null"
+                    android:hint="@string/login_fragment_layout_pwd_hint_ed"
+                    android:inputType="textPassword"
+                    android:drawablePadding="@dimen/qb_px_28"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:drawableLeft="@drawable/pwd_ic"
+                    android:layout_height="@dimen/qb_px_80" />
+
+                <include
+                    android:visibility="gone"
+                    android:id="@+id/bs_edit_text_pwd"
+                    android:layout_width="@dimen/qb_px_700"
+                    android:layout_height="wrap_content"
+                    layout="@layout/bs_edit_text_layout"/>
+
+                <View
+                    android:layout_marginTop="@dimen/qb_px_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/qb_px_1"
+                    android:background="#c4c4c4"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

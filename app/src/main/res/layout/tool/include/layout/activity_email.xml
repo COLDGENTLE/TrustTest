@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayDef"
+    tools:context=".home.user.EmailActivity">
+
+    <include
+        android:id="@+id/email_title_layout"
+        layout="@layout/tite_layout"/>
+
+
+    <TextView
+        android:textColor="@color/gray999"
+        android:text="@string/email_msg1"
+        android:layout_marginTop="@dimen/qb_px_55"
+        android:layout_marginRight="@dimen/qb_px_55"
+        android:layout_marginLeft="@dimen/qb_px_55"
+        app:layout_constraintTop_toBottomOf="@+id/email_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

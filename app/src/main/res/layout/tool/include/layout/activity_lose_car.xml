@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".cards.activity.securitysettings.LoseCarActivity">
+
+    <RelativeLayout
+        android:id="@+id/test_animor"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1000"
+        android:orientation="vertical">
+
+        <com.trust.statusbarlibrary.view.TrustStatusBarView
+            android:id="@+id/lose_car_logo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+        <include
+            layout="@layout/tite_layout"/>
+            
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_marginTop="@dimen/qb_px_120"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/qb_px_400"
+                android:layout_height="@dimen/qb_px_400">
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/lose_car_waiting_ic"
+                    android:src="@drawable/lose_car_waiting_ic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/lose_car_tag_ic"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/lose_car_logo"
+                    android:layout_width="@dimen/qb_px_200"
+                    android:layout_height="@dimen/qb_px_240" />
+            </RelativeLayout>
+
+        <TextView
+            android:id="@+id/lose_car_tag_tx"
+            android:layout_marginTop="@dimen/qb_px_20"
+            android:gravity="center"
+            android:textColor="@color/colorWhiteGay"
+            android:layout_marginLeft="@dimen/qb_px_120"
+            android:layout_marginRight="@dimen/qb_px_120"
+            android:text="@string/lose_bike_tag"
+            android:textSize="@dimen/qb_px_55"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="@dimen/qb_px_30"
+            android:id="@+id/lose_car_status_tag_tx"
+            android:layout_marginLeft="@dimen/qb_px_120"
+            android:layout_marginRight="@dimen/qb_px_120"
+            android:lineSpacingExtra="@dimen/qb_px_15"
+            android:textSize="@dimen/qb_px_45"
+            android:textColor="@color/colorWhiteGay"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lose_bike_status_tag"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/lose_car_msg_tx"
+            android:lineSpacingExtra="@dimen/qb_px_20"
+            android:layout_marginTop="@dimen/qb_px_100"
+            android:layout_marginLeft="@dimen/qb_px_100"
+            android:layout_marginRight="@dimen/qb_px_100"
+            android:text="@string/lose_bike_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+
+        <Button
+            android:id="@+id/lose_car_submint_btn"
+            android:layout_marginBottom="@dimen/qb_px_60"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="开启丢车模式"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+</LinearLayout>

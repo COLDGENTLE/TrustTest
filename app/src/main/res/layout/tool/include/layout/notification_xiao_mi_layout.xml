@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="@dimen/qb_px_50"
+        android:text="测试推送测试推送测试推送测试推送"
+        android:layout_marginLeft="@dimen/qb_px_100"
+        android:layout_marginRight="@dimen/qb_px_100"
+        android:gravity="center_vertical"
+        android:id="@+id/notification_layout_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_200" />
+</FrameLayout>

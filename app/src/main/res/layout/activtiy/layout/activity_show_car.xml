@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lottie_bg"
+    tools:context=".loging.ShowCarActivity">
+
+    <ImageView
+        android:layout_marginTop="@dimen/qb_px_227"
+        android:transitionName="logo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/qb_m_px_830"
+        android:scaleType="fitXY"
+        android:src="@drawable/car"
+        android:layout_width="@dimen/qb_px_830"
+        android:layout_height="@dimen/qb_px_1512" />
+
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/show_car_lottie_view"
+        app:lottie_imageAssetsFolder="images"
+        app:lottie_fileName="show_car_data.json"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <ImageView
+        android:layout_marginLeft="@dimen/qb_px_40"
+        android:layout_marginTop="@dimen/qb_px_40"
+        android:id="@+id/show_car_black_btn"
+        android:layout_width="@dimen/qb_px_100"
+        android:layout_height="@dimen/qb_px_100"
+        android:src="@drawable/ic_black_withe"
+        />
+
+</RelativeLayout>

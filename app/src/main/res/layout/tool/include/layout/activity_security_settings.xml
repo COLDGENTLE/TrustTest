@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".cards.activity.securitysettings.SecuritySettingsActivity">
+
+    <include
+        layout="@layout/tite_layout"/>
+
+
+
+    <TextView
+        android:background="@color/colorGrayEc"
+        android:paddingLeft="@dimen/qb_px_60"
+        android:gravity="center_vertical"
+        android:text="@string/item_security_settings_status_title_tx"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_100" />
+
+
+    <LinearLayout
+        android:id="@+id/security_settings_alert_choose_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_240"
+        android:paddingLeft="@dimen/qb_px_60"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/security_settings_alert_choose_ic"
+            android:src="@drawable/cars_choose_ic"
+            android:layout_width="@dimen/qb_px_72"
+            android:layout_height="@dimen/qb_px_72" />
+
+        <ImageView
+            android:src="@drawable/lose_car_alert_open_ic"
+            android:layout_marginLeft="@dimen/qb_px_30"
+            android:layout_width="@dimen/qb_px_118"
+            android:layout_height="@dimen/qb_px_118" />
+
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/qb_px_30"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:lineSpacingExtra="@dimen/qb_px_10"
+                android:id="@+id/security_settings_alert_msg_tx"
+                android:gravity="center_vertical"
+                android:text="@string/security_settings_alert_msg_tx"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/qb_px_40"/>
+
+            <ImageView
+                android:id="@+id/security_settings_alert_btn"
+                android:layout_marginRight="@dimen/qb_px_30"
+                android:layout_marginTop="@dimen/qb_px_35"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/home_security_settings_do_not_disturb_choose_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_240"
+        android:paddingLeft="@dimen/qb_px_60"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/home_security_settings_do_not_disturb_choose_ic"
+            android:src="@drawable/cars_choose_ic"
+            android:layout_width="@dimen/qb_px_72"
+            android:layout_height="@dimen/qb_px_72" />
+
+        <ImageView
+            android:src="@drawable/lose_car_do_not_open_ic"
+            android:layout_marginLeft="@dimen/qb_px_30"
+            android:layout_width="@dimen/qb_px_118"
+            android:layout_height="@dimen/qb_px_118" />
+
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/qb_px_30"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/security_settings_do_not_disturb_msg_tx"
+                android:lineSpacingExtra="@dimen/qb_px_10"
+                android:gravity="center_vertical"
+                android:text="@string/security_settings_do_not_disturb_msg_tx"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/qb_px_40"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:background="@color/colorGrayEc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_100" />
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_260"
+        android:paddingLeft="@dimen/qb_px_60"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/lose_car_status_ic"
+            android:src="@drawable/lose_car_close_ic"
+            android:layout_marginLeft="@dimen/qb_px_30"
+            android:layout_width="@dimen/qb_px_118"
+            android:layout_height="@dimen/qb_px_118" />
+
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/qb_px_30"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/security_settings_lose_car_msg_tx"
+                android:lineSpacingExtra="@dimen/qb_px_10"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/qb_px_40"
+                android:text="@string/security_settings_lose_car_msg_tx"/>
+
+
+            <LinearLayout
+                android:id="@+id/security_settings_lose_car_btn"
+                android:layout_marginRight="@dimen/qb_px_30"
+                android:layout_marginTop="@dimen/qb_px_35"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/security_settings_lose_car_tx"
+                    android:text="未开启"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:src="@drawable/ic_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:visibility="gone"
+        android:lineSpacingExtra="@dimen/qb_px_10"
+        android:paddingLeft="@dimen/qb_px_60"
+        android:paddingRight="@dimen/qb_px_40"
+        android:gravity="center_vertical"
+        android:text="@string/security_settings_lose_car_title_msg_tx"
+        android:background="@color/colorGrayEc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_200" />
+
+    <TextView
+        android:lineSpacingExtra="@dimen/qb_px_10"
+        android:paddingLeft="@dimen/qb_px_60"
+        android:paddingRight="@dimen/qb_px_40"
+        android:gravity="center_vertical"
+        android:text="@string/security_setting_test_alert_tx"
+        android:background="@color/colorGrayEc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_260"
+        android:paddingLeft="@dimen/qb_px_60"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:src="@drawable/lose_car_app_alert_ic"
+            android:layout_marginLeft="@dimen/qb_px_30"
+            android:layout_width="@dimen/qb_px_118"
+            android:layout_height="@dimen/qb_px_118" />
+
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/qb_px_30"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/security_settings_lose_car_app_alert_tx"
+                android:lineSpacingExtra="@dimen/qb_px_10"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/qb_px_40"
+                android:text="@string/security_settings_lose_car_app_alert_tx"/>
+
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:id="@+id/security_settings_test_alert_tx"
+                android:layout_marginRight="@dimen/qb_px_30"
+                android:layout_marginTop="@dimen/qb_px_35"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:text="@string/security_settings_test_alert_tx"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:background="@color/colorGrayEc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

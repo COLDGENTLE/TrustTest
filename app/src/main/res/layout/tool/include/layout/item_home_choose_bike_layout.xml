@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_350"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/qb_px_25"
+    android:layout_marginLeft="@dimen/qb_px_50"
+    android:id="@+id/item_home_choose_bike_layout_bg"
+    android:background="@drawable/white_bg_white_line_bg"
+    android:layout_marginRight="@dimen/qb_px_50">
+
+    <ImageView
+        android:id="@+id/item_home_choose_bike_bike_ic"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:src="@drawable/car_ic"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:layout_marginBottom="@dimen/qb_px_50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="@dimen/qb_px_280"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/item_home_choose_bike_name_tv"
+        android:textSize="@dimen/qb_px_70"
+        android:maxLines="1"
+        android:textColor="@color/colorBlack"
+        android:text="大魔王大魔王大魔王"
+        android:layout_marginLeft="@dimen/qb_px_30"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/qb_px_50"
+        app:layout_constraintLeft_toRightOf="@+id/item_home_choose_bike_bike_ic"
+        android:layout_width="@dimen/qb_px_700"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:maxLines="1"
+        android:id="@+id/item_home_choose_bike_vin_tv"
+        android:text="车架号"
+        android:layout_marginLeft="@dimen/qb_px_30"
+        app:layout_constraintTop_toBottomOf="@+id/item_home_choose_bike_name_tv"
+        android:layout_marginTop="@dimen/qb_px_10"
+        app:layout_constraintLeft_toRightOf="@+id/item_home_choose_bike_bike_ic"
+        android:layout_width="@dimen/qb_px_600"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:maxLines="1"
+        android:id="@+id/item_home_choose_bike_modul_tv"
+        android:text="车辆型号"
+        android:layout_marginLeft="@dimen/qb_px_30"
+        app:layout_constraintTop_toBottomOf="@+id/item_home_choose_bike_vin_tv"
+        android:layout_marginTop="@dimen/qb_px_10"
+        app:layout_constraintLeft_toRightOf="@+id/item_home_choose_bike_bike_ic"
+        android:layout_width="@dimen/qb_px_600"
+        android:layout_height="wrap_content"/>
+
+
+    <ImageView
+        android:id="@+id/item_home_choose_bike_select_im"
+        android:layout_marginRight="@dimen/qb_px_50"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/choose_bike_no_choose_ic"
+        android:layout_width="@dimen/qb_px_80"
+        android:layout_height="@dimen/qb_px_80"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

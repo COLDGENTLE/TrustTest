@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sharkgulf.soloera">
+    <!-- 读取数据的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 在SD卡中创建与删除文件权限 -->
+    <uses-permission
+        android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" /> <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".appliction.BsApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/bs_lc"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/trust_network"
+        android:resizeableActivity="true"
+        android:roundIcon="@mipmap/bs_ic_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".home.user.UserChangePhoneActivity"></activity>
+        <activity android:name=".home.user.EmailActivity" />
+        <activity android:name=".cards.SosServiceActivity" />
+        <activity android:name=".home.user.cars.CarEditInfoActivity" />
+        <activity android:name=".cards.activity.FindBsActivity" />
+        <activity android:name=".cards.activity.battery.BatteryInfoActivity" />
+        <activity android:name=".cards.activity.AppsActivity" />
+        <activity android:name=".home.BaWebViewActivity" />
+        <activity android:name=".home.user.cars.AboutCarActivity" />
+        <activity
+            android:name=".loging.ThreeLoginChooseActivity"
+            android:label="@string/title_activity_three_login_choose"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".cards.activity.AlertPopupwindowPrivacyPolicyActivity" />
+        <activity android:name=".cards.activity.alert.AlertListActivity" />
+        <activity android:name=".cards.activity.securitysettings.WaitTestNotifyHelpActivity" />
+        <activity android:name=".cards.activity.securitysettings.LoseCarActivity" />
+        <activity android:name=".cards.activity.securitysettings.AlertActivity" />
+        <activity android:name=".cards.activity.securitysettings.SecuritySettingsActivity" />
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" /> <!-- bugly渠道号 -->
+        <meta-data
+            android:name="BUGLY_APP_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" /> <!-- 适配华为（huawei）刘海屏 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" /> <!-- 适配小米（xiaomi）刘海屏 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" /> <!-- 7.0调用色相头 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.sharkgulf.soloera.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".home.MainActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".loging.LogingActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".cards.activity.map.MapActivity"
+            android:label="@string/title_activity_map" />
+        <activity
+            android:name=".bindcar.BindCarActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <service android:name=".server.BsServer" />
+
+        <activity android:name=".controllcar.ControllCarActivity" />
+        <activity android:name=".loging.ShowCarActivity" />
+        <activity android:name=".loging.ChangePwdActivity" />
+        <activity android:name=".home.user.UserActivity" />
+        <activity android:name=".cards.activity.battery.BatteryActivity" />
+        <activity android:name=".cards.activity.history.CarHistoryActivity" />
+        <activity android:name=".loging.AddCarShowsActivity" />
+        <activity android:name=".home.user.UserInfoActivity" />
+        <activity android:name=".home.user.UserIcActivity" />
+        <activity android:name=".home.user.cars.CarsActivity" />
+        <activity android:name=".UserProtocolActivity" />
+        <activity android:name=".home.user.cars.CarInfoActivity" />
+        <activity android:name=".home.user.cars.CarsEditActivity" />
+        <activity
+            android:name=".loging.StartUpActivity"
+            android:theme="@style/startTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".home.user.AboutBsActivity" />
+        <activity android:name=".home.user.UserEditActivity" />
+        <activity android:name=".home.user.EditPwdActivity"  android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".home.user.cars.CarDeleteProtocolActivity" />
+        <activity android:name=".home.user.cars.CarDeleteBleOrServiceActivity" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:targetActivity="com.pingplusplus.android.PaymentActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- 微信支付 -->
+        <!-- 1.需要将以下"替换成自己 APK 的包名"换成在微信平台上注册填写的包名 -->
+        <!-- 2.WxPayEntryActivity 这个类在 SDK 内部实现，开发者不需要额外实现该类 -->
+        <activity-alias
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:targetActivity="com.pingplusplus.android.PaymentActivity" />
+
+        <activity
+            android:name=".loging.ThreeLoginActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".main.MainHomeActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/mainTheme" >
+            <intent-filter>
+                <action android:name="action_bs_main_activity"></action>
+            </intent-filter>
+        </activity>
+        <activity android:name=".home.user.GeneralSettingsActivity" />
+        <activity android:name=".home.user.checkininfo.UserCheckinInfoActivity" />
+        <activity android:name=".cards.activity.history.RideTrackActivity" />
+        <activity android:name=".cards.activity.securitysettings.WaitTestNotifyActivity" />
+        <activity
+            android:name=".PushActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/startTranceTheme">
+            <intent-filter>
+                <action android:name="com.sharkgulf.soloera.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.test.trust" />
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".cards.activity.alert.BsFragmentActivity" />
+        <service android:name=".server.DownloadIntentService"/>
+    </application>
+
+</manifest>

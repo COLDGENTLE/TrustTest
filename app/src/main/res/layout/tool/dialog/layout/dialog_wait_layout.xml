@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center">
+
+
+
+
+    <!--<com.airbnb.lottie.LottieAnimationView-->
+        <!--app:lottie_fileName="wait_data.json"-->
+        <!--app:lottie_imageAssetsFolder="images"-->
+        <!--app:lottie_autoPlay="true"-->
+        <!--app:lottie_loop="true"-->
+        <!--android:layout_width="@dimen/qb_px_260"-->
+        <!--android:layout_height="@dimen/qb_px_260" />-->
+
+    <ImageView
+        android:id="@+id/wait_load_ic"
+        android:src="@drawable/bind_car_load_ic"
+        android:layout_width="@dimen/qb_px_260"
+        android:layout_height="@dimen/qb_px_260" />
+
+</LinearLayout>

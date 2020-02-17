@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sharkgulf.soloera.home.user.cars.CarDeleteProtocolActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/tite_layout"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/car_deleter_protocol_recycler"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1500"/>
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/car_deleter_protocol_submint_btn"
+        android:text="请认真阅读以上条款并勾选确认"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:enabled="false"
+        android:layout_marginBottom="@dimen/qb_px_80"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/car_deleter_protocol_submint_btn"
+        android:textColor="#ffffff"
+        android:background="@drawable/login_register_btn_gray_bg"
+        android:layout_marginTop="@dimen/qb_px_55"
+        android:text="确认删除车辆"
+        android:layout_width="@dimen/qb_px_900"
+        android:layout_height="@dimen/qb_px_120" />
+</RelativeLayout>

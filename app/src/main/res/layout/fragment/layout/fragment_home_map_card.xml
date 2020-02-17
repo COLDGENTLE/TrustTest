@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_500"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+
+   <LinearLayout
+       android:layout_marginLeft="@dimen/qb_px_50"
+       android:layout_marginRight="@dimen/qb_px_30"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1"
+       android:orientation="vertical">
+
+
+      <RelativeLayout
+          android:layout_marginTop="@dimen/qb_px_30"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+         <TextView
+             android:text="@string/map_car_vehicle_positioning_tx"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+         <TextView
+             android:layout_alignParentRight="true"
+
+             android:text="@string/nothing_status_tx"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+      </RelativeLayout>
+
+
+      <LinearLayout
+          android:layout_marginTop="@dimen/qb_px_10"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+
+
+
+      </LinearLayout>
+
+   </LinearLayout>
+
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+      <RelativeLayout
+          android:id="@+id/testetett"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+         <com.amap.api.maps.TextureMapView
+             android:id="@+id/map"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"/>
+
+         <TextView
+             android:visibility="invisible"
+             android:id="@+id/car_location_error_layout"
+             android:layout_centerInParent="true"
+             android:text="@string/car_location_error_tx"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+
+            <ImageView
+                android:layout_marginLeft="@dimen/qb_px_25"
+                android:layout_marginTop="@dimen/qb_px_34"
+                android:layout_marginRight="@dimen/qb_px_2"
+                android:src="@drawable/home_map_location_ic"
+                android:layout_width="@dimen/qb_px_60"
+                android:layout_height="@dimen/qb_px_60" />
+
+
+
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/qb_px_34"
+                android:textColor="@color/colorBlack"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/qb_px_100"
+                android:id="@+id/card_map_car_address_tx"
+                android:textSize="@dimen/qb_px_41"
+                android:lineSpacingExtra="@dimen/qb_px_10"
+                android:layout_width="@dimen/qb_px_800"
+                android:layout_height="wrap_content" />
+
+
+            <com.sharkgulf.soloera.tool.view.TextDrawable
+                android:id="@+id/home_map_car_gps_ic"
+                android:layout_marginRight="@dimen/qb_px_20"
+                android:layout_marginTop="@dimen/qb_px_36"
+                android:textSize="@dimen/qb_px_40"
+                android:textColor="@color/gray888"
+                android:layout_alignParentRight="true"
+                android:text="GPS"
+                android:layout_width="@dimen/qb_px_150"
+                android:layout_height="wrap_content"
+                app:rightDrawable="@drawable/home_map_no_gps_ic"
+                app:rightDrawableHeight="@dimen/qb_px_40"
+                app:rightDrawableWidth="@dimen/qb_px_40"/>
+
+
+
+            <TextView
+                android:textColor="@color/colorWhiteGay"
+                android:id="@+id/card_map_car_location_info_tx"
+                android:layout_marginLeft="@dimen/qb_px_25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/home_map_car_module_tv"/>
+
+            <com.sharkgulf.soloera.tool.view.TextDrawable
+                android:drawablePadding="@dimen/qb_px_20"
+                android:textSize="@dimen/qb_px_50"
+                android:maxLines="1"
+                app:leftDrawable="@drawable/icon_alert_on_ic"
+                app:leftDrawableHeight="@dimen/qb_px_50"
+                app:leftDrawableWidth="@dimen/qb_px_55"
+                android:id="@+id/home_map_car_module_tv"
+                android:textColor="@color/orangerD00"
+                android:text="@string/alert_is_open_tx"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/qb_px_25"
+                android:layout_marginBottom="@dimen/qb_px_19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+         </RelativeLayout>
+
+      </RelativeLayout>
+
+
+
+
+
+
+      <TextView
+          android:visibility="invisible"
+          android:layout_marginLeft="@dimen/qb_px_40"
+          android:layout_marginBottom="@dimen/qb_px_20"
+         android:layout_alignParentBottom="true"
+      android:gravity="center"
+      android:text="@string/car_bs_assisted_positioning_tx"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+   </RelativeLayout>
+
+
+
+
+
+
+
+   <!--<TextView-->
+       <!--android:text="车辆位置详细说明"-->
+       <!--android:layout_width="wrap_content"-->
+       <!--android:layout_height="wrap_content" />-->
+
+
+
+
+   <!--<TextView-->
+       <!--android:layout_alignParentBottom="true"-->
+       <!--android:text="基站辅助定位已开启"-->
+       <!--android:layout_width="wrap_content"-->
+       <!--android:layout_height="wrap_content" />-->
+
+   <!--<TextView-->
+       <!--android:layout_alignParentBottom="true"-->
+       <!--android:layout_alignParentRight="true"-->
+       <!--android:text="23小时 前更新"-->
+       <!--android:layout_width="wrap_content"-->
+       <!--android:layout_height="wrap_content" />-->
+
+</RelativeLayout>

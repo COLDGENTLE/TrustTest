@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_double_battry_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_280">
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/qb_px_202"
+        android:orientation="vertical"
+        android:layout_width="@dimen/qb_px_340"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints" >
+
+        <TextView
+            android:fontFamily="@font/hwht_subset"
+            android:textSize="@dimen/qb_px_50"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorWhiteGay"
+            android:text="@string/estimated_mileage_tx"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/qb_m_px_20"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center_horizontal"
+            android:layout_weight="3.5">
+            <TextView
+                android:id="@+id/home_one_mileage_tv"
+                android:fontFamily="@font/hwht_num"
+                android:textStyle="bold"
+                android:gravity="center_horizontal|top"
+                android:textSize="@dimen/qb_px_190"
+                android:textColor="@color/colorWhiteGay"
+                android:text="189"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_marginRight="@dimen/qb_px_202"
+        android:orientation="vertical"
+        android:layout_width="@dimen/qb_px_340"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" >
+
+
+        <TextView
+            android:id="@+id/home_batt_text_tv"
+            android:fontFamily="@font/hwht_subset"
+            android:textSize="@dimen/qb_px_50"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorWhiteGay"
+            android:text="@string/battery_nomorl_info_tx"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/qb_m_px_20"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:layout_weight="3.5">
+            <TextView
+                android:id="@+id/home_batt_capacity_tv"
+                android:fontFamily="@font/hwht_num"
+                android:textStyle="bold"
+                android:gravity="center_horizontal|top"
+                android:textSize="@dimen/qb_px_190"
+                android:textColor="@color/colorWhiteGay"
+                android:text="09%"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_120"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_marginBottom="@dimen/qb_px_57"
+    >
+
+    <RelativeLayout
+        android:id="@+id/item_add_cars_btn"
+        android:background="@drawable/blue_0ff_bg_0ff_line_bg"
+        android:layout_width="@dimen/qb_px_500"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <com.sharkgulf.soloera.tool.view.TextDrawable
+            app:rightDrawable="@drawable/add_circle_ic"
+            android:fontFamily="@font/hwht_subset"
+            android:textColor="@color/blue0ff"
+            android:gravity="center"
+            android:text="@string/add_car_tx"
+            android:layout_width="@dimen/qb_px_350"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

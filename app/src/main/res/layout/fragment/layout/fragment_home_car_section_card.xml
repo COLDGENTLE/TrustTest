@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/sectopm_card_status_tv"
+        android:text="未注册"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/sectopm_card_tx_tv"
+        android:layout_marginTop="@dimen/qb_px_30"
+        android:text="APP与车辆未连接，无法获取车辆注册状态"
+        android:layout_width="@dimen/qb_px_950"
+        android:layout_height="@dimen/qb_px_150" />
+
+
+    <RelativeLayout
+        android:id="@+id/home_find_bs_btn"
+        android:layout_marginLeft="@dimen/qb_px_72"
+        android:background="@drawable/eed_bg"
+        android:layout_width="@dimen/qb_px_525"
+        android:layout_height="@dimen/qb_px_260"
+        >
+
+        <TextView
+            android:fontFamily="@font/hwht_subset"
+            android:textSize="@dimen/qb_px_40"
+            android:id="@+id/home_adas_title_tv"
+            android:layout_marginTop="@dimen/qb_px_43"
+            android:layout_marginLeft="@dimen/qb_px_29"
+            android:textColor="@color/colorWhiteGay"
+            android:text="@string/find_bs_title_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_marginTop="@dimen/qb_px_17"
+            android:layout_below="@+id/home_adas_title_tv"
+            android:layout_marginLeft="@dimen/qb_px_37"
+            android:src="@drawable/find_bs"
+            android:layout_width="@dimen/qb_px_100"
+            android:layout_height="@dimen/qb_px_100" />
+
+
+        <TextView
+            android:fontFamily="@font/hwht_subset"
+            android:textColor="#9ea6ca"
+            android:layout_marginRight="@dimen/qb_px_53"
+            android:layout_marginLeft="@dimen/qb_px_160"
+            android:layout_marginTop="@dimen/qb_px_34"
+            android:layout_below="@+id/home_adas_title_tv"
+            android:textSize="@dimen/qb_px_30"
+            android:text="@string/find_bs_msg_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_battery_sos_btn"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/qb_px_72"
+        android:background="@drawable/eed_bg"
+        android:layout_width="@dimen/qb_px_525"
+        android:layout_height="@dimen/qb_px_260"
+        >
+
+        <TextView
+            android:fontFamily="@font/hwht_subset"
+            android:textSize="@dimen/qb_px_40"
+            android:id="@+id/home_sos_title_tv"
+            android:layout_marginTop="@dimen/qb_px_43"
+            android:layout_marginLeft="@dimen/qb_px_29"
+            android:textColor="@color/colorWhiteGay"
+            android:text="服务中心"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_marginTop="@dimen/qb_px_17"
+            android:layout_below="@+id/home_sos_title_tv"
+            android:layout_marginLeft="@dimen/qb_px_37"
+            android:src="@drawable/home_sos_ic"
+            android:layout_width="@dimen/qb_px_100"
+            android:layout_height="@dimen/qb_px_100" />
+
+
+        <TextView
+            android:fontFamily="@font/hwht_subset"
+            android:textColor="#9ea6ca"
+            android:layout_marginRight="@dimen/qb_px_53"
+            android:layout_marginLeft="@dimen/qb_px_180"
+            android:layout_marginTop="@dimen/qb_px_34"
+            android:layout_below="@+id/home_sos_title_tv"
+            android:textSize="@dimen/qb_px_30"
+            android:text="SOS驾驶救援"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    >
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/login_type_tv"
+        android:fontFamily="@font/hwht_subset"
+        android:textStyle="bold"
+        android:textSize="@dimen/qb_px_50"
+        android:textColor="@color/colorWhiteGay"
+        android:text="@string/bind_phone_tx"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/qb_px_100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+
+    <com.sharkgulf.soloera.tool.view.ClearEditText
+        android:layout_marginTop="@dimen/qb_px_123"
+        android:textColor="@color/colorWhiteGay"
+        android:layout_marginRight="@dimen/qb_px_143"
+        android:layout_marginLeft="@dimen/qb_px_143"
+        android:fontFamily="@font/hwht_subset"
+        android:id="@+id/fragment_loging_reset_pwd_phone_ed"
+        android:layout_width="match_parent"
+        android:background="@null"
+        android:textColorHint="@color/colorWhiteGay"
+        android:hint="@string/login_fragment_layout_phone_hint_ed"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:maxLines="1"
+        android:drawablePadding="@dimen/qb_px_50"
+        android:drawableLeft="@drawable/phone_ic"
+        android:layout_height="@dimen/qb_px_110" />
+    <View
+        android:layout_marginRight="@dimen/qb_px_143"
+        android:layout_marginLeft="@dimen/qb_px_143"
+        android:layout_marginTop="@dimen/qb_px_18"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1"
+        android:background="@color/colorWhiteGay"/>
+
+
+    <Button
+        android:layout_marginRight="@dimen/qb_px_143"
+        android:layout_marginLeft="@dimen/qb_px_143"
+        android:id="@+id/fragment_loging_reset_pwd_next_btn"
+        android:textColor="@color/blue2fc"
+        android:background="@drawable/white_bg_white_line_bg"
+        android:layout_marginTop="@dimen/qb_px_270"
+        android:text="@string/send_smms"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_110" />
+
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/fragment_loging_reset_protocol_layout"
+        android:layout_marginTop="@dimen/qb_px_400"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/fragment_loging_reset_protocol_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/colorWhiteGay"
+            android:id="@+id/fragment_loging_reset_protocol_tx"
+            android:text="@string/login_fragment_bind_phone_layout_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

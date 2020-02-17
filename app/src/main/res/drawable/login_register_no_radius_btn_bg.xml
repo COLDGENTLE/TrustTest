@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 边 -->
+    <stroke android:width="1dp"
+        android:color="#00000000"/>
+    <!-- 角 -->
+    <corners android:radius="0dp"
+        />
+    <!-- 面 -->
+    <solid android:color="#1e455c"/>
+
+    <gradient
+    android:startColor="@color/colorBtnStart"
+    android:endColor="@color/colorBtnEnd"
+    android:angle="45" />
+
+
+</shape>

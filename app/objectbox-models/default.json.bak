@@ -1,0 +1,253 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:4216685148117269087",
+      "lastPropertyId": "12:4592926189055553586",
+      "name": "DbBleBean",
+      "properties": [
+        {
+          "id": "1:1872427046158207570",
+          "name": "id"
+        },
+        {
+          "id": "2:6860983131557093746",
+          "name": "mac"
+        },
+        {
+          "id": "3:2306751194484952233",
+          "name": "salt"
+        },
+        {
+          "id": "4:1911170303626503776",
+          "name": "did"
+        },
+        {
+          "id": "5:5944018948255515766",
+          "name": "sign"
+        },
+        {
+          "id": "6:3098663421076131905",
+          "name": "validation"
+        },
+        {
+          "id": "7:4603711936721387276",
+          "name": "bikeId"
+        },
+        {
+          "id": "8:2395475040218627521",
+          "name": "userId"
+        },
+        {
+          "id": "9:6222517846227185568",
+          "name": "bleId"
+        },
+        {
+          "id": "10:4817024679367427209",
+          "name": "isConnction"
+        },
+        {
+          "id": "11:6466749110859943062",
+          "name": "electironic"
+        },
+        {
+          "id": "12:4592926189055553586",
+          "name": "cushionInduction"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:7496407899949897307",
+      "lastPropertyId": "7:6176625971581484582",
+      "name": "DbCarInfoBean",
+      "properties": [
+        {
+          "id": "1:1248659030781959967",
+          "name": "id"
+        },
+        {
+          "id": "2:5224808733208118643",
+          "name": "bikeId"
+        },
+        {
+          "id": "3:3790062830754468131",
+          "name": "bikeLoctionInfo"
+        },
+        {
+          "id": "4:2798793804451497681",
+          "name": "bikeBattertInfo"
+        },
+        {
+          "id": "5:7948218534709742156",
+          "name": "bikeInfo"
+        },
+        {
+          "id": "6:8385736619697125252",
+          "name": "bikeStatus"
+        },
+        {
+          "id": "7:6176625971581484582",
+          "name": "userMapType"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:7977274518797239353",
+      "lastPropertyId": "14:1423606055767583600",
+      "name": "DbUserLoginStatusBean",
+      "properties": [
+        {
+          "id": "1:5794600158055655085",
+          "name": "id"
+        },
+        {
+          "id": "2:797027024350163410",
+          "name": "userPhone"
+        },
+        {
+          "id": "3:8355210780323225878",
+          "name": "userLoginStatus"
+        },
+        {
+          "id": "4:3949443735706694814",
+          "name": "userIsBindCar"
+        },
+        {
+          "id": "5:1149504715928892037",
+          "name": "userNickName"
+        },
+        {
+          "id": "6:4944384137456728993",
+          "name": "userName"
+        },
+        {
+          "id": "7:305968951983069960",
+          "name": "userSalt"
+        },
+        {
+          "id": "8:6914599040421977397",
+          "name": "userToken"
+        },
+        {
+          "id": "9:241113304123523772",
+          "name": "userBikeList"
+        },
+        {
+          "id": "10:5411004158085832693",
+          "name": "userId"
+        },
+        {
+          "id": "11:274732071793157689",
+          "name": "userCheckInNum"
+        },
+        {
+          "id": "12:4157527096500916923",
+          "name": "userBean"
+        },
+        {
+          "id": "14:1423606055767583600",
+          "name": "bidPos"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:4447429827371849050",
+      "lastPropertyId": "2:2566358759879181900",
+      "name": "TestBean",
+      "properties": [
+        {
+          "id": "1:4846215659269711238",
+          "name": "id"
+        },
+        {
+          "id": "2:2566358759879181900",
+          "name": "test"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:7257281462839108089",
+      "lastPropertyId": "5:6753763191729689309",
+      "name": "DbAlertBean",
+      "properties": [
+        {
+          "id": "1:1546180416930560963",
+          "name": "id"
+        },
+        {
+          "id": "2:1196392578007779023",
+          "name": "bikeId"
+        },
+        {
+          "id": "3:1791976821420828616",
+          "name": "alerBean"
+        },
+        {
+          "id": "4:67095666053780375",
+          "name": "day"
+        },
+        {
+          "id": "5:6753763191729689309",
+          "name": "isRead"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:4959363595577311489",
+      "lastPropertyId": "8:2164399936626756578",
+      "name": "DbAppBean",
+      "properties": [
+        {
+          "id": "1:7063711291175762618",
+          "name": "id"
+        },
+        {
+          "id": "2:5486513712236601937",
+          "name": "appPrivacyPolicy"
+        },
+        {
+          "id": "3:6454382896323388906",
+          "name": "loginType"
+        },
+        {
+          "id": "4:9214287752669063141",
+          "name": "threeLoginType"
+        },
+        {
+          "id": "5:8828768122278907242",
+          "name": "isDebug"
+        },
+        {
+          "id": "6:7799015433403834236",
+          "name": "isDevFirstInit"
+        },
+        {
+          "id": "7:6946494750169597644",
+          "name": "deviceId"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "6:4959363595577311489",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    4329069734176105265,
+    2164399936626756578
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

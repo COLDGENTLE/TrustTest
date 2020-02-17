@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:textSize="@dimen/qb_px_40"
+        android:textColor="@color/colorWhiteGay"
+        android:id="@+id/item_week_btn"
+        android:layout_width="@dimen/qb_px_130"
+        android:layout_height="@dimen/qb_px_130"
+        android:gravity="center"
+        android:text="周一\n 2/12" />
+</RelativeLayout>

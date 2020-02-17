@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_200"
+    android:orientation="vertical">
+    <TextView
+        android:lineSpacingExtra="@dimen/qb_px_15"
+        android:layout_marginLeft="@dimen/qb_px_60"
+        android:gravity="center_vertical"
+        android:text="几分来源名称\n2019.05.05 00:00:00"
+        android:id="@+id/item_checin_info_msg_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/integral_info_item_num_tx"
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:text="+3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

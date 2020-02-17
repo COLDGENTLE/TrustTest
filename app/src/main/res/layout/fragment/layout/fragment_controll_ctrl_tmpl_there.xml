@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/controll_car_bg"
+    android:layout_height="@dimen/qb_px_700"
+    android:scaleType="fitXY">
+
+
+    <RelativeLayout
+        android:id="@+id/controll_there_start_btn"
+        android:background="@drawable/controll_car_up_big_ic"
+        android:layout_width="@dimen/qb_px_300"
+        android:layout_height="@dimen/qb_px_300"
+        android:layout_marginTop="@dimen/qb_px_60"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <ImageView
+            android:background="@drawable/controll_car_accon_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/controll_there_no_voice_lock_btn"
+        android:gravity="center"
+        android:background="@drawable/controll_car_up__ic"
+        android:layout_width="@dimen/qb_px_200"
+        android:layout_height="@dimen/qb_px_200"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/qb_px_60"
+        >
+        <ImageView
+            android:background="@drawable/controll_car_ele_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/qb_px_60"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/qb_px_143"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/controll_car_up__ic"
+        android:layout_width="@dimen/qb_px_200"
+        android:layout_height="@dimen/qb_px_200"
+        android:id="@+id/controll_there_find_btn"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:background="@drawable/controll_car_find_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/controll_there_bucket_btn"
+        android:background="@drawable/controll_car_up__ic"
+        android:layout_width="@dimen/qb_px_200"
+        android:layout_height="@dimen/qb_px_200"
+        android:layout_marginBottom="@dimen/qb_px_60"
+        android:layout_marginRight="@dimen/qb_px_143"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:background="@drawable/controll_car_eitting_bucket_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/controll_there_unlock_btn"
+        android:layout_marginLeft="@dimen/qb_px_143"
+        android:layout_marginTop="@dimen/qb_px_140"
+        android:layout_width="@dimen/qb_px_200"
+        android:layout_height="@dimen/qb_px_200"
+        android:background="@drawable/controll_car_up__ic"
+        android:gravity="center">
+
+        <ImageView
+            android:background="@drawable/controll_car_lock_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/controll_there_lock_btn"
+        android:layout_width="@dimen/qb_px_200"
+        android:layout_height="@dimen/qb_px_200"
+        android:background="@drawable/controll_car_up__ic"
+        android:layout_marginTop="@dimen/qb_px_140"
+        android:layout_marginRight="@dimen/qb_px_143"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        >
+
+
+        <ImageView
+            android:background="@drawable/controll_car_unlock_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+    </RelativeLayout>
+
+</RelativeLayout>

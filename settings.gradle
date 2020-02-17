@@ -1,0 +1,1 @@
+include ':app', ':TrustPermission-library', ':TrustStatusBarLibrary', ':trustRetrofit', ':TrustBasis', ':TrustMapsLibrary', ':TrustThereLoginLibrary', ':PingPayLib', ':jpushlibrary'

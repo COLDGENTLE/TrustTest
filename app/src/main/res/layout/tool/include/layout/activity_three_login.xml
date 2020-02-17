@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".loging.ThreeLoginActivity"
+    android:gravity="center_horizontal"
+    android:background="@color/blue2fc">
+
+
+    <include
+        layout="@layout/tite_layout"/>
+
+
+    <com.sharkgulf.soloera.tool.view.ClearEditText
+        android:textColorHint="@color/colorWhiteGay"
+        android:textColor="@color/colorWhiteGay"
+        android:drawablePadding="@dimen/qb_px_28"
+        android:id="@+id/activity_threeligin_phone_ed"
+        android:layout_marginTop="@dimen/qb_px_300"
+        android:layout_width="@dimen/qb_px_700"
+        android:background="@null"
+        android:hint="@string/login_fragment_layout_phone_hint_ed"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:maxLines="1"
+        android:drawableLeft="@drawable/phone_ic"
+        android:layout_height="@dimen/qb_px_150" />
+
+
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/activity_threeligin_submint_btn"
+        android:textColor="@color/blue2fc"
+        android:background="@drawable/white_bg_white_line_bg"
+        android:layout_marginTop="@dimen/qb_px_500"
+        android:text="@string/bind_copywriting_tx"
+        android:layout_width="@dimen/qb_px_700"
+        android:layout_height="@dimen/qb_px_110" />
+
+
+
+    <LinearLayout
+        android:id="@+id/activity_threeligin_protocol_layout"
+        android:layout_marginTop="@dimen/qb_px_400"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/activity_threeligin_protocol_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/colorWhiteGay"
+            android:id="@+id/activity_threeligin_protocol_tx"
+            android:text="@string/login_fragment_bind_phone_layout_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

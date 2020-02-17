@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e9e9e9"
+    tools:context="com.sharkgulf.soloera.home.user.cars.CarInfoActivity">
+
+
+    <include
+        layout="@layout/tite_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+    <ImageView
+        android:id="@+id/car_info_car_ic_img"
+        android:background="@color/colorWhiteGay"
+        android:src="@drawable/ic_cars"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1000"
+        />
+
+    <View
+        android:layout_marginRight="@dimen/qb_px_20"
+        android:layout_marginLeft="@dimen/qb_px_20"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+    <RelativeLayout
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:text="@string/car_info_tx"
+            android:textSize="@dimen/qb_px_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:id="@+id/car_info_btn"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/car_info_complete_tx"
+            android:textSize="@dimen/qb_px_42"
+            android:text="@string/car_info_complete_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:src="@drawable/ic_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_marginRight="@dimen/qb_px_20"
+        android:layout_marginLeft="@dimen/qb_px_20"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+    <LinearLayout
+        android:background="@color/colorWhiteGay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_410"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/qb_px_30"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:layout_marginRight="@dimen/qb_px_60"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_90">
+
+            <TextView
+                android:textSize="@dimen/qb_px_42"
+                android:text="@string/car_info_name_tx"
+                android:layout_width="@dimen/qb_px_500"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="@dimen/qb_px_42"
+                android:text="@string/car_info_plate_num_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:layout_marginRight="@dimen/qb_px_60"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/car_info_name_tx"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/qb_px_51"
+                android:text="我是车辆名八个字"
+                android:layout_width="@dimen/qb_px_500"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/car_info_plate_num_tx"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/qb_px_51"
+                android:text="XXXXXXXXXXXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/qb_px_30"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:layout_marginRight="@dimen/qb_px_60"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_90">
+
+            <TextView
+                android:textSize="@dimen/qb_px_42"
+                android:text="@string/car_info_bike_class_tx"
+                android:layout_width="@dimen/qb_px_500"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="@dimen/qb_px_42"
+                android:text="@string/car_info_vin_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:layout_marginRight="@dimen/qb_px_60"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/car_info_bike_class_tx"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/qb_px_51"
+                android:layout_width="@dimen/qb_px_500"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/car_info_vin_tx"
+                android:textSize="@dimen/qb_px_51"
+                android:text="XXXXXXXXXXXXXXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+    
+
+
+
+
+
+   
+
+
+  
+
+    <LinearLayout
+        android:background="@color/colorWhiteGay"
+        android:layout_marginTop="@dimen/qb_px_30"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/car_info_about_car_btn"
+            android:layout_marginRight="@dimen/qb_px_60"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_120">
+
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:text="@string/car_info_about_tx"
+                android:textSize="@dimen/qb_px_51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+
+
+                <ImageView
+                    android:src="@drawable/ic_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_marginRight="@dimen/qb_px_20"
+            android:layout_marginLeft="@dimen/qb_px_20"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c4c4c4"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_266">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/qb_px_55"
+                    android:gravity="center|left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textSize="@dimen/qb_px_45"
+                        android:text="@string/car_info_bind_days_tx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/car_info_bind_days_tx"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/qb_px_100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/qb_px_200"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textSize="@dimen/qb_px_45"
+                        android:text="@string/car_info_total_mileage_tx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/car_info_total_mileage_tx"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/qb_px_100"
+                        android:text="@string/car_info_total_mileage_num_tx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginRight="@dimen/qb_px_20"
+            android:layout_marginLeft="@dimen/qb_px_20"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c4c4c4"/>
+
+
+        <RelativeLayout
+            android:visibility="gone"
+
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_120">
+
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="@dimen/qb_px_60"
+                android:text="@string/car_info_software_version_tx"
+                android:textSize="@dimen/qb_px_51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginRight="@dimen/qb_px_60"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/car_info_software_version_tx"
+                    android:textSize="@dimen/qb_px_42"
+                    android:text="已升级到最新版本"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:src="@drawable/ic_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

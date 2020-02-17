@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+def sdkVersion = rootProject.ext.androidVersion
+def supporCompiles = rootProject.ext.supporCompiles
+android {
+    compileSdkVersion sdkVersion.compileSdkVersion
+
+
+
+    defaultConfig {
+        minSdkVersion sdkVersion.minSdkVersion
+        targetSdkVersion sdkVersion.targetSdkVersion
+        versionCode sdkVersion.versionCode
+        versionName sdkVersion.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation supporCompiles["v7"]
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    api 'com.umeng.sdk:common:1.5.1'
+    api 'com.umeng.sdk:analytics:7.5.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //友盟分享
+    implementation 'com.umeng.sdk:share-core:6.9.1'
+    implementation 'com.umeng.sdk:share-qq:6.9.1.1'
+    api 'com.umeng.sdk:share-wechat:6.9.1'
+    implementation 'com.umeng.sdk:share-sina:6.9.1'
+
+    //分享面板
+    implementation 'com.umeng.sdk:shareboard-widget:6.9.1'
+}
+repositories {
+    mavenCentral()
+}

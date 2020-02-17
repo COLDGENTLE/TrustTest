@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sharkgulf.soloera.home.user.cars.CarDeleteBleOrServiceActivity">
+
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/tite_layout"/>
+
+
+    <TextView
+        android:id="@+id/car_delete_ble_or_service_msg_tx"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:text="手机与车辆距离不应该超过米，以免删除失败"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="@dimen/qb_px_96"
+        android:id="@+id/car_delete_ble_or_service_recycler"
+        android:layout_below="@+id/car_delete_ble_or_service_msg_tx"
+        android:layout_above="@+id/car_delete_ble_or_service_bootom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/qb_px_60"
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_marginBottom="@dimen/qb_px_70"
+        android:id="@+id/car_delete_ble_or_service_bootom_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_100"
+        android:orientation="horizontal">
+
+        <TextView
+            android:gravity="bottom"
+            android:textSize="@dimen/qb_px_40"
+            android:text="如果无法链接车辆，您也可以选择强行删除"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:textColor="@color/colorWhiteGay"
+            android:id="@+id/car_delete_ble_or_service_must_dele_btn"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/login_register_btn_bg"
+            android:text="强行删除"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

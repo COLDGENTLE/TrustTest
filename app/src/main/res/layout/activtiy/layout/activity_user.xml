@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/qb_px_800"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".home.user.UserActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/colorWhiteGay">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/qb_px_200"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        android:id="@+id/my_tourist_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_350"
+        android:layout_marginBottom="@dimen/qb_px_50"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/my_tourist_login_ic_btn"
+            android:layout_marginLeft="@dimen/qb_px_80"
+            android:src="@drawable/user_defulte_ic"
+            android:layout_width="@dimen/qb_px_200"
+            android:layout_height="@dimen/qb_px_200"
+            android:contentDescription="TODO" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/qb_px_50"
+            android:textSize="@dimen/qb_px_60"
+            android:fontFamily="@font/hwht_subset"
+            android:textColor="@color/gray555"
+            android:id="@+id/my_tourist_login_btn"
+            android:text="@string/no_login_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/qb_px_200"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:id="@+id/user_info_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_350"
+        android:layout_marginBottom="@dimen/qb_px_50"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginLeft="@dimen/qb_px_80"
+            android:id="@+id/user_logo_img"
+            android:src="@drawable/user_defulte_ic"
+            android:layout_width="@dimen/qb_px_200"
+            android:layout_height="@dimen/qb_px_200"
+            android:contentDescription="TODO" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="@dimen/qb_px_58"
+                android:textColor="@color/gray555"
+                android:textStyle="bold"
+                android:id="@+id/user_name_tx"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/qb_px_50"
+                android:layout_marginRight="@dimen/qb_px_50"/>
+
+            <TextView
+                android:fontFamily="@font/hwht_num"
+                android:layout_marginTop="@dimen/qb_px_21"
+                android:textColor="@color/gray555"
+                android:textSize="@dimen/qb_px_50"
+                android:id="@+id/user_phone_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:background="@drawable/fragment_my_integral_bg"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:layout_marginRight="@dimen/qb_px_50"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_330">
+
+        <TextView
+            android:layout_marginTop="@dimen/qb_px_50"
+            android:layout_marginLeft="@dimen/qb_px_50"
+            android:textSize="@dimen/qb_px_50"
+            android:textColor="@color/colorBlack"
+            android:text="@string/user_integral_num_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/fragment_my_integral_tx"
+            android:layout_marginTop="@dimen/qb_px_120"
+            android:layout_marginLeft="@dimen/qb_px_50"
+            android:textColor="#0099ff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:paddingLeft="@dimen/qb_px_50"
+            android:gravity="center"
+            android:id="@+id/fragment_my_checkin_btn"
+            android:textSize="@dimen/qb_px_58"
+            android:textColor="@color/colorWhiteGay"
+            android:text="@string/user_integral_check_in_tx"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/fragment_my_integral_down_ic"
+            android:layout_width="@dimen/qb_px_350"
+            android:layout_height="@dimen/qb_px_140" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/qb_px_80"
+        android:layout_marginRight="@dimen/qb_px_70"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_160">
+
+        <com.sharkgulf.soloera.tool.view.TextDrawable
+            android:id="@+id/fragment_my_checkin_info_btn"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/qb_px_50"
+            android:fontFamily="@font/hwht_subset"
+            android:textColor="@color/gray555"
+            android:text="@string/points_user_tx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:rightDrawableHeight="@dimen/qb_px_80"
+            app:rightDrawableWidth="@dimen/qb_px_80"
+            app:rightDrawable="@drawable/user_integral_ic"/>
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1"
+        android:background="@color/transparent"/>
+
+
+    <com.sharkgulf.soloera.tool.view.TextDrawable
+        android:id="@+id/user_devices_center_btn"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/qb_px_54"
+        android:layout_marginLeft="@dimen/qb_px_80"
+        android:layout_marginRight="@dimen/qb_px_80"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/qb_px_50"
+        android:textColor="@color/gray555"
+        android:text="@string/devices_center_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:rightDrawable="@drawable/add_circlebig__ic"
+        app:rightDrawableHeight="@dimen/qb_px_60"
+        app:rightDrawableWidth="@dimen/qb_px_60"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/user_devices_recycler"
+        android:layout_marginTop="@dimen/qb_px_58"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1"
+        android:background="@color/transparent"/>
+
+    <com.sharkgulf.soloera.tool.view.TextDrawable
+        android:textStyle="bold"
+        android:id="@+id/user_apps_btn"
+        android:layout_marginTop="@dimen/qb_px_54"
+        android:layout_marginLeft="@dimen/qb_px_80"
+        android:layout_marginRight="@dimen/qb_px_80"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/qb_px_50"
+        android:fontFamily="@font/hwht_subset"
+        android:textColor="@color/gray555"
+        android:text="@string/light_apps_test_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:rightDrawable="@drawable/user_apps"/>
+
+        <com.sharkgulf.soloera.tool.view.TextDrawable
+            android:id="@+id/user_settings_btn"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/qb_px_54"
+            android:layout_marginLeft="@dimen/qb_px_80"
+            android:layout_marginRight="@dimen/qb_px_80"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/qb_px_50"
+            android:fontFamily="@font/hwht_subset"
+            android:textColor="@color/gray555"
+            android:text="@string/settings_tx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:rightDrawable="@drawable/user_settings"/>
+
+
+        <com.sharkgulf.soloera.tool.view.TextDrawable
+            android:id="@+id/user_help_btn"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/qb_px_54"
+            android:layout_marginLeft="@dimen/qb_px_80"
+            android:layout_marginRight="@dimen/qb_px_80"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/qb_px_50"
+            android:fontFamily="@font/hwht_subset"
+            android:textColor="@color/gray555"
+            android:text="@string/call_help_tx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:rightDrawable="@drawable/user_phone_ic"/>
+
+
+
+
+        <LinearLayout
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/qb_px_60"
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_100"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:src="@drawable/ic_user_warn"
+            android:layout_width="@dimen/qb_px_20"
+            android:layout_height="@dimen/qb_px_20" />
+
+        <ImageView
+            android:src="@drawable/ic_user_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/qb_px_10"
+            android:text="@string/user_notification_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:layout_marginLeft="@dimen/qb_px_430"
+            android:text="@string/user_unread_message_tx"
+            android:layout_width="@dimen/qb_px_300"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:src="@drawable/ic_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/qb_px_60"
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e2e2e2"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/qb_px_20"
+         android:layout_marginLeft="@dimen/qb_px_60"
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_100"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_marginLeft="@dimen/qb_px_20"
+            android:src="@drawable/ic_user_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/qb_px_10"
+            android:text="我的车库"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/qb_px_430"
+            android:text="尚无添加车辆"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/user_cars_btn"
+            android:src="@drawable/ic_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/qb_px_60"
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e2e2e2"/>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/qb_px_20"
+         android:layout_marginLeft="@dimen/qb_px_60"
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_100"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_marginLeft="@dimen/qb_px_20"
+            android:src="@drawable/ic_user_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/qb_px_10"
+            android:text="@string/user_general_settings_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:layout_marginLeft="@dimen/qb_px_430"
+            android:text=""
+            android:layout_width="@dimen/qb_px_300"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/user_app_general_settings_btn"
+            android:src="@drawable/ic_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:visibility="gone"
+         android:layout_marginLeft="@dimen/qb_px_60"
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e2e2e2"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/qb_px_20"
+         android:layout_marginLeft="@dimen/qb_px_60"
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_100"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_marginLeft="@dimen/qb_px_20"
+            android:src="@drawable/ic_user_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/qb_px_10"
+            android:text="@string/user_help_feedback_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+
+    <View
+        android:visibility="gone"
+         android:layout_marginLeft="@dimen/qb_px_60"
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e2e2e2"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/qb_px_20"
+         android:layout_marginLeft="@dimen/qb_px_60"
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_100"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_marginLeft="@dimen/qb_px_20"
+            android:src="@drawable/ic_user_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/qb_px_10"
+            android:text="@string/user_on_bs_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/user_version_tx"
+            android:gravity="right"
+            android:layout_marginLeft="@dimen/qb_px_430"
+            android:text="@string/user_bs_version_tx"
+            android:layout_width="@dimen/qb_px_300"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/user_app_version_btn"
+            android:src="@drawable/ic_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:visibility="gone"
+         android:layout_marginLeft="@dimen/qb_px_60"
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e2e2e2"/>
+    </LinearLayout>
+    
+    <ImageView
+        android:visibility="gone"
+        android:src="@drawable/user_phone_ic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="@dimen/qb_px_80"
+        android:layout_marginBottom="@dimen/qb_px_120"
+        android:layout_width="@dimen/qb_px_80"
+        android:layout_height="@dimen/qb_px_80" />
+
+    <ImageView
+        android:visibility="gone"
+        android:src="@drawable/user_settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="@dimen/qb_px_80"
+        android:layout_marginBottom="@dimen/qb_px_120"
+        android:layout_width="@dimen/qb_px_80"
+        android:layout_height="@dimen/qb_px_80" />
+    
+    
+</androidx.constraintlayout.widget.ConstraintLayout>

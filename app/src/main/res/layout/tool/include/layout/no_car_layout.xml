@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sharkgulf.soloera.tool.view.layout.weight.secondfloor.TrustRefrshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/qb_px_200"
+    android:id="@+id/test_refrshLayout"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+    <ImageView
+        android:layout_marginTop="@dimen/qb_px_72"
+        android:layout_marginBottom="@dimen/qb_px_227"
+        android:transitionName="logo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/qb_m_px_415"
+        android:scaleType="fitXY"
+        android:src="@drawable/car"
+        android:layout_width="@dimen/qb_px_860"
+        android:layout_height="match_parent"
+        android:contentDescription="TODO" />
+
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/qb_px_600"
+        android:layout_marginLeft="@dimen/qb_px_200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <ImageView
+            android:id="@+id/main_add_cars_btn"
+            android:src="@drawable/ic_add_cars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/qb_px_58"
+            android:layout_marginTop="@dimen/qb_px_60"
+            android:text="添加车辆"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+    <!--oldlayout-->
+
+
+
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_504"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:src="@drawable/ic_add_cars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/qb_px_51"
+                android:layout_marginTop="@dimen/qb_px_88"
+                android:text="添加车辆"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:background="@drawable/ic_add_cars_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/main_show_car_btn"
+                android:gravity="center"
+                android:background="@drawable/main_show_car_btn_bg"
+                android:layout_marginRight="@dimen/qb_px_60"
+                android:layout_marginTop="@dimen/qb_px_84"
+                android:textSize="@dimen/qb_px_51"
+                android:textColor="@color/colorWhiteGay"
+                android:layout_alignParentRight="true"
+                android:text="进入展厅"
+                android:layout_width="@dimen/qb_px_400"
+                android:layout_height="@dimen/qb_px_110" />
+        </RelativeLayout>
+    </LinearLayout>
+</com.sharkgulf.soloera.tool.view.layout.weight.secondfloor.TrustRefrshLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eaedef"
+    tools:context="com.sharkgulf.soloera.home.user.UserEditActivity">
+
+
+    <include
+        layout="@layout/tite_layout"/>
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@color/colorWhiteGay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sharkgulf.soloera.tool.view.ClearEditText
+            android:maxLines="1"
+            android:id="@+id/user_edit_ed"
+            android:background="@null"
+            android:layout_marginLeft="@dimen/qb_px_100"
+            android:layout_marginRight="@dimen/qb_px_100"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_130" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

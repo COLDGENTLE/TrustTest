@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_double_battry_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_280">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginLeft="@dimen/qb_px_202"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints" >
+
+        <TextView
+            app:layout_constraintBottom_toTopOf="@+id/battert_1_num_layout"
+            android:id="@+id/home_batt1_text_tv"
+            android:fontFamily="@font/hwht_subset"
+            android:textSize="@dimen/qb_px_40"
+            android:gravity="center"
+            android:textColor="@color/gray092"
+            android:text="电池(1)电量"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/qb_px_20"/>
+
+
+        <LinearLayout
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/battert_1_num_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/home_batt1_capacity_tv"
+                android:fontFamily="@font/gotham_medium"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/qb_px_65"
+                android:textColor="@color/colorWhiteGay"
+                android:text="17%"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/home_batt1_tag_ic"
+                android:layout_marginLeft="@dimen/qb_px_5"
+                android:layout_marginTop="@dimen/qb_px_70"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/home_battry_1_ic"
+                android:layout_width="@dimen/qb_px_40"
+                android:layout_height="@dimen/qb_px_100" />
+        </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_width="@dimen/qb_px_340"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/double_mileage_layout"
+            android:text="674"
+            android:id="@+id/home_double_mileage_tv"
+            android:fontFamily="@font/gotham_medium"
+            android:textSize="@dimen/qb_px_150"
+            android:textColor="@color/colorWhiteGay"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/double_mileage_layout"
+            android:fontFamily="@font/hwht_subset"
+            android:textSize="@dimen/qb_px_50"
+            android:gravity="center_horizontal"
+            android:textColor="@color/gray092"
+            android:text="预估里程 (KM)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginRight="@dimen/qb_px_202"
+        android:orientation="vertical"
+        android:layout_width="@dimen/qb_px_220"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" >
+
+
+
+        <TextView
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/battert_2_num_layout"
+            android:id="@+id/home_batt2_text_tv"
+            android:fontFamily="@font/hwht_subset"
+            android:textSize="@dimen/qb_px_40"
+            android:gravity="center"
+            android:textColor="@color/gray092"
+            android:text="电池(2)电量"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/qb_px_20"/>
+
+
+        <LinearLayout
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/battert_2_num_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/home_batt2_capacity_tv"
+                android:fontFamily="@font/gotham_medium"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/qb_px_65"
+                android:textColor="@color/colorWhiteGay"
+                android:text="17%"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/home_batt2_tag_ic"
+                android:layout_marginLeft="@dimen/qb_px_5"
+                android:layout_marginTop="@dimen/qb_px_70"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/home_battry_1_ic"
+                android:layout_width="@dimen/qb_px_40"
+                android:layout_height="@dimen/qb_px_100" />
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

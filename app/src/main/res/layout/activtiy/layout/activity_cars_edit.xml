@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eaedef"
+    tools:context="com.sharkgulf.soloera.home.user.cars.CarsEditActivity">
+
+    <include
+        layout="@layout/tite_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/car_edit_name_layout"
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_150">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:text="@string/car_info_name_tx"
+            android:textSize="@dimen/qb_px_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/qb_px_60"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/car_edit_name_tv"
+                android:maxLines="1"
+                android:gravity="right"
+                android:background="@null"
+                android:textSize="@dimen/qb_px_42"
+                android:layout_width="@dimen/qb_px_400"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@drawable/ic_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+
+    <RelativeLayout
+        android:id="@+id/car_edit_car_num_layout"
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:text="@string/car_info_plate_num_tx"
+            android:textSize="@dimen/qb_px_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/qb_px_60"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:hint="@string/onclik_ed_tx"
+                android:id="@+id/car_edit_car_num_tv"
+                android:maxLines="1"
+                android:gravity="right"
+                android:background="@null"
+                android:textSize="@dimen/qb_px_42"
+                android:layout_width="@dimen/qb_px_400"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@drawable/ic_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+    <RelativeLayout
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:text="@string/car_info_vin_tx"
+            android:textSize="@dimen/qb_px_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/qb_px_60"
+
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/car_edit_vin_tx"
+                android:textSize="@dimen/qb_px_42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:visibility="invisible"
+                android:src="@drawable/ic_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_150">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:text="@string/car_edit_version_tx"
+            android:textSize="@dimen/qb_px_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/qb_px_60"
+
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/car_edit_version_tx"
+                android:textSize="@dimen/qb_px_42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_150">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:text="@string/car_edit_type_tx"
+            android:textSize="@dimen/qb_px_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/qb_px_60"
+
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/car_edit_type_tx"
+                android:textSize="@dimen/qb_px_42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+
+    <RelativeLayout
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_150">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:text="@string/car_edit_mode_tx"
+            android:textSize="@dimen/qb_px_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/qb_px_60"
+
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/car_edit_mode_tx"
+                android:textSize="@dimen/qb_px_42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:visibility="invisible"
+                android:src="@drawable/ic_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/qb_px_100"
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120">
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/qb_px_60"
+            android:text="@string/car_edit_motor_or_engine_ed_tx"
+            android:textSize="@dimen/qb_px_51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/qb_px_60"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:text="点击编辑"
+                android:background="@null"
+                android:id="@+id/car_edit_motor_or_engine_ed"
+                android:textSize="@dimen/qb_px_42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:background="@color/colorWhiteGay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/qb_px_30"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="@dimen/qb_px_60"
+                android:text="@string/electronic_tx"
+                android:textSize="@dimen/qb_px_51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:lineSpacingExtra="@dimen/qb_px_10"
+                android:layout_marginBottom="@dimen/qb_px_50"
+                android:layout_marginTop="@dimen/qb_px_20"
+                android:layout_marginLeft="@dimen/qb_px_60"
+                android:text="@string/electronic_msg_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/qb_px_50"
+            android:orientation="horizontal"
+            android:layout_marginRight="@dimen/qb_px_60"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           >
+
+            <Switch
+                android:checked="true"
+                android:id="@+id/car_edit_electironic_sw"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:visibility="gone"
+                android:src="@drawable/home_controll_loading_ic"
+                android:tint="@color/blue"
+                android:id="@+id/electironic_load_im"
+                android:layout_width="@dimen/qb_px_100"
+                android:layout_height="@dimen/qb_px_100"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_marginLeft="@dimen/qb_px_60"
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:text="@string/electronic_msg1_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/qb_px_30"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="@dimen/qb_px_60"
+                android:text="@string/cushion_induction_tx"
+                android:textSize="@dimen/qb_px_51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="@dimen/qb_px_50"
+                android:lineSpacingExtra="@dimen/qb_px_10"
+                android:layout_marginTop="@dimen/qb_px_20"
+                android:layout_marginLeft="@dimen/qb_px_60"
+                android:text="@string/cushion_induction_msg_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/qb_px_50"
+            android:layout_marginRight="@dimen/qb_px_60"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <Switch
+                android:checked="true"
+                android:id="@+id/car_edit_cushion_induction_sw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:visibility="gone"
+                android:src="@drawable/home_controll_loading_ic"
+                android:tint="@color/blue"
+                android:id="@+id/cushion_inducation_load_im"
+                android:layout_width="@dimen/qb_px_100"
+                android:layout_height="@dimen/qb_px_100"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_marginLeft="@dimen/qb_px_60"
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:text="@string/cushion_induction_msg1_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <RelativeLayout
+        android:background="@color/colorWhiteGay"
+        android:id="@+id/car_edit_dele_car_btn"
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:textColor="@color/colorRead"
+            android:paddingLeft="@dimen/qb_px_60"
+            android:gravity="left|center_vertical"
+            android:text="删除车辆"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/qb_px_150" />
+
+
+        <ImageView
+            android:layout_marginRight="@dimen/qb_px_60"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+</LinearLayout>

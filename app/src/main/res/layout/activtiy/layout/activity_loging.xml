@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".loging.LogingActivity"
+    android:background="@color/blue2fc"
+   >
+
+        <include
+            android:id="@+id/title_layout"
+            android:visibility="gone"
+                layout="@layout/tite_layout"/>
+
+        <RelativeLayout
+            android:id="@+id/defult_layout"
+            android:layout_marginTop="@dimen/qb_px_40"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_160"
+            >
+
+                <ImageView
+                    android:id="@+id/login_finsh_btn"
+                    android:layout_marginLeft="@dimen/qb_px_60"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/register_back_ic"
+                    android:layout_width="@dimen/qb_px_80"
+                    android:layout_height="@dimen/qb_px_80" />
+
+                <TextView
+                    android:id="@+id/login_change_login_type_btn"
+                    android:layout_marginRight="@dimen/qb_px_60"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/colorWhiteGay"
+                    android:textSize="@dimen/qb_px_42"
+                    android:text="密码登录"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+
+            android:id="@+id/activity_login_fragment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    <!--<RelativeLayout-->
+        <!--android:layout_marginTop="@dimen/qb_px_12"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/qb_px_30">-->
+
+        <!--<Button-->
+            <!--android:layout_marginLeft="-2dp"-->
+            <!--android:background="@drawable/car_show_btn_bg"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:gravity="center"-->
+            <!--android:text="车辆展厅"-->
+            <!--android:layout_width="@dimen/qb_px_100"-->
+            <!--android:layout_height="@dimen/qb_px_30" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/activity_loging_pwd_btn"-->
+            <!--android:layout_marginRight="-2dp"-->
+            <!--android:background="@drawable/pwd_login_btn_bg"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:gravity="center"-->
+            <!--android:text="密码登陆"-->
+            <!--android:layout_width="@dimen/qb_px_100"-->
+            <!--android:layout_height="@dimen/qb_px_30" />-->
+
+    <!--</RelativeLayout>-->
+
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grayDef"
+    tools:context=".cards.activity.alert.AlertListActivity">
+
+    <include
+        layout="@layout/tite_layout"/>
+
+
+    <RelativeLayout
+        android:background="@color/colorWhiteGay"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_200">
+
+        <com.sharkgulf.soloera.tool.view.TextDrawable
+            android:textSize="@dimen/qb_px_50"
+            android:gravity="center_vertical"
+            app:leftDrawable="@drawable/ic_black"
+            app:leftDrawableWidth="@dimen/qb_px_100"
+            app:leftDrawableHeight="@dimen/qb_px_100"
+            android:text="@string/yesterday_tx"
+            android:layout_centerVertical="true"
+            android:id="@+id/alert_list_yesterday_btn"
+            android:layout_width="@dimen/qb_px_250"
+            android:layout_height="match_parent" />
+
+        <com.sharkgulf.soloera.tool.view.TextDrawable
+            android:gravity="center_vertical"
+            android:textSize="@dimen/qb_px_50"
+            android:text="@string/tomorrow_tx"
+            app:rightDrawable="@drawable/ic_right"
+            app:rightDrawableHeight="@dimen/qb_px_100"
+            app:rightDrawableWidth="@dimen/qb_px_100"
+            android:layout_centerVertical="true"
+            android:id="@+id/alert_list_tomorrow_btn"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_right"
+            android:layout_width="@dimen/qb_px_250"
+            android:layout_height="@dimen/qb_px_100" />
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/alert_list_calendar_btn"
+            android:layout_marginTop="@dimen/qb_px_30"
+            android:layout_marginBottom="@dimen/qb_px_30"
+            android:background="@drawable/blue_0ff_bg"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/qb_px_50"
+                android:layout_centerVertical="true"
+                android:text="01月02号 今天"
+                android:id="@+id/alert_list_submint_btn"
+                android:textSize="@dimen/qb_px_60"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorWhiteGay"
+                android:layout_width="@dimen/qb_px_400"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_marginTop="@dimen/qb_px_30"
+                android:layout_marginBottom="@dimen/qb_px_30"
+                android:layout_marginLeft="@dimen/qb_px_25"
+                android:id="@+id/alert_list_line"
+                android:layout_toRightOf="@+id/alert_list_submint_btn"
+                android:background="@color/colorBlack"
+                android:layout_width="@dimen/qb_px_3"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_marginLeft="@dimen/qb_px_25"
+                android:layout_toRightOf="@+id/alert_list_line"
+                android:layout_marginRight="@dimen/qb_px_25"
+                android:layout_centerVertical="true"
+                android:src="@drawable/bike_alert_calendar_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/alert_list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/set_car_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/colorBlack"
+    >
+
+
+
+
+    <TextView
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/qb_px_66"
+        android:text = "@string/car_mac_msg_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/fragment_set_car_logo_im"
+        android:layout_marginTop="@dimen/qb_px_60"
+        android:src="@drawable/bind_car_show_ic"
+        android:layout_width="@dimen/qb_px_860"
+        android:layout_height="@dimen/qb_px_783" />
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/fragment_set_car_mac_tx"
+        android:layout_marginTop="@dimen/qb_px_100"
+        android:text="@string/car_mac_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/fragment_set_car_vin_tx"
+        android:layout_marginTop="@dimen/qb_px_10"
+        android:text="@string/car_vin_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/fragment_bind_car_to_success_btn"
+        android:layout_gravity="center"
+        android:textColor="#ffffff"
+        android:background="@drawable/login_register_btn_bg"
+        android:layout_marginTop="@dimen/qb_px_120"
+        android:text="保存"
+        android:layout_width="@dimen/qb_px_780"
+        android:layout_height="@dimen/qb_px_108" />
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_540">
+
+        <!--ping-->
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/bind_car_ble_connection_ping_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+            android:layout_marginTop="@dimen/qb_px_290"
+
+            android:id="@+id/bind_car_ble_connection_ping_load_ic"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/bind_car_load_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="@dimen/qb_px_120"
+
+            android:id="@+id/bind_car_ble_connection_status_tv"
+            android:gravity="center"
+            android:textSize="@dimen/qb_px_60"
+            android:textColor="#848dac"
+            android:layout_centerHorizontal="true"
+            android:text="正在添加车辆，请不要远离车辆"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <!--error-->
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/bind_car_ble_connection_error_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="@dimen/qb_px_190"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/qb_px_60"
+                android:text="车辆添加失败"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:gravity="center"
+                android:textColor="@color/colorRead"
+                android:id="@+id/bind_car_ble_connection_error_msg_tv"
+                android:layout_marginTop="@dimen/qb_px_290"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/qb_px_50"
+                android:text="请尝试重新搜索车辆"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+        <!--success-->
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/bind_car_ble_connection_success_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:textColor="#848dac"
+                android:textSize="@dimen/qb_px_60"
+                android:lineSpacingExtra="@dimen/qb_px_10"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/qb_px_66"
+                android:text = "@string/car_mac_msg_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/qb_px_80"
+                android:layout_marginLeft="@dimen/qb_px_100"
+                android:layout_marginRight="@dimen/qb_px_100"
+                android:background="@drawable/gray_1a1a1a_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_200"
+                android:gravity="center">
+
+
+                <com.sharkgulf.soloera.tool.view.ClearEditText
+                    android:maxLines="1"
+                    android:textColor="@color/gray6d"
+                    android:hint="@string/car_defute_name_tx"
+                    android:textColorHint="@color/gray6d"
+                    android:id="@+id/fragment_set_car_name_ed"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:drawablePadding="@dimen/qb_px_40"
+                    android:layout_width="@dimen/qb_px_730"
+                    android:layout_height="@dimen/qb_px_120" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bind_car_ble_connection_car_layout"
+        android:layout_marginTop="@dimen/qb_px_540"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_900" >
+
+        <ImageView
+            android:src="@drawable/bind_car_ic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/bind_car_ble_connection_car_vin_tv"
+        android:textSize="@dimen/qb_px_60"
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/bind_car_ble_connection_car_layout"
+        android:text = "车架号: NNNNNNNN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/bind_car_ble_connection_car_module_tv"
+        android:gravity="center"
+        android:textSize="@dimen/qb_px_60"
+        android:layout_marginTop="@dimen/qb_px_40"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/bind_car_ble_connection_car_vin_tv"
+        android:text = "车辆型号:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/bind_car_ble_connection_submint_btn"
+        android:visibility="gone"
+        android:textColor="@color/colorWhiteGay"
+        android:text="完成"
+        android:layout_marginRight="@dimen/qb_px_50"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:background="@drawable/blue_bg"
+        android:layout_marginBottom="@dimen/qb_px_50"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_110" />
+
+    <Button
+        android:id="@+id/bind_car_ble_connection_error_btn"
+        android:visibility="gone"
+        android:textColor="@color/colorWhiteGay"
+        android:text="重新搜索"
+        android:layout_marginRight="@dimen/qb_px_50"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:background="@drawable/blue_bg"
+        android:layout_marginBottom="@dimen/qb_px_50"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_110" />
+
+
+</RelativeLayout>

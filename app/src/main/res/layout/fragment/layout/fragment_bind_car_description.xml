@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bind_car_connection_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_1100"
+            />
+
+
+        <LinearLayout
+            android:visibility="invisible"
+            android:layout_width="@dimen/qb_px_300"
+            android:layout_height="@dimen/qb_px_60"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/fragment_bind_car_point1"
+                android:src="@drawable/add_car_choose_point"
+                android:layout_width="@dimen/qb_px_60"
+                android:layout_height="@dimen/qb_px_60" />
+
+            <ImageView
+                android:id="@+id/fragment_bind_car_point2"
+                android:src="@drawable/add_car_choose_point"
+                android:layout_width="@dimen/qb_px_60"
+                android:layout_height="@dimen/qb_px_60"/>
+
+        </LinearLayout>
+    <ImageView
+        android:visibility="gone"
+        android:src="@drawable/bind_car_connection_low_ic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1100"
+        android:contentDescription="TODO" />
+
+
+    <TextView
+        android:textColor="@color/gray092"
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:lineSpacingExtra="@dimen/qb_px_10"
+        android:gravity="center"
+        android:text="@string/add_cars_description_1_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:gravity="center"
+        android:textSize="@dimen/qb_px_55"
+        android:textColor="@color/gray092"
+        android:id="@+id/add_cars_description_2_tx"
+        android:layout_marginTop="@dimen/qb_px_60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="SpUsage" />
+
+
+    <TextView
+        android:textColor="@color/gray092"
+        android:id="@+id/add_cars_description_3_tx"
+        android:layout_marginTop="@dimen/qb_px_60"
+        android:lineSpacingExtra="@dimen/qb_px_10"
+        android:gravity="center"
+        android:text="@string/add_cars_description_3_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_marginBottom="@dimen/qb_px_200"
+        android:id="@+id/fragment_bind_car_next_btn"
+        android:textColor="#ffffff"
+        android:background="@drawable/blue_0ff_bg"
+        android:layout_marginTop="@dimen/qb_px_150"
+        android:text="下一步"
+        android:layout_width="@dimen/qb_px_780"
+        android:layout_height="@dimen/qb_px_110" />
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

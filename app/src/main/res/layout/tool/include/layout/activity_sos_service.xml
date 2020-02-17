@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorRead"
+    tools:context=".cards.SosServiceActivity">
+
+    <include
+        android:id="@+id/sos_title_layout"
+        layout="@layout/tite_layout"/>
+
+   <ImageView
+       app:layout_constraintBottom_toTopOf="@+id/sos_call_btn"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       android:src="@drawable/sos_bg1_ic"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:layout_marginTop="@dimen/qb_px_500"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/sos_bg2_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/qb_px_233"
+        app:layout_constraintTop_toBottomOf="@+id/sos_title_layout"
+        android:textSize="@dimen/qb_px_122"
+        android:textColor="@color/colorWhiteGay"
+        android:text="SOS驾驶救援"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/sos_call_btn"
+        android:layout_marginBottom="@dimen/qb_px_100"
+        android:textColor="@color/colorRead"
+        android:gravity="center"
+        android:text="呼叫救援"
+        android:layout_marginLeft="@dimen/qb_px_80"
+        android:layout_marginRight="@dimen/qb_px_80"
+        android:background="@drawable/white_bg_white_line_bg"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_120" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

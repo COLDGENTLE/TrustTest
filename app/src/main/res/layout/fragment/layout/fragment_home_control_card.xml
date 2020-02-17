@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:scaleType="fitXY"
+        android:background="@drawable/blue_eff_to_0ff_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1550"/>
+
+
+
+
+    <View
+        android:background="@drawable/blue_0ff_to_5f2_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_720"/>
+
+
+    <RelativeLayout
+        android:id="@+id/bike_info_layout"
+        android:layout_marginLeft="@dimen/qb_px_100"
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_130">
+
+        <TextView
+            android:textSize="@dimen/qb_px_100"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhiteGay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_below="@+id/bike_info_layout"
+        android:layout_marginTop="@dimen/qb_px_120"
+        android:src="@drawable/home_controll_car_type_ic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_below="@+id/bike_info_layout"
+        android:id="@+id/fragment_car_card_ic"
+        android:transitionName="carLogo"
+        android:layout_marginTop="@dimen/qb_px_180"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/home_controll_car_ic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_450" />
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:layout_below="@+id/fragment_car_card_ic"
+        android:id="@+id/home_battry_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_280"
+       >
+
+        <include
+            android:visibility="gone"
+            android:id="@+id/home_double_battry_layout"
+            layout="@layout/item_double_battry_layout"/>
+
+        <include
+            android:visibility="visible"
+            android:id="@+id/home_one_battry_layout"
+            layout="@layout/item_one_battry_layout"/>
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_marginTop="@dimen/qb_px_150"
+        android:layout_marginBottom="@dimen/qb_px_30"
+        android:layout_marginLeft="@dimen/qb_px_70"
+        android:layout_marginRight="@dimen/qb_px_70"
+        android:id="@+id/home_control_layout"
+        android:layout_below="@+id/home_battry_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_200"/>
+
+
+
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/fragment_home_controll_btn"
+        android:layout_marginRight="@dimen/qb_px_60"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/qb_px_50"
+        android:src="@drawable/fragment_controll_btn_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/fragment_home_controll_status_layout"
+        android:transitionName="carStatus"
+        android:layout_marginBottom="@dimen/qb_px_60"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/controll_car_status_bg"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_above="@+id/activity_controll_car_controll_layout"
+        android:layout_width="@dimen/qb_px_400"
+        android:layout_height="@dimen/qb_px_119"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_70">
+
+            <ImageView
+                android:id="@+id/home_control_card_lock_ic"
+                android:src="@drawable/controll_status_lock"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/home_control_card_acc_ic"
+                android:src="@drawable/controll_status_unele"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/home_control_card_ble_ic"
+                android:src="@drawable/controll_ble_ic"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

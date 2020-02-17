@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_bind_car_refrshlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+        android:gravity="center_horizontal"
+       android:id="@+id/fragment_bind_car_list_layout"
+       >
+
+
+       <TextView
+           android:textColor="@color/colorWhiteGay"
+           android:background="@color/greenf55"
+           android:gravity="center"
+           android:layout_centerHorizontal="true"
+           android:id="@+id/fragment_bind_car_num_tx"
+           android:layout_marginTop="@dimen/qb_px_20"
+           android:layout_gravity="center_horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/qb_px_150" />
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_marginTop="@dimen/qb_px_170"
+           android:id="@+id/recycler"
+           app:centerScale="1.2"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_above="@+id/fragment_bind_btn_layout"/>
+
+
+
+        <LinearLayout
+            android:id="@+id/fragment_bind_btn_layout"
+            android:layout_marginLeft="@dimen/qb_px_90"
+            android:layout_marginRight="@dimen/qb_px_90"
+            android:layout_marginBottom="@dimen/qb_px_70"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_130">
+
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/fragment_bind_car_next_btn"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:background="@drawable/blue_0ff_bg"
+                android:text="@string/next_tx"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/qb_px_108" />
+
+
+
+            <Button
+                android:id="@+id/fragment_bind_car_search_agin_btn"
+                android:layout_marginLeft="@dimen/qb_px_30"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:background="@drawable/blue_0ff_bg"
+                android:text="@string/search_again_tx"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/qb_px_110" />
+        </LinearLayout>
+
+   </RelativeLayout>
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/fragment_bind_car_wait_layout"
+        layout="@layout/wait_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1350" />
+
+
+    <include
+        android:id="@+id/fragment_bind_car_help_layout"
+        android:visibility="gone"
+        layout="@layout/bind_car_help_layout"
+        />
+
+</RelativeLayout>

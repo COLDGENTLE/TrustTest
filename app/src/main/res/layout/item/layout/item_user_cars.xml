@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_680"
+    android:background="@color/colorWhiteGay">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_370"
+        android:orientation="horizontal">
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+
+           <ImageView
+               android:layout_marginTop="@dimen/qb_px_48"
+               android:layout_marginLeft="@dimen/qb_px_60"
+               android:src="@drawable/ic_cars_list_brand"
+               android:layout_width="@dimen/qb_px_360"
+               android:layout_height="@dimen/qb_px_70" />
+
+            <TextView
+                android:id="@+id/item_car_version_tx"
+                android:textSize="@dimen/qb_px_52"
+                android:layout_marginTop="@dimen/qb_px_58"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/qb_px_60"
+                android:text="K3 series 2S clasic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+           <TextView
+               android:id="@+id/item_car_name_tx"
+               android:layout_marginTop="@dimen/qb_px_10"
+               android:textColor="@color/colorBlack"
+               android:textSize="@dimen/qb_px_61"
+               android:layout_marginLeft="@dimen/qb_px_60"
+               android:text="我是车辆名八个字"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+
+
+       </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/item_car_ic_img"
+                android:src="@drawable/ic_cars_list"
+                android:layout_marginRight="@dimen/qb_px_60"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/qb_px_480"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+        
+        
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginRight="@dimen/qb_px_20"
+        android:layout_marginLeft="@dimen/qb_px_20"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c4c4c4"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/qb_px_55"
+            android:gravity="center|left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="@dimen/qb_px_45"
+                android:text="陪伴天数"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/item_car_bind_time_tx"
+                android:textSize="@dimen/qb_px_100"
+                android:text="300天"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/qb_px_200"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="@dimen/qb_px_45"
+                android:text="总里程"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/item_car_mileage_tx"
+                android:textSize="@dimen/qb_px_100"
+                android:text="00000 KM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        
+
+
+    </LinearLayout>
+</LinearLayout>

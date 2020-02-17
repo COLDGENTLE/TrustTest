@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".cards.activity.securitysettings.WaitTestNotifyHelpActivity">
+
+    <include
+        layout="@layout/tite_layout"/>
+
+
+    <TextView
+        android:lineSpacingExtra="@dimen/qb_px_15"
+        android:textColor="@color/textBlue"
+        android:layout_marginLeft="@dimen/qb_px_50"
+        android:layout_marginRight="@dimen/qb_px_50"
+        android:text="1、检查您是否开启了{蓝鲨应用名称}的通知权限。\n2、检查您是否是使用了省电模式，省电模式下有可能会禁用部分应用的通知功能。\n3、检查您是否使用了安全中心或者手机管家等类似软件进行系统或着内存优化，优化后可能会禁用部分应用的启动。\n4、检查是否允许{蓝鲨应用名称}开机自启动，无法顺利启动您将无法在开机后收到通知。"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:layout_marginTop="@dimen/qb_px_400"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/test_notify_help_btn"
+        android:text="重新测试"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/qb_px_450"
+    android:background="@color/colorBlack">
+    <TextView
+        android:id="@+id/popu_only_warn_btn"
+        android:gravity="center"
+        android:textColor="@color/colorWhiteGay"
+        android:layout_width="@dimen/qb_px_300"
+        android:text="@string/popu_warn_tx"
+        android:layout_height="@dimen/qb_px_150" />
+
+    <TextView
+        android:id="@+id/popu_only_location_btn"
+        android:gravity="center"
+        android:textColor="@color/colorWhiteGay"
+        android:layout_width="@dimen/qb_px_300"
+        android:text="@string/popu_location_tx"
+        android:layout_height="@dimen/qb_px_150" />
+
+    <TextView
+        android:id="@+id/popu_all_btn"
+        android:gravity="center"
+        android:textColor="@color/colorWhiteGay"
+        android:layout_width="@dimen/qb_px_300"
+        android:text="@string/popu_all_tx"
+        android:layout_height="@dimen/qb_px_150" />
+</LinearLayout>

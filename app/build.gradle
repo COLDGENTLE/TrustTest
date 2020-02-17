@@ -1,0 +1,335 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'com.hujiang.android-aspectjx'
+
+apply plugin: 'kotlin-kapt'
+
+
+def root = rootProject.ext
+def androidVersion = root.androidVersion
+def supporCompiles = rootProject.ext.supporCompiles
+
+def releaseTime() {
+    return new Date().format("yyyy_MM_dd_HH_mm_ss", TimeZone.getTimeZone("UTC"))
+}
+
+aspectjx {
+//排除所有package路径中包含`android.support`的class文件及库（jar文件）
+    exclude 'razerdp/library'
+    exclude 'com/bs/trust/blueshark/tool/view/layout/weight'
+    exclude 'com/bs/trust/blueshark/cards/activity'
+    exclude 'com/alipay'
+}
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+android {
+    compileSdkVersion androidVersion["compileSdkVersion"]
+    defaultConfig {
+        applicationId androidVersion["applicationId"]
+        minSdkVersion androidVersion["minSdkVersion"]
+        targetSdkVersion androidVersion["targetSdkVersion"]
+        versionCode androidVersion["versionCode"]
+        versionName androidVersion["versionName"]
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+
+        packagingOptions {
+            //解决编译时com.android.builder.merge.DuplicateRelativeFileException: More than one file was found with OS independent path 'META-INF/rxjava.properties'这个错误
+            exclude 'META-INF/rxjava.properties'
+        }
+
+
+        ndk {
+            abiFilters 'armeabi', "armeabi-v7a","x86"
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so） abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86","arm64-v8a","x86_64" }
+        }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : androidVersion["applicationId"],
+                JPUSH_APPKEY  : "8d01300ed22db0b04de96d47",
+                JPUSH_CHANNEL : "jpush-default",
+                MEIZU_APPKEY  : "MZ-75740592430c48bd8e2876765f7bf147",
+                MEIZU_APPID   : "MZ-120979",
+                XIAOMI_APPID  : "MI-2882303761518317640",
+                XIAOMI_APPKEY : "MI-5701831756640",
+                HUAWEI_APPID  : "101712593",
+                HMSVERSION    : "2.6.3.301",
+                OPPO_APPKEY   : "OP-8086d7f03c4d432abe5ade43d9823042",
+                OPPO_APPID    : "OP-30244520",
+                OPPO_APPSECRET: "OP-5ac28daec91541028ecfd3799dfb8223",
+                VIVO_APPKEY   : "d33efdba-4253-456b-8fb9-15df0ce8e9c1",
+                VIVO_APPID    : "17965",
+                trust         : "2882303761518010495",
+                qqappid       : "101572894"
+        ]
+    }
+
+
+    flavorDimensions "default"
+
+    androidExtensions {
+        experimental = true
+    }
+
+    productFlavors {
+        SL_DEV {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "SL_DEV"]
+        }
+
+        SL_RELEASE {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "SL_RELEASE"]
+        }
+
+        SL_HUAWEI {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "SL_HUAWEI"]
+        }
+
+        SL_XIAOMI {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "SL_XIAOMI"]
+        }
+
+        SL_MEIZU {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "SL_MEIZU"]
+        }
+
+        SL_OPPO {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "SL_OPPO"]
+        }
+
+        SL_VIVO {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "SL_VIVO"]
+        }
+
+        SL_QQ {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "SL_QQ"]
+        }
+
+    }
+
+    android.applicationVariants.all { variant ->
+
+
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                //这里修改apk文件名
+                def fileName
+                if (variant.buildType.name == "release") {
+                    fileName = "${variant.productFlavors[0].name}_V${defaultConfig.versionName}_${getBuildCode()}_${releaseTime()}.apk"
+                } else {
+                    fileName = "${variant.productFlavors[0].name}_V${defaultConfig.versionName}_${getBuildCode()}_debug.apk"
+                }
+                outputFileName = new File(fileName)
+            }
+        }
+    }
+
+
+    signingConfigs {
+        release {
+            storeFile file("../key/release/bsKey.jks")
+            storePassword "blueshark"
+            keyAlias "bs"
+            keyPassword "blueshark"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            zipAlignEnabled true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            signingConfig signingConfigs.release
+            zipAlignEnabled false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs'];
+            res.srcDirs = [
+                    'src/main/res/layout/tool/include',
+                    'src/main/res/layout/tool/dialog',
+                    'src/main/res/layout/tool',
+                    'src/main/res/layout/item',
+                    'src/main/res/layout/activtiy',
+                    'src/main/res/layout/fragment',
+                    'src/main/res/layout/',
+                    'src/main/res/'];
+        }
+    }
+
+
+}
+
+//-----------自动化打包自定义任务-------------------------------------------------------------------
+task setGlobalBuildEnv {
+    def tag_name = "${android.defaultConfig.versionName}_${getBuildCode()}"
+    def lastchangerev = "${gitCommitCount}"
+    def f = new File("set_env.bat")
+    f.write("SET last_build_tag=${tag_name}\r\nSET last_git_revsion=${lastchangerev}\r\n" +
+            "SET revsion=${gitCommitShortHash}\r\nSET version_code=${gitCommitCount}\r\n" +
+            "SET pack_name=${androidVersion["applicationId"]}\r\n")
+
+    def f2 = new File("set_env.sh")
+    f2.write("#!/bin/bash\nexport last_build_tag=\"${tag_name}\"\nexport last_git_revsion=\"${lastchangerev}\"\r\n" +
+            "export revsion=\"${gitCommitShortHash}\"\r\nexport version_code=\"${gitCommitCount}\"" +
+            "\r\nexport pack_name=\"${androidVersion["applicationId"]}\"")
+    println('f :' + f.getPath())
+    println('f2 :' + f2.getPath())
+    //f.close()
+
+}
+
+boolean isInBamboo() {
+    if (System.getenv()['bamboo_agentId']) {
+        return true
+    }
+
+    return false
+}
+
+boolean isInJenkins() {
+    //   检查  gradle.properties  中有没有设置JENKINS_BUILD_SERVER
+    if (project.hasProperty('JENKINS_BUILD_SERVER')) {
+        return true
+    }
+
+    return false
+}
+
+/**
+ * 获取Jenkins Build 号
+ * @return
+ */
+def getBuildCode() {
+
+    ext.env = System.getenv()
+    if (isInBamboo()) {
+        ext.buildNumber = env.bamboo_buildNumber?.toInteger()
+        return "$buildNumber"
+    } else if (isInJenkins()) {
+        ext.buildNumber = env.BUILD_NUMBER?.toInteger()
+        return "$buildNumber"
+    } else {
+        String selfBuildName = env.get("USERNAME")
+        if (selfBuildName == null) {
+            selfBuildName = env.get("COMPUTERNAME")
+
+            if (selfBuildName == null) {
+                selfBuildName = "UNKNOWN"
+            }
+        }
+        return selfBuildName
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+
+
+
+    implementation ('androidx.core:core:1.0.1'){
+        exclude group:'androidx.core'
+    }
+
+
+//    androidTestImplementation({exclude 'org.reactivestreams:reactive-streams:1.0.1@jar'})
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    //权限---------------------------------------------------------------------------
+    implementation project(':TrustPermission-library')
+    //状态栏-------------------------------------------------------------------------
+    implementation project(':TrustStatusBarLibrary')
+    //基础模块-----------------------------------------------------------------------
+    implementation project(':TrustBasis')
+    //objectbox 数据库debug查看数据库--------------------------------------------------
+    debugImplementation "io.objectbox:objectbox-android-objectbrowser:$objectboxVersion"
+    releaseImplementation "io.objectbox:objectbox-android:$objectboxVersion"
+    implementation "io.objectbox:objectbox-kotlin:$objectboxVersion"
+    //---------------------------------------------------------------------------------
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //短信验证码控件
+    implementation 'com.jacktuotuo.customview:verificationcodeview:1.0.5'
+    implementation project(':TrustMapsLibrary')
+    implementation 'com.airbnb.android:lottie:2.5.5'
+    //aar
+    implementation(name: 'sharkbleclient-release2.1', ext: 'aar')
+    implementation(name: 'sharkbleutils-release1.0', ext: 'aar')
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-18'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-18'
+    //没有使用特殊Header，可以不加这行
+//    implementation 'com.github.razerdp:BasePopup:2.1.7'
+    implementation 'com.github.razerdp:BasePopup_Candy:2.2.2.190916'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.github:MyCropBitmap:1.0.4'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    //底部导航栏
+    implementation 'com.github.forvv231:EasyNavigation:1.0.2'
+    //路由
+    implementation 'com.alibaba:arouter-api:1.5.0'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+    kapt 'com.alibaba:arouter-compiler:1.2.2'
+
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    implementation 'com.edmodo:cropper:1.0.1'
+//    //内存泄露检测工具
+//    dependencies {
+//        debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5'
+//        releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+//        testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+//    }
+
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.2.0
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+
+
+}
+//一定要在 上面两个依赖之下 此plugin
+apply plugin: 'io.objectbox' // after applying Android plugin
+
